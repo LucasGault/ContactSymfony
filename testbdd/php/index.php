@@ -4,13 +4,14 @@ $user = 'devuser';
 $passwrd = 'devpass';
 $db = 'test_db';
 
-$conn = new mysqli($host,$user,$passwrd,$db);
-if ($conn -> connect_error) {
-    echo 'erreur ' . $conn->connect_error;
-
-} else {
-    echo 'sucess';
+try {
+    $bdd = new PDO ('mysql:host=db;dbname=test_db;charset=utf8','devuser','devpass');
+} catch (Exception $e) {
+    die('Erreur ' . $e->getMessage());
 }
+
+$query = $bdd->query('SELECT * FROM Contact');
+
 ?>
 
 
@@ -23,5 +24,10 @@ if ($conn -> connect_error) {
 </head>
 <body>
     <h1>Hello PHP</h1>
+    <?php 
+    while ($donnees = $query->fetch()){
+        echo $donnees['Nom'];
+    }
+    ?>
 </body>
 </html>
