@@ -5,7 +5,7 @@ $passwrd = 'devpass';
 $db = 'test_db';
 
 try {
-    $bdd = new PDO ('mysql:host=db;dbname=test_db;charset=utf8','devuser','devpass');
+    $bdd = new PDO ('mysql:host=10.40.74.14:6033; dbname=test_db;charset=utf8','root','MYSQL_ROOT_PASSWORD');
 } catch (Exception $e) {
     die('Erreur ' . $e->getMessage());
 }
