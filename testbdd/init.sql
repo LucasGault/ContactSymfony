@@ -1,9 +1,11 @@
-create database coucou;
+create database if not exists contactony;
 use coucou;
 
-CREATE TABLE testtab
+CREATE TABLE  if not exists contact
 (
 id INTEGER AUTO_INCREMENT,
-name TEXT,
+lastName TEXT,
+firstName TEXT,
+phoneNumber INTEGER,
 PRIMARY KEY (id)
 ) COMMENT='this is my test table';
