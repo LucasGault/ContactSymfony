@@ -1,9 +1,4 @@
-create database coucou;
-use coucou;
+create database contactony;
+use contactony;
 
-CREATE TABLE testtab
-(
-id INTEGER AUTO_INCREMENT,
-name TEXT,
-PRIMARY KEY (id)
-) COMMENT='this is my test table';
+CREATE TABLE contact ( id INT NOT NULL AUTO_INCREMENT , firstname VARCHAR(255) NOT NULL , lastname INT(255) NOT NULL , phonenumber INT(10) NOT NULL , PRIMARY KEY (id)) ENGINE = InnoDB;
