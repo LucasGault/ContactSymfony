@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Contactony {% endblock %}
+
+{% block body %}
+    <h1>{{ pluralize(contacts|length, 'Contactonie','Contactonies') }}</h1>
+
+    {% for contact in contacts %}
+        <div>
+            <h2><a href="{{ path('app_contacts_show',{id: contact.id} )}}">{{ contact.firstname }} {{ contact.lastname }}</a></h2>
+            <h3>{{ contact.phonenumber }}</h3>
+        </div>
+    
+    {% endfor %}
+{% endblock %}
