@@ -27,7 +27,7 @@ services:
             dockerfile: ./php/Dockerfile
         container_name: php74-container
         ports:
-            - "9000:9000"
+            - "9010:9010"
         volumes:
             - ./app:/var/www/project
         networks:
@@ -38,7 +38,7 @@ services:
         image: mysql:8
         container_name: mysql8-container
         ports:
-            - "3306:3306"
+            - "6033:3306"
         volumes:
             - ./init.sql:/data/application/init.sql
             - ./mysql:/var/lib/mysql
@@ -48,8 +48,8 @@ services:
         restart: always 
         environment:
             MYSQL_USER: root
-            MYSQL_ROOT_PASSWORD: secret
-            MYSQL_PASSWORD: secret
+            MYSQL_ROOT_PASSWORD: coucou05
+            MYSQL_PASSWORD: coucou05
         networks:
             - nginx-php74-mysql8-node-phpmyadmin
 

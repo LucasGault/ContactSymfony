@@ -1,0 +1,39 @@
+body{
+    background-color:white;
+    margin:auto;
+}
+header{
+    background-color:black;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    text-align:center;
+}
+.title{
+    color:white
+}
+
+.page{
+    margin-left:auto;
+    margin-right:auto;
+    justify-content: center;
+}
+#contactCard{
+    transition-property: color;
+      transition-duration: 0.5s;
+      transition-timing-function: ease-in;
+      transition-delay: 0.3s;
+    }
+  .transform {
+    -webkit-transition: all 2s ease;  
+    -moz-transition: all 2s ease;  
+    -o-transition: all 2s ease;  
+    -ms-transition: all 2s ease;  
+    transition: all 2s ease;
+  }
+  
+  .transform-active {
+    background-color: #45CEE0;
+    height: 200px;
+    width: 200px;
+  }
+    

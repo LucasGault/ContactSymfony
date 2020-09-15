@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+{% block title 'Mes contact' %}
+{% block body %}
+
+<div class="head">
+    <img src= width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+    <h1>Mes Contacts</h1>
+<div>
+
+<div class="page">
+    <div class="container">
+        {% for contact in contacts %} 
+        <div class="row justify-content-center">
+            <div class="col col-lg-3">
+            <div class="card border-info mb-3" id="contactCard">
+                <div class="card-body text-info">
+                    <h5 class="card-title">{{contact.firstname}} {{contact.lastname}}</h5>
+                    <p class="card-text"> 0{{contact.phonenumber}} </p>
+                </div>
+            </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
