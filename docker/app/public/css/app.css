@@ -1,13 +1,8 @@
 body{
-    background-color:white;
     margin:auto;
+
 }
-header{
-    background-color:black;
-    padding-top: 3%;
-    padding-bottom: 3%;
-    text-align:center;
-}
+
 .title{
     color:white
 }
@@ -17,23 +12,32 @@ header{
     margin-right:auto;
     justify-content: center;
 }
-#contactCard{
-    transition-property: color;
-      transition-duration: 0.5s;
-      transition-timing-function: ease-in;
-      transition-delay: 0.3s;
-    }
-  .transform {
-    -webkit-transition: all 2s ease;  
-    -moz-transition: all 2s ease;  
-    -o-transition: all 2s ease;  
-    -ms-transition: all 2s ease;  
-    transition: all 2s ease;
-  }
-  
-  .transform-active {
-    background-color: #45CEE0;
-    height: 200px;
-    width: 200px;
-  }
-    
+#contactCard {width:100%;
+    -webkit-transition: all 1s ease; /* Safari and Chrome */
+    -moz-transition: all 1s ease; /* Firefox */
+    -ms-transition: all 1s ease; /* IE 9 */
+    -o-transition: all 1s ease; /* Opera */
+    transition: all 1s ease;
+}
+#contactCard:hover{
+    margin-left:-70px;
+}
+
+h1{
+    margin-left:10%;
+}
+.card {
+    border: 1px solid teal;
+}
+.card-header {
+    background-color: teal;
+    color : white;
+    height: 40px;
+    padding-left:10%;
+}
+
+.card-body {
+    height: 30px; 
+    padding-left:10%;
+    padding-top:3px;
+}

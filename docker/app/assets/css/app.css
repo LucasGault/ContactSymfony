@@ -1,3 +1,19 @@
-body {
-    background-color: lightgray;
+body{
+    background-color:white;
+    margin:auto;
+}
+
+#contactCard {
+    -webkit-transition: all 1s ease; /* Safari and Chrome */
+    -moz-transition: all 1s ease; /* Firefox */
+    -ms-transition: all 1s ease; /* IE 9 */
+    -o-transition: all 1s ease; /* Opera */
+    transition: all 1s ease;
+}
+#contactCard:hover{
+    width:350px; 
+}
+
+.h1{
+    margin-left:5%;
 }
