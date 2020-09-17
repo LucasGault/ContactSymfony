@@ -1,11 +1,8 @@
 body{
     margin:auto;
-
+    background-image:url(blue.jpg);
 }
 
-.title{
-    color:white
-}
 
 .page{
     margin-left:auto;
@@ -18,20 +15,30 @@ body{
     -ms-transition: all 1s ease; /* IE 9 */
     -o-transition: all 1s ease; /* Opera */
     transition: all 1s ease;
+
 }
 #contactCard:hover{
     margin-left:-70px;
+
 }
 
+.contactButtons{
+    position:absolute;
+    width:40px;
+    left: 67%;
+    z-index: -1;
+    padding-top:2%;
+
+}
 h1{
     margin-left:10%;
 }
 .card {
-    border: 1px solid teal;
+    border: 1px solid #d8b011;
 }
 .card-header {
-    background-color: teal;
-    color : white;
+    background-color: #ffcc00;
+    color :white;
     height: 40px;
     padding-left:10%;
 }

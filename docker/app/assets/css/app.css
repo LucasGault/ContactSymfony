@@ -1,5 +1,5 @@
 body{
-    background-color:white;
+
     margin:auto;
 }
 
@@ -9,6 +9,8 @@ body{
     -ms-transition: all 1s ease; /* IE 9 */
     -o-transition: all 1s ease; /* Opera */
     transition: all 1s ease;
+    position: absolute;
+    z-index: 2;
 }
 #contactCard:hover{
     width:350px; 
