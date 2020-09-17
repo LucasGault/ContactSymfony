@@ -3,13 +3,16 @@
 {% block title %}Contactony {% endblock %}
 
 {% block body %}
-    <h1>{{ pluralize(contacts|length, 'Contactonie','Contactonies') }}</h1>
-
-    {% for contact in contacts %}
-        <div>
-            <h2><a href="{{ path('app_contacts_show',{id: contact.id} )}}">{{ contact.firstname }} {{ contact.lastname }}</a></h2>
-            <h3>{{ contact.phonenumber }}</h3>
+    <h1 >{{ pluralize(contacts|length, 'Contactonie','Contactonies') }}</h1>
+    <div class="container rounded-lg">
+        {% for contact in contacts %}
+        <div class="card d-inline p-4" style="">
+            <div class="card-body">
+                <div>
+                    <h2><a href="{{ path('app_contacts_show',{id: contact.id} )}}">{{ firstLetter(contact.firstname,contact.lastname) }}</a></h2> 
+                </div>  
+            </div>
         </div>
-    
-    {% endfor %}
+        {% endfor %}
+    </div>
 {% endblock %}

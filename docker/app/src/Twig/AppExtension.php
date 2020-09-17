@@ -22,6 +22,7 @@ class AppExtension extends AbstractExtension
     {
         return [
             new TwigFunction('pluralize', [$this, 'doSomething']),
+            new TwigFunction('firstLetter', [$this,'firstLetter']),
         ];
     }
 
@@ -29,5 +30,12 @@ class AppExtension extends AbstractExtension
     {
         $result = $count === 1 ? $singular : $plural;
         return "$count $result";
+    }
+
+    public function firstLetter(string $firstname,string $lastname):string
+    {
+        $f = ucfirst(substr($firstname,0,1));
+        $l = ucfirst(substr($lastname,0,1));
+        return "$f $l";
     }
 }
