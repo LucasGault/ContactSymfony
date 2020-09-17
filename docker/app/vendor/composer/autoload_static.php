@@ -64,10 +64,7 @@ class ComposerStaticInit3cab7308c848a2887bb68fb6ec6ee4bc
             'Symfony\\Component\\Console\\' => 26,
             'Symfony\\Component\\Config\\' => 25,
             'Symfony\\Component\\Cache\\' => 24,
-<<<<<<< HEAD
-=======
             'Symfony\\Component\\Asset\\' => 24,
->>>>>>> emma
             'Symfony\\Bundle\\TwigBundle\\' => 26,
             'Symfony\\Bundle\\MakerBundle\\' => 27,
             'Symfony\\Bundle\\FrameworkBundle\\' => 31,
