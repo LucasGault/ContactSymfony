@@ -117,12 +117,9 @@
     "psy/psysh": {
         "version": "v0.10.4"
     },
-<<<<<<< HEAD
-=======
     "symfony/asset": {
         "version": "v5.1.5"
     },
->>>>>>> emma
     "symfony/cache": {
         "version": "v5.1.5"
     },
@@ -312,12 +309,9 @@
     "theofidry/psysh-bundle": {
         "version": "4.3.0"
     },
-<<<<<<< HEAD
-=======
     "twbs/bootstrap": {
         "version": "v4.5.2"
     },
->>>>>>> emma
     "twig/twig": {
         "version": "v3.0.5"
     },

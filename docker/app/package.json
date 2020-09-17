@@ -1,9 +1,4 @@
 {
-<<<<<<< HEAD
-  "devDependencies": {
-    "bootstrap": "^4.5.2"
-  }
-=======
     "devDependencies": {
         "@symfony/webpack-encore": "^0.30.0",
         "core-js": "^3.0.0",
@@ -18,5 +13,4 @@
         "watch": "encore dev --watch",
         "build": "encore production --progress"
     }
->>>>>>> emma
 }

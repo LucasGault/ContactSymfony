@@ -1952,8 +1952,6 @@ return array(
     'Symfony\\Bundle\\TwigBundle\\DependencyInjection\\TwigExtension' => $vendorDir . '/symfony/twig-bundle/DependencyInjection/TwigExtension.php',
     'Symfony\\Bundle\\TwigBundle\\TemplateIterator' => $vendorDir . '/symfony/twig-bundle/TemplateIterator.php',
     'Symfony\\Bundle\\TwigBundle\\TwigBundle' => $vendorDir . '/symfony/twig-bundle/TwigBundle.php',
-<<<<<<< HEAD
-=======
     'Symfony\\Component\\Asset\\Context\\ContextInterface' => $vendorDir . '/symfony/asset/Context/ContextInterface.php',
     'Symfony\\Component\\Asset\\Context\\NullContext' => $vendorDir . '/symfony/asset/Context/NullContext.php',
     'Symfony\\Component\\Asset\\Context\\RequestStackContext' => $vendorDir . '/symfony/asset/Context/RequestStackContext.php',
@@ -1970,7 +1968,6 @@ return array(
     'Symfony\\Component\\Asset\\VersionStrategy\\RemoteJsonManifestVersionStrategy' => $vendorDir . '/symfony/asset/VersionStrategy/RemoteJsonManifestVersionStrategy.php',
     'Symfony\\Component\\Asset\\VersionStrategy\\StaticVersionStrategy' => $vendorDir . '/symfony/asset/VersionStrategy/StaticVersionStrategy.php',
     'Symfony\\Component\\Asset\\VersionStrategy\\VersionStrategyInterface' => $vendorDir . '/symfony/asset/VersionStrategy/VersionStrategyInterface.php',
->>>>>>> emma
     'Symfony\\Component\\Cache\\Adapter\\AbstractAdapter' => $vendorDir . '/symfony/cache/Adapter/AbstractAdapter.php',
     'Symfony\\Component\\Cache\\Adapter\\AbstractTagAwareAdapter' => $vendorDir . '/symfony/cache/Adapter/AbstractTagAwareAdapter.php',
     'Symfony\\Component\\Cache\\Adapter\\AdapterInterface' => $vendorDir . '/symfony/cache/Adapter/AdapterInterface.php',
@@ -2872,8 +2869,6 @@ return array(
     'Symfony\\Polyfill\\Mbstring\\Mbstring' => $vendorDir . '/symfony/polyfill-mbstring/Mbstring.php',
     'Symfony\\Polyfill\\Php73\\Php73' => $vendorDir . '/symfony/polyfill-php73/Php73.php',
     'Symfony\\Polyfill\\Php80\\Php80' => $vendorDir . '/symfony/polyfill-php80/Php80.php',
-<<<<<<< HEAD
-=======
     'Symfony\\WebpackEncoreBundle\\Asset\\EntrypointLookup' => $vendorDir . '/symfony/webpack-encore-bundle/src/Asset/EntrypointLookup.php',
     'Symfony\\WebpackEncoreBundle\\Asset\\EntrypointLookupCollection' => $vendorDir . '/symfony/webpack-encore-bundle/src/Asset/EntrypointLookupCollection.php',
     'Symfony\\WebpackEncoreBundle\\Asset\\EntrypointLookupCollectionInterface' => $vendorDir . '/symfony/webpack-encore-bundle/src/Asset/EntrypointLookupCollectionInterface.php',
@@ -2889,7 +2884,6 @@ return array(
     'Symfony\\WebpackEncoreBundle\\Exception\\UndefinedBuildException' => $vendorDir . '/symfony/webpack-encore-bundle/src/Exception/UndefinedBuildException.php',
     'Symfony\\WebpackEncoreBundle\\Twig\\EntryFilesTwigExtension' => $vendorDir . '/symfony/webpack-encore-bundle/src/Twig/EntryFilesTwigExtension.php',
     'Symfony\\WebpackEncoreBundle\\WebpackEncoreBundle' => $vendorDir . '/symfony/webpack-encore-bundle/src/WebpackEncoreBundle.php',
->>>>>>> emma
     'Twig\\Cache\\CacheInterface' => $vendorDir . '/twig/twig/src/Cache/CacheInterface.php',
     'Twig\\Cache\\FilesystemCache' => $vendorDir . '/twig/twig/src/Cache/FilesystemCache.php',
     'Twig\\Cache\\NullCache' => $vendorDir . '/twig/twig/src/Cache/NullCache.php',

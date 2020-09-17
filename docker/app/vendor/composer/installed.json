@@ -2112,8 +2112,6 @@
         ]
     },
     {
-<<<<<<< HEAD
-=======
         "name": "symfony/asset",
         "version": "v5.1.5",
         "version_normalized": "5.1.5.0",
@@ -2187,7 +2185,6 @@
         ]
     },
     {
->>>>>>> emma
         "name": "symfony/cache",
         "version": "v5.1.5",
         "version_normalized": "5.1.5.0",
@@ -3913,11 +3910,6 @@
             "php": ">=5.3.3"
         },
         "suggest": {
-<<<<<<< HEAD
-            "ext-intl": "For best performance"
-        },
-        "time": "2020-07-14T12:35:20+00:00",
-=======
             "ext-apcu": "For best performance of the system caches",
             "symfony/console": "For using the console commands",
             "symfony/form": "For using forms",
@@ -4120,7 +4112,6 @@
             "symfony/dependency-injection": ""
         },
         "time": "2020-09-02T08:15:18+00:00",
->>>>>>> emma
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -4134,11 +4125,7 @@
         "installation-source": "dist",
         "autoload": {
             "psr-4": {
-<<<<<<< HEAD
-                "Symfony\\Polyfill\\Intl\\Normalizer\\": ""
-=======
                 "Symfony\\Component\\HttpKernel\\": ""
->>>>>>> emma
             },
             "files": [
                 "bootstrap.php"
@@ -4161,8 +4148,6 @@
                 "homepage": "https://symfony.com/contributors"
             }
         ],
-<<<<<<< HEAD
-=======
         "description": "Symfony HttpKernel Component",
         "homepage": "https://symfony.com",
         "funding": [
@@ -4447,7 +4432,6 @@
                 "homepage": "https://symfony.com/contributors"
             }
         ],
->>>>>>> emma
         "description": "Symfony polyfill for intl's Normalizer class and related functions",
         "homepage": "https://symfony.com",
         "keywords": [
@@ -5695,8 +5679,6 @@
         ]
     },
     {
-<<<<<<< HEAD
-=======
         "name": "twbs/bootstrap",
         "version": "v4.5.2",
         "version_normalized": "4.5.2.0",
@@ -5756,7 +5738,6 @@
         ]
     },
     {
->>>>>>> emma
         "name": "twig/twig",
         "version": "v3.0.5",
         "version_normalized": "3.0.5.0",
