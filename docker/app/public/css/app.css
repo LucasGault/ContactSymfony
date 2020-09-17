@@ -34,10 +34,10 @@ h1{
     margin-left:10%;
 }
 .card {
-    border: 1px solid #d8b011;
+    border: 1px solid #34b9a8;
 }
 .card-header {
-    background-color: #ffcc00;
+    background-color: #34b9a8;
     color :white;
     height: 40px;
     padding-left:10%;
@@ -47,4 +47,5 @@ h1{
     height: 30px; 
     padding-left:10%;
     padding-top:3px;
+    background-color:whitesmoke;
 }
