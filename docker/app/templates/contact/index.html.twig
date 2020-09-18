@@ -68,7 +68,7 @@
             </div>
         </nav>
     </header>
-
+    
 <div class="page" style="margin:5%">
     <div class="container">
         {% for contact in contacts %} 
@@ -79,7 +79,7 @@
                         <h5 class="card-title">{{contact.firstname}} {{contact.lastname}}</h5>
                     </div> 
                     <div class="card-body">
-                        <span> 0{{contact.phonenumber}} </span>
+                        <span> {{contact.phonenumber}} </span>
                     </div>
                 </div>
             </div>

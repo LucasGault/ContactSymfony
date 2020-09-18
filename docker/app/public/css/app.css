@@ -1,6 +1,7 @@
 body{
     margin:auto;
-    background-image:url(blue.jpg);
+    background-image:url(bg.png);
+    background-size: cover;
 }
 
 
@@ -34,10 +35,10 @@ h1{
     margin-left:10%;
 }
 .card {
-    border: 1px solid #34b9a8;
+    border: 1px solid #4f8a8b;
 }
 .card-header {
-    background-color: #34b9a8;
+    background-color: #222831;
     color :white;
     height: 40px;
     padding-left:10%;
