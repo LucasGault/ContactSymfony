@@ -13,10 +13,7 @@
       <parameter key="DoctrineBundle">Doctrine\Bundle\DoctrineBundle\DoctrineBundle</parameter>
       <parameter key="DoctrineMigrationsBundle">Doctrine\Bundle\MigrationsBundle\DoctrineMigrationsBundle</parameter>
       <parameter key="PsyshBundle">Fidry\PsyshBundle\PsyshBundle</parameter>
-<<<<<<< HEAD
-=======
       <parameter key="WebpackEncoreBundle">Symfony\WebpackEncoreBundle\WebpackEncoreBundle</parameter>
->>>>>>> emma
     </parameter>
     <parameter key="kernel.bundles_metadata" type="collection">
       <parameter key="FrameworkBundle" type="collection">
@@ -43,13 +40,10 @@
         <parameter key="path">/var/www/project/vendor/theofidry/psysh-bundle/src</parameter>
         <parameter key="namespace">Fidry\PsyshBundle</parameter>
       </parameter>
-<<<<<<< HEAD
-=======
       <parameter key="WebpackEncoreBundle" type="collection">
         <parameter key="path">/var/www/project/vendor/symfony/webpack-encore-bundle/src</parameter>
         <parameter key="namespace">Symfony\WebpackEncoreBundle</parameter>
       </parameter>
->>>>>>> emma
     </parameter>
     <parameter key="kernel.charset">UTF-8</parameter>
     <parameter key="kernel.container_class">App_KernelDevDebugContainer</parameter>
@@ -194,7 +188,13 @@
       <call method="setContainer">
         <argument type="service" id=".service_locator.g9CqTPp.App\Controller\ContactController"/>
       </call>
-<<<<<<< HEAD
+    </service>
+    <service id="App\Controller\UserController" class="App\Controller\UserController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.g9CqTPp.App\Controller\UserController"/>
+      </call>
     </service>
     <service id="App\Repository\ContactRepository" class="App\Repository\ContactRepository" autowire="true" autoconfigure="true">
       <tag name="doctrine.repository_service"/>
@@ -202,12 +202,6 @@
     </service>
     <service id="App\Twig\AppExtension" class="App\Twig\AppExtension" autowire="true" autoconfigure="true">
       <tag name="twig.extension"/>
-=======
-    </service>
-    <service id="App\Repository\ContactRepository" class="App\Repository\ContactRepository" autowire="true" autoconfigure="true">
-      <tag name="doctrine.repository_service"/>
-      <argument type="service" id="doctrine"/>
->>>>>>> emma
     </service>
     <service id="argument_metadata_factory" class="Symfony\Component\HttpKernel\ControllerMetadata\ArgumentMetadataFactory" public="false"/>
     <service id="response_listener" class="Symfony\Component\HttpKernel\EventListener\ResponseListener" public="false">
@@ -302,12 +296,9 @@
         <argument key="debug.stopwatch" type="service" id="debug.stopwatch" on-invalid="ignore_uninitialized"/>
         <argument key="debug.event_dispatcher" type="service" id="debug.event_dispatcher" on-invalid="ignore_uninitialized"/>
         <argument key="doctrine" type="service" id="doctrine" on-invalid="ignore_uninitialized"/>
-<<<<<<< HEAD
-=======
         <argument key="webpack_encore.tag_renderer" type="service" id="webpack_encore.tag_renderer" on-invalid="ignore_uninitialized"/>
         <argument key="cache.webpack_encore" type="service" id="cache.webpack_encore" on-invalid="ignore_uninitialized"/>
         <argument key="webpack_encore.entrypoint_lookup[_default]" type="service" id="webpack_encore.entrypoint_lookup[_default]" on-invalid="ignore_uninitialized"/>
->>>>>>> emma
       </argument>
       <argument type="collection">
         <argument key="cache.app" type="collection">
@@ -337,8 +328,6 @@
         <argument key="doctrine" type="collection">
           <argument>reset</argument>
         </argument>
-<<<<<<< HEAD
-=======
         <argument key="webpack_encore.tag_renderer" type="collection">
           <argument>reset</argument>
         </argument>
@@ -348,7 +337,6 @@
         <argument key="webpack_encore.entrypoint_lookup[_default]" type="collection">
           <argument>reset</argument>
         </argument>
->>>>>>> emma
       </argument>
     </service>
     <service id="reverse_container" class="Symfony\Component\DependencyInjection\ReverseContainer" public="false">
@@ -487,10 +475,7 @@
         <argument>cache.doctrine.orm.default.metadata</argument>
         <argument>cache.doctrine.orm.default.result</argument>
         <argument>cache.doctrine.orm.default.query</argument>
-<<<<<<< HEAD
-=======
         <argument>cache.webpack_encore</argument>
->>>>>>> emma
       </argument>
       <call method="setName">
         <argument>cache:pool:list</argument>
@@ -814,10 +799,7 @@
         <argument key="cache.doctrine.orm.default.metadata" type="service" id="cache.doctrine.orm.default.metadata" on-invalid="ignore_uninitialized"/>
         <argument key="cache.doctrine.orm.default.result" type="service" id="cache.doctrine.orm.default.result" on-invalid="ignore_uninitialized"/>
         <argument key="cache.doctrine.orm.default.query" type="service" id="cache.doctrine.orm.default.query" on-invalid="ignore_uninitialized"/>
-<<<<<<< HEAD
-=======
         <argument key="cache.webpack_encore" type="service" id="cache.webpack_encore" on-invalid="ignore_uninitialized"/>
->>>>>>> emma
       </argument>
     </service>
     <service id=".cache_connection.GD_MSZC" class="Symfony\Component\Cache\Adapter\AbstractAdapter" public="false">
@@ -958,8 +940,6 @@
     <service id="debug.stopwatch" class="Symfony\Component\Stopwatch\Stopwatch">
       <tag name="kernel.reset" method="reset"/>
       <argument>true</argument>
-<<<<<<< HEAD
-=======
     </service>
     <service id="debug.event_dispatcher" class="Symfony\Component\HttpKernel\Debug\TraceableEventDispatcher" public="false">
       <tag name="container.hot_path"/>
@@ -977,239 +957,6 @@
         </argument>
         <argument>0</argument>
       </call>
-      <call method="addListener">
-        <argument>kernel.response</argument>
-        <argument type="collection">
-          <argument type="service" id="response_listener"/>
-          <argument>onKernelResponse</argument>
-        </argument>
-        <argument>0</argument>
-      </call>
-      <call method="addListener">
-        <argument>kernel.response</argument>
-        <argument type="collection">
-          <argument type="service" id="streamed_response_listener"/>
-          <argument>onKernelResponse</argument>
-        </argument>
-        <argument>-1024</argument>
-      </call>
-      <call method="addListener">
-        <argument>kernel.request</argument>
-        <argument type="collection">
-          <argument type="service" id="locale_listener"/>
-          <argument>setDefaultLocale</argument>
-        </argument>
-        <argument>100</argument>
-      </call>
-      <call method="addListener">
-        <argument>kernel.request</argument>
-        <argument type="collection">
-          <argument type="service" id="locale_listener"/>
-          <argument>onKernelRequest</argument>
-        </argument>
-        <argument>16</argument>
-      </call>
-      <call method="addListener">
-        <argument>kernel.finish_request</argument>
-        <argument type="collection">
-          <argument type="service" id="locale_listener"/>
-          <argument>onKernelFinishRequest</argument>
-        </argument>
-        <argument>0</argument>
-      </call>
-      <call method="addListener">
-        <argument>kernel.request</argument>
-        <argument type="collection">
-          <argument type="service" id="validate_request_listener"/>
-          <argument>onKernelRequest</argument>
-        </argument>
-        <argument>256</argument>
-      </call>
-      <call method="addListener">
-        <argument>kernel.response</argument>
-        <argument type="collection">
-          <argument type="service" id="disallow_search_engine_index_response_listener"/>
-          <argument>onResponse</argument>
-        </argument>
-        <argument>-255</argument>
-      </call>
-      <call method="addListener">
-        <argument>kernel.controller_arguments</argument>
-        <argument type="collection">
-          <argument type="service" id="exception_listener"/>
-          <argument>onControllerArguments</argument>
-        </argument>
-        <argument>0</argument>
-      </call>
-      <call method="addListener">
-        <argument>kernel.exception</argument>
-        <argument type="collection">
-          <argument type="service" id="exception_listener"/>
-          <argument>logKernelException</argument>
-        </argument>
-        <argument>0</argument>
-      </call>
-      <call method="addListener">
-        <argument>kernel.exception</argument>
-        <argument type="collection">
-          <argument type="service" id="exception_listener"/>
-          <argument>onKernelException</argument>
-        </argument>
-        <argument>-128</argument>
-      </call>
-      <call method="addListener">
-        <argument>kernel.response</argument>
-        <argument type="collection">
-          <argument type="service" id="exception_listener"/>
-          <argument>removeCspHeader</argument>
-        </argument>
-        <argument>-128</argument>
-      </call>
-      <call method="addListener">
-        <argument>kernel.request</argument>
-        <argument type="collection">
-          <argument type="service" id="locale_aware_listener"/>
-          <argument>onKernelRequest</argument>
-        </argument>
-        <argument>15</argument>
-      </call>
-      <call method="addListener">
-        <argument>kernel.finish_request</argument>
-        <argument type="collection">
-          <argument type="service" id="locale_aware_listener"/>
-          <argument>onKernelFinishRequest</argument>
-        </argument>
-        <argument>-15</argument>
-      </call>
-      <call method="addListener">
-        <argument>console.error</argument>
-        <argument type="collection">
-          <argument type="service" id="console.error_listener"/>
-          <argument>onConsoleError</argument>
-        </argument>
-        <argument>-128</argument>
-      </call>
-      <call method="addListener">
-        <argument>console.terminate</argument>
-        <argument type="collection">
-          <argument type="service" id="console.error_listener"/>
-          <argument>onConsoleTerminate</argument>
-        </argument>
-        <argument>-128</argument>
-      </call>
-      <call method="addListener">
-        <argument>console.error</argument>
-        <argument type="collection">
-          <argument type="service" id="console.suggest_missing_package_subscriber"/>
-          <argument>onConsoleError</argument>
-        </argument>
-        <argument>0</argument>
-      </call>
-      <call method="addListener">
-        <argument>kernel.request</argument>
-        <argument type="collection">
-          <argument type="service" id="session_listener"/>
-          <argument>onKernelRequest</argument>
-        </argument>
-        <argument>128</argument>
-      </call>
-      <call method="addListener">
-        <argument>kernel.response</argument>
-        <argument type="collection">
-          <argument type="service" id="session_listener"/>
-          <argument>onKernelResponse</argument>
-        </argument>
-        <argument>-1000</argument>
-      </call>
-      <call method="addListener">
-        <argument>kernel.finish_request</argument>
-        <argument type="collection">
-          <argument type="service" id="session_listener"/>
-          <argument>onFinishRequest</argument>
-        </argument>
-        <argument>0</argument>
-      </call>
-      <call method="addListener">
-        <argument>kernel.request</argument>
-        <argument type="collection">
-          <argument type="service" id="debug.debug_handlers_listener"/>
-          <argument>configure</argument>
-        </argument>
-        <argument>2048</argument>
-      </call>
-      <call method="addListener">
-        <argument>console.command</argument>
-        <argument type="collection">
-          <argument type="service" id="debug.debug_handlers_listener"/>
-          <argument>configure</argument>
-        </argument>
-        <argument>2048</argument>
-      </call>
-      <call method="addListener">
-        <argument>kernel.request</argument>
-        <argument type="collection">
-          <argument type="service" id="router_listener"/>
-          <argument>onKernelRequest</argument>
-        </argument>
-        <argument>32</argument>
-      </call>
-      <call method="addListener">
-        <argument>kernel.finish_request</argument>
-        <argument type="collection">
-          <argument type="service" id="router_listener"/>
-          <argument>onKernelFinishRequest</argument>
-        </argument>
-        <argument>0</argument>
-      </call>
-      <call method="addListener">
-        <argument>kernel.exception</argument>
-        <argument type="collection">
-          <argument type="service" id="router_listener"/>
-          <argument>onKernelException</argument>
-        </argument>
-        <argument>-64</argument>
-      </call>
-      <call method="addListener">
-        <argument>console.error</argument>
-        <argument type="collection">
-          <argument type="service" id="maker.console_error_listener"/>
-          <argument>onConsoleError</argument>
-        </argument>
-        <argument>0</argument>
-      </call>
-      <call method="addListener">
-        <argument>console.terminate</argument>
-        <argument type="collection">
-          <argument type="service" id="maker.console_error_listener"/>
-          <argument>onConsoleTerminate</argument>
-        </argument>
-        <argument>0</argument>
-      </call>
-    </service>
-    <service id="debug.controller_resolver" class="Symfony\Component\HttpKernel\Controller\TraceableControllerResolver" public="false">
-      <tag name="monolog.logger" channel="request"/>
-      <argument type="service" id="debug.controller_resolver.inner"/>
-      <argument type="service" id="debug.stopwatch"/>
-    </service>
-    <service id="debug.argument_resolver" class="Symfony\Component\HttpKernel\Controller\TraceableArgumentResolver" public="false">
-      <argument type="service" id="debug.argument_resolver.inner"/>
-      <argument type="service" id="debug.stopwatch"/>
-    </service>
-    <service id=".2_int~UG5sIwe" class="int" public="false">
-      <factory service="router.request_context" method="getHttpsPort"/>
-    </service>
-    <service id=".1_int~UG5sIwe" class="int" public="false">
-      <factory service="router.request_context" method="getHttpPort"/>
->>>>>>> emma
-    </service>
-    <service id="debug.event_dispatcher" class="Symfony\Component\HttpKernel\Debug\TraceableEventDispatcher" public="false">
-      <tag name="container.hot_path"/>
-      <tag name="monolog.logger" channel="event"/>
-      <tag name="kernel.reset" method="reset"/>
-      <argument type="service" id="debug.event_dispatcher.inner"/>
-      <argument type="service" id="debug.stopwatch"/>
-      <argument type="service" id="logger" on-invalid="null"/>
-      <argument type="service" id="request_stack" on-invalid="null"/>
       <call method="addListener">
         <argument>kernel.response</argument>
         <argument type="collection">
@@ -1819,6 +1566,9 @@
       </call>
       <call method="addExtension">
         <argument type="service" id="twig.extension.httpfoundation"/>
+      </call>
+      <call method="addExtension">
+        <argument type="service" id="App\Twig\AppExtension"/>
       </call>
       <call method="addExtension">
         <argument type="service" id="twig.extension.debug"/>
@@ -2515,1036 +2265,6 @@
         <argument>psysh</argument>
       </call>
     </service>
-<<<<<<< HEAD
-    <service id="routing.loader.directory" class="Symfony\Component\Routing\Loader\DirectoryLoader" public="false">
-      <tag name="routing.loader"/>
-      <argument type="service" id="file_locator"/>
-    </service>
-    <service id="routing.loader.container" class="Symfony\Component\Routing\Loader\ContainerLoader" public="false">
-      <tag name="routing.loader"/>
-      <argument type="service" id=".service_locator.51fe2Cf"/>
-    </service>
-    <service id="routing.loader" class="Symfony\Bundle\FrameworkBundle\Routing\DelegatingLoader" public="true">
-      <argument type="service" id="routing.resolver"/>
-      <argument type="collection">
-        <argument key="utf8">true</argument>
-      </argument>
-      <argument type="collection"/>
-    </service>
-    <service id="router.default" class="Symfony\Bundle\FrameworkBundle\Routing\Router" public="false">
-      <tag name="monolog.logger" channel="router"/>
-      <tag name="container.service_subscriber" id="routing.loader"/>
-      <argument type="service" id=".service_locator.vEnWPsK.router.default"/>
-      <argument>kernel::loadRoutes</argument>
-      <argument type="collection">
-        <argument key="cache_dir">/var/www/project/var/cache/dev</argument>
-        <argument key="debug">true</argument>
-        <argument key="generator_class">Symfony\Component\Routing\Generator\CompiledUrlGenerator</argument>
-        <argument key="generator_dumper_class">Symfony\Component\Routing\Generator\Dumper\CompiledUrlGeneratorDumper</argument>
-        <argument key="matcher_class">Symfony\Bundle\FrameworkBundle\Routing\RedirectableCompiledUrlMatcher</argument>
-        <argument key="matcher_dumper_class">Symfony\Component\Routing\Matcher\Dumper\CompiledUrlMatcherDumper</argument>
-        <argument key="strict_requirements">true</argument>
-        <argument key="resource_type">service</argument>
-      </argument>
-      <argument type="service" id="router.request_context" on-invalid="ignore"/>
-      <argument type="service" id="parameter_bag" on-invalid="ignore"/>
-      <argument type="service" id="logger" on-invalid="ignore"/>
-      <argument>en</argument>
-      <call method="setConfigCacheFactory">
-        <argument type="service" id="config_cache_factory"/>
-      </call>
-      <call method="addExpressionLanguageProvider">
-        <argument type="service" id="router.expression_language_provider"/>
-      </call>
-    </service>
-    <service id="router.request_context" class="Symfony\Component\Routing\RequestContext" public="false">
-      <argument></argument>
-      <argument>localhost</argument>
-      <argument>http</argument>
-      <argument>80</argument>
-      <argument>443</argument>
-      <call method="setParameter">
-        <argument>_functions</argument>
-        <argument type="service" id="router.expression_language_provider" on-invalid="ignore"/>
-      </call>
-      <factory class="Symfony\Component\Routing\RequestContext" method="fromUri"/>
-    </service>
-    <service id="router.expression_language_provider" class="Symfony\Component\Routing\Matcher\ExpressionLanguageProvider" public="false">
-      <tag name="routing.expression_language_provider"/>
-      <argument type="service" id=".service_locator.t1zFPXA"/>
-    </service>
-    <service id="router.cache_warmer" class="Symfony\Bundle\FrameworkBundle\CacheWarmer\RouterCacheWarmer" public="false">
-      <tag name="container.service_subscriber" id="router"/>
-      <tag name="kernel.cache_warmer"/>
-      <argument type="service" id=".service_locator.LHmLVnd.router.cache_warmer"/>
-    </service>
-    <service id="router_listener" class="Symfony\Component\HttpKernel\EventListener\RouterListener" public="false">
-      <tag name="kernel.event_subscriber"/>
-      <tag name="monolog.logger" channel="request"/>
-      <tag name="container.hot_path"/>
-      <tag name="container.hot_path"/>
-      <argument type="service" id="router.default"/>
-      <argument type="service" id="request_stack"/>
-      <argument type="service" id="router.request_context" on-invalid="ignore"/>
-      <argument type="service" id="logger" on-invalid="ignore"/>
-      <argument>/var/www/project</argument>
-      <argument>true</argument>
-    </service>
-    <service id="Symfony\Bundle\FrameworkBundle\Controller\RedirectController" class="Symfony\Bundle\FrameworkBundle\Controller\RedirectController" public="true">
-      <argument type="service" id="router.default"/>
-      <argument type="service" id=".1_int~UG5sIwe"/>
-      <argument type="service" id=".2_int~UG5sIwe"/>
-    </service>
-    <service id="Symfony\Bundle\FrameworkBundle\Controller\TemplateController" class="Symfony\Bundle\FrameworkBundle\Controller\TemplateController" public="true">
-      <argument type="service" id="twig" on-invalid="ignore"/>
-    </service>
-    <service id="routing.loader.annotation" class="Symfony\Bundle\FrameworkBundle\Routing\AnnotatedRouteControllerLoader" public="false">
-      <tag name="routing.loader" priority="-10"/>
-      <argument type="service" id="annotations.cached_reader"/>
-    </service>
-    <service id="routing.loader.annotation.directory" class="Symfony\Component\Routing\Loader\AnnotationDirectoryLoader" public="false">
-      <tag name="routing.loader" priority="-10"/>
-      <argument type="service" id="file_locator"/>
-      <argument type="service" id="routing.loader.annotation"/>
-    </service>
-    <service id="routing.loader.annotation.file" class="Symfony\Component\Routing\Loader\AnnotationFileLoader" public="false">
-      <tag name="routing.loader" priority="-10"/>
-      <argument type="service" id="file_locator"/>
-      <argument type="service" id="routing.loader.annotation"/>
-    </service>
-    <service id=".2_PhpArrayAdapter~kiRdisZ" class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" public="false">
-      <argument>/var/www/project/var/cache/dev/annotations.php</argument>
-      <argument type="service" id="cache.annotations"/>
-      <factory class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" method="create"/>
-    </service>
-    <service id=".1_ArrayCache~kiRdisZ" class="Doctrine\Common\Cache\ArrayCache" public="false"/>
-    <service id="annotations.reader" class="Doctrine\Common\Annotations\AnnotationReader" public="false">
-      <call method="addGlobalIgnoredName">
-        <argument>required</argument>
-        <argument type="service" id="annotations.dummy_registry"/>
-      </call>
-    </service>
-    <service id="annotations.dummy_registry" class="Doctrine\Common\Annotations\AnnotationRegistry" public="false">
-      <call method="registerUniqueLoader">
-        <argument>class_exists</argument>
-      </call>
-    </service>
-    <service id="annotations.cached_reader" class="Doctrine\Common\Annotations\CachedReader" public="false">
-      <tag name="annotations.cached_reader"/>
-      <argument type="service" id="annotations.reader"/>
-      <argument type="service" id=".1_ArrayCache~kiRdisZ"/>
-      <argument>true</argument>
-      <property name="cacheProviderBackup" type="service" id="annotations.cache"/>
-    </service>
-    <service id="annotations.filesystem_cache" class="Doctrine\Common\Cache\FilesystemCache" public="false">
-      <argument></argument>
-    </service>
-    <service id="annotations.cache_warmer" class="Symfony\Bundle\FrameworkBundle\CacheWarmer\AnnotationsCacheWarmer" public="false">
-      <tag name="kernel.cache_warmer"/>
-      <argument type="service" id="annotations.reader"/>
-      <argument>/var/www/project/var/cache/dev/annotations.php</argument>
-      <argument>#^Symfony\\(?:Component\\HttpKernel\\|Bundle\\FrameworkBundle\\Controller\\(?!.*Controller$))#</argument>
-      <argument>true</argument>
-    </service>
-    <service id="annotations.cache" class="Symfony\Component\Cache\DoctrineProvider" public="false">
-      <argument type="service" id=".2_PhpArrayAdapter~kiRdisZ"/>
-    </service>
-    <service id="secrets.vault" class="Symfony\Bundle\FrameworkBundle\Secrets\SodiumVault">
-      <tag name="container.env_var_loader"/>
-      <argument>/var/www/project/config/secrets/dev</argument>
-      <argument type="service" id="secrets.decryption_key" on-invalid="ignore"/>
-    </service>
-    <service id="secrets.decryption_key" class="Symfony\Component\String\LazyString" public="false">
-      <argument type="service" id="container.getenv"/>
-      <argument>base64:default::SYMFONY_DECRYPTION_SECRET</argument>
-      <factory class="Symfony\Component\String\LazyString" method="fromCallable"/>
-    </service>
-    <service id="secrets.local_vault" class="Symfony\Bundle\FrameworkBundle\Secrets\DotenvVault">
-      <argument>/var/www/project/.env.dev.local</argument>
-    </service>
-    <service id="maker.file_manager" class="Symfony\Bundle\MakerBundle\FileManager" public="false">
-      <argument type="service" id="filesystem"/>
-      <argument type="service" id="maker.autoloader_util"/>
-      <argument type="service" id="maker.file_link_formatter"/>
-      <argument>/var/www/project</argument>
-      <argument>/var/www/project/templates</argument>
-    </service>
-    <service id="maker.autoloader_finder" class="Symfony\Bundle\MakerBundle\Util\ComposerAutoloaderFinder" public="false">
-      <argument>App</argument>
-    </service>
-    <service id="maker.autoloader_util" class="Symfony\Bundle\MakerBundle\Util\AutoloaderUtil" public="false">
-      <argument type="service" id="maker.autoloader_finder"/>
-    </service>
-    <service id="maker.file_link_formatter" class="Symfony\Bundle\MakerBundle\Util\MakerFileLinkFormatter" public="false">
-      <argument type="service" id="debug.file_link_formatter" on-invalid="ignore"/>
-    </service>
-    <service id="maker.event_registry" class="Symfony\Bundle\MakerBundle\EventRegistry" public="false">
-      <argument type="service" id="debug.event_dispatcher"/>
-    </service>
-    <service id="maker.console_error_listener" class="Symfony\Bundle\MakerBundle\Event\ConsoleErrorSubscriber" public="false">
-      <tag name="kernel.event_subscriber"/>
-      <tag name="container.no_preload"/>
-    </service>
-    <service id="maker.doctrine_helper" class="Symfony\Bundle\MakerBundle\Doctrine\DoctrineHelper" public="false">
-      <argument>App\Entity</argument>
-      <argument type="service" id="doctrine" on-invalid="ignore"/>
-    </service>
-    <service id="maker.auto_command.abstract" class="Symfony\Bundle\MakerBundle\Command\MakerCommand" public="false" abstract="true">
-      <argument></argument>
-      <argument type="service" id="maker.file_manager"/>
-      <argument type="service" id="maker.generator"/>
-    </service>
-    <service id="maker.generator" class="Symfony\Bundle\MakerBundle\Generator" public="false">
-      <argument type="service" id="maker.file_manager"/>
-      <argument>App</argument>
-    </service>
-    <service id="maker.entity_class_generator" class="Symfony\Bundle\MakerBundle\Doctrine\EntityClassGenerator" public="false">
-      <argument type="service" id="maker.generator"/>
-      <argument type="service" id="maker.doctrine_helper"/>
-      <call method="setMangerRegistryClassName">
-        <argument>Doctrine\Persistence\ManagerRegistry</argument>
-      </call>
-    </service>
-    <service id="maker.user_class_builder" class="Symfony\Bundle\MakerBundle\Security\UserClassBuilder" public="false"/>
-    <service id="maker.security_config_updater" class="Symfony\Bundle\MakerBundle\Security\SecurityConfigUpdater" public="false"/>
-    <service id="maker.renderer.form_type_renderer" class="Symfony\Bundle\MakerBundle\Renderer\FormTypeRenderer" public="false">
-      <argument type="service" id="maker.generator"/>
-    </service>
-    <service id="maker.maker.make_authenticator" class="Symfony\Bundle\MakerBundle\Maker\MakeAuthenticator" public="false">
-      <tag name="maker.command"/>
-      <argument type="service" id="maker.file_manager"/>
-      <argument type="service" id="maker.security_config_updater"/>
-      <argument type="service" id="maker.generator"/>
-      <argument type="service" id="maker.doctrine_helper"/>
-    </service>
-    <service id="maker.maker.make_command" class="Symfony\Bundle\MakerBundle\Maker\MakeCommand" public="false">
-      <tag name="maker.command"/>
-    </service>
-    <service id="maker.maker.make_controller" class="Symfony\Bundle\MakerBundle\Maker\MakeController" public="false">
-      <tag name="maker.command"/>
-      <argument type="service" id="maker.file_manager"/>
-    </service>
-    <service id="maker.maker.make_crud" class="Symfony\Bundle\MakerBundle\Maker\MakeCrud" public="false">
-      <tag name="maker.command"/>
-      <argument type="service" id="maker.doctrine_helper"/>
-      <argument type="service" id="maker.renderer.form_type_renderer"/>
-    </service>
-    <service id="maker.maker.make_docker_database" class="Symfony\Bundle\MakerBundle\Maker\MakeDockerDatabase" public="false">
-      <tag name="maker.command"/>
-      <argument type="service" id="maker.file_manager"/>
-    </service>
-    <service id="maker.maker.make_entity" class="Symfony\Bundle\MakerBundle\Maker\MakeEntity" public="false">
-      <tag name="maker.command"/>
-      <argument type="service" id="maker.file_manager"/>
-      <argument type="service" id="maker.doctrine_helper"/>
-      <argument>/var/www/project</argument>
-      <argument type="service" id="maker.generator"/>
-      <argument type="service" id="maker.entity_class_generator"/>
-    </service>
-    <service id="maker.maker.make_fixtures" class="Symfony\Bundle\MakerBundle\Maker\MakeFixtures" public="false">
-      <tag name="maker.command"/>
-    </service>
-    <service id="maker.maker.make_form" class="Symfony\Bundle\MakerBundle\Maker\MakeForm" public="false">
-      <tag name="maker.command"/>
-      <argument type="service" id="maker.doctrine_helper"/>
-      <argument type="service" id="maker.renderer.form_type_renderer"/>
-    </service>
-    <service id="maker.maker.make_functional_test" class="Symfony\Bundle\MakerBundle\Maker\MakeFunctionalTest" public="false">
-      <tag name="maker.command"/>
-    </service>
-    <service id="maker.maker.make_message" class="Symfony\Bundle\MakerBundle\Maker\MakeMessage" public="false">
-      <tag name="maker.command"/>
-      <argument type="service" id="maker.file_manager"/>
-    </service>
-    <service id="maker.maker.make_messenger_middleware" class="Symfony\Bundle\MakerBundle\Maker\MakeMessengerMiddleware" public="false">
-      <tag name="maker.command"/>
-    </service>
-    <service id="maker.maker.make_registration_form" class="Symfony\Bundle\MakerBundle\Maker\MakeRegistrationForm" public="false">
-      <tag name="maker.command"/>
-      <argument type="service" id="maker.file_manager"/>
-      <argument type="service" id="maker.renderer.form_type_renderer"/>
-      <argument type="service" id="router.default"/>
-    </service>
-    <service id="maker.maker.make_reset_password" class="Symfony\Bundle\MakerBundle\Maker\MakeResetPassword" public="false">
-      <tag name="maker.command"/>
-      <argument type="service" id="maker.file_manager"/>
-      <argument type="service" id="maker.doctrine_helper"/>
-      <argument type="service" id="maker.entity_class_generator"/>
-    </service>
-    <service id="maker.maker.make_serializer_encoder" class="Symfony\Bundle\MakerBundle\Maker\MakeSerializerEncoder" public="false">
-      <tag name="maker.command"/>
-    </service>
-    <service id="maker.maker.make_serializer_normalizer" class="Symfony\Bundle\MakerBundle\Maker\MakeSerializerNormalizer" public="false">
-      <tag name="maker.command"/>
-    </service>
-    <service id="maker.maker.make_subscriber" class="Symfony\Bundle\MakerBundle\Maker\MakeSubscriber" public="false">
-      <tag name="maker.command"/>
-      <argument type="service" id="maker.event_registry"/>
-    </service>
-    <service id="maker.maker.make_twig_extension" class="Symfony\Bundle\MakerBundle\Maker\MakeTwigExtension" public="false">
-      <tag name="maker.command"/>
-    </service>
-    <service id="maker.maker.make_unit_test" class="Symfony\Bundle\MakerBundle\Maker\MakeUnitTest" public="false">
-      <tag name="maker.command"/>
-    </service>
-    <service id="maker.maker.make_validator" class="Symfony\Bundle\MakerBundle\Maker\MakeValidator" public="false">
-      <tag name="maker.command"/>
-    </service>
-    <service id="maker.maker.make_voter" class="Symfony\Bundle\MakerBundle\Maker\MakeVoter" public="false">
-      <tag name="maker.command"/>
-    </service>
-    <service id="maker.maker.make_user" class="Symfony\Bundle\MakerBundle\Maker\MakeUser" public="false">
-      <tag name="maker.command"/>
-      <argument type="service" id="maker.file_manager"/>
-      <argument type="service" id="maker.user_class_builder"/>
-      <argument type="service" id="maker.security_config_updater"/>
-      <argument type="service" id="maker.doctrine_helper"/>
-      <argument type="service" id="maker.entity_class_generator"/>
-    </service>
-    <service id="maker.maker.make_migration" class="Symfony\Bundle\MakerBundle\Maker\MakeMigration" public="false">
-      <tag name="maker.command"/>
-      <argument>/var/www/project</argument>
-    </service>
-    <service id=".1_~ugminRX" public="false">
-      <argument type="service" id="request_stack"/>
-      <argument>true</argument>
-      <factory class="Symfony\Bridge\Twig\ErrorRenderer\TwigErrorRenderer" method="isDebug"/>
-    </service>
-    <service id="twig" class="Twig\Environment" public="true">
-      <tag name="container.preload" class="Twig\Cache\FilesystemCache"/>
-      <tag name="container.preload" class="Twig\Extension\CoreExtension"/>
-      <tag name="container.preload" class="Twig\Extension\EscaperExtension"/>
-      <tag name="container.preload" class="Twig\Extension\OptimizerExtension"/>
-      <tag name="container.preload" class="Twig\Extension\StagingExtension"/>
-      <tag name="container.preload" class="Twig\ExtensionSet"/>
-      <tag name="container.preload" class="Twig\Template"/>
-      <tag name="container.preload" class="Twig\TemplateWrapper"/>
-      <argument type="service" id="twig.loader.native_filesystem"/>
-      <argument type="collection">
-        <argument key="autoescape">name</argument>
-        <argument key="cache">/var/www/project/var/cache/dev/twig</argument>
-        <argument key="charset">UTF-8</argument>
-        <argument key="debug">true</argument>
-        <argument key="strict_variables">true</argument>
-      </argument>
-      <call method="addExtension">
-        <argument type="service" id="twig.extension.profiler"/>
-      </call>
-      <call method="addExtension">
-        <argument type="service" id="twig.extension.trans"/>
-      </call>
-      <call method="addExtension">
-        <argument type="service" id="twig.extension.code"/>
-      </call>
-      <call method="addExtension">
-        <argument type="service" id="twig.extension.routing"/>
-      </call>
-      <call method="addExtension">
-        <argument type="service" id="twig.extension.yaml"/>
-      </call>
-      <call method="addExtension">
-        <argument type="service" id="twig.extension.debug.stopwatch"/>
-      </call>
-      <call method="addExtension">
-        <argument type="service" id="twig.extension.expression"/>
-      </call>
-      <call method="addExtension">
-        <argument type="service" id="twig.extension.httpkernel"/>
-      </call>
-      <call method="addExtension">
-        <argument type="service" id="twig.extension.httpfoundation"/>
-      </call>
-      <call method="addExtension">
-        <argument type="service" id="App\Twig\AppExtension"/>
-      </call>
-      <call method="addExtension">
-        <argument type="service" id="twig.extension.debug"/>
-      </call>
-      <call method="addExtension">
-        <argument type="service" id="doctrine.twig.doctrine_extension"/>
-      </call>
-      <call method="addGlobal">
-        <argument>app</argument>
-        <argument type="service" id="twig.app_variable"/>
-      </call>
-      <call method="addRuntimeLoader">
-        <argument type="service" id="twig.runtime_loader"/>
-      </call>
-      <configurator service="twig.configurator.environment" method="configure"/>
-    </service>
-    <service id="twig.app_variable" class="Symfony\Bridge\Twig\AppVariable" public="false">
-      <call method="setEnvironment">
-        <argument>dev</argument>
-      </call>
-      <call method="setDebug">
-        <argument>true</argument>
-      </call>
-      <call method="setRequestStack">
-        <argument type="service" id="request_stack" on-invalid="ignore"/>
-      </call>
-    </service>
-    <service id="twig.template_iterator" class="Symfony\Bundle\TwigBundle\TemplateIterator" public="false">
-      <argument type="service" id="kernel"/>
-      <argument type="collection"/>
-      <argument>/var/www/project/templates</argument>
-    </service>
-    <service id="twig.template_cache_warmer" class="Symfony\Bundle\TwigBundle\CacheWarmer\TemplateCacheWarmer" public="false">
-      <tag name="kernel.cache_warmer"/>
-      <tag name="container.service_subscriber" id="twig"/>
-      <argument type="service" id=".service_locator.VF.njwi.twig.template_cache_warmer"/>
-      <argument type="service" id="twig.template_iterator"/>
-    </service>
-    <service id="twig.loader.native_filesystem" class="Twig\Loader\FilesystemLoader" public="false">
-      <tag name="twig.loader"/>
-      <argument type="collection"/>
-      <argument>/var/www/project</argument>
-      <call method="addPath">
-        <argument>/var/www/project/vendor/doctrine/doctrine-bundle/Resources/views</argument>
-        <argument>Doctrine</argument>
-      </call>
-      <call method="addPath">
-        <argument>/var/www/project/vendor/doctrine/doctrine-bundle/Resources/views</argument>
-        <argument>!Doctrine</argument>
-      </call>
-      <call method="addPath">
-        <argument>/var/www/project/templates</argument>
-      </call>
-    </service>
-    <service id="twig.loader.chain" class="Twig\Loader\ChainLoader" public="false"/>
-    <service id="twig.extension.profiler" class="Symfony\Bridge\Twig\Extension\ProfilerExtension" public="false">
-      <tag name="twig.extension"/>
-      <argument type="service" id="twig.profile"/>
-      <argument type="service" id="debug.stopwatch" on-invalid="null"/>
-    </service>
-    <service id="twig.profile" class="Twig\Profiler\Profile" public="false"/>
-    <service id="data_collector.twig" class="Symfony\Bridge\Twig\DataCollector\TwigDataCollector" public="false">
-      <tag name="data_collector" template="@WebProfiler/Collector/twig.html.twig" id="twig" priority="257"/>
-      <argument type="service" id="twig.profile"/>
-      <argument type="service" id="twig"/>
-    </service>
-    <service id="twig.extension.trans" class="Symfony\Bridge\Twig\Extension\TranslationExtension" public="false">
-      <tag name="twig.extension"/>
-      <argument>null</argument>
-    </service>
-    <service id="twig.extension.code" class="Symfony\Bridge\Twig\Extension\CodeExtension" public="false">
-      <tag name="twig.extension"/>
-      <argument type="service" id="debug.file_link_formatter" on-invalid="ignore"/>
-      <argument>/var/www/project</argument>
-      <argument>UTF-8</argument>
-    </service>
-    <service id="twig.extension.routing" class="Symfony\Bridge\Twig\Extension\RoutingExtension" public="false">
-      <tag name="twig.extension"/>
-      <argument type="service" id="router.default"/>
-    </service>
-    <service id="twig.extension.yaml" class="Symfony\Bridge\Twig\Extension\YamlExtension" public="false">
-      <tag name="twig.extension"/>
-    </service>
-    <service id="twig.extension.debug.stopwatch" class="Symfony\Bridge\Twig\Extension\StopwatchExtension" public="false">
-      <tag name="twig.extension"/>
-      <argument type="service" id="debug.stopwatch" on-invalid="ignore"/>
-      <argument>true</argument>
-    </service>
-    <service id="twig.extension.expression" class="Symfony\Bridge\Twig\Extension\ExpressionExtension" public="false">
-      <tag name="twig.extension"/>
-    </service>
-    <service id="twig.extension.httpkernel" class="Symfony\Bridge\Twig\Extension\HttpKernelExtension" public="false">
-      <tag name="twig.extension"/>
-    </service>
-    <service id="twig.runtime.httpkernel" class="Symfony\Bridge\Twig\Extension\HttpKernelRuntime" public="false">
-      <tag name="twig.runtime"/>
-      <argument type="service" id="fragment.handler"/>
-    </service>
-    <service id="twig.extension.httpfoundation" class="Symfony\Bridge\Twig\Extension\HttpFoundationExtension" public="false">
-      <tag name="twig.extension"/>
-      <argument type="service" id="url_helper"/>
-    </service>
-    <service id="twig.extension.debug" class="Twig\Extension\DebugExtension" public="false">
-      <tag name="twig.extension"/>
-    </service>
-    <service id="twig.extension.weblink" class="Symfony\Bridge\Twig\Extension\WebLinkExtension" public="false">
-      <argument type="service" id="request_stack"/>
-    </service>
-    <service id="twig.configurator.environment" class="Symfony\Bundle\TwigBundle\DependencyInjection\Configurator\EnvironmentConfigurator" public="false">
-      <argument>F j, Y H:i</argument>
-      <argument>%d days</argument>
-      <argument>null</argument>
-      <argument>0</argument>
-      <argument>.</argument>
-      <argument>,</argument>
-    </service>
-    <service id="twig.runtime_loader" class="Twig\RuntimeLoader\ContainerRuntimeLoader" public="false">
-      <argument type="service" id=".service_locator.oee5UUU"/>
-    </service>
-    <service id="twig.error_renderer.html" class="Symfony\Bridge\Twig\ErrorRenderer\TwigErrorRenderer" public="false">
-      <argument type="service" id="twig"/>
-      <argument type="service" id="error_handler.error_renderer.html"/>
-      <argument type="service" id=".1_~ugminRX"/>
-    </service>
-    <service id="twig.command.debug" class="Symfony\Bridge\Twig\Command\DebugCommand" public="false">
-      <tag name="console.command" command="debug:twig"/>
-      <tag name="container.no_preload"/>
-      <argument type="service" id="twig"/>
-      <argument>/var/www/project</argument>
-      <argument>%kernel.bundles_metadata%</argument>
-      <argument>/var/www/project/templates</argument>
-      <argument type="service" id="debug.file_link_formatter" on-invalid="null"/>
-      <call method="setName">
-        <argument>debug:twig</argument>
-      </call>
-    </service>
-    <service id="twig.command.lint" class="Symfony\Bundle\TwigBundle\Command\LintCommand" public="false">
-      <tag name="console.command" command="lint:twig"/>
-      <tag name="container.no_preload"/>
-      <argument type="service" id="twig"/>
-      <call method="setName">
-        <argument>lint:twig</argument>
-      </call>
-    </service>
-    <service id="doctrine.dbal.logger.chain" class="Doctrine\DBAL\Logging\LoggerChain" public="false" abstract="true">
-      <call method="addLogger">
-        <argument type="service" id="doctrine.dbal.logger"/>
-      </call>
-    </service>
-    <service id="doctrine.dbal.logger.profiling" class="Doctrine\DBAL\Logging\DebugStack" public="false" abstract="true"/>
-    <service id="doctrine.dbal.logger.backtrace" class="Doctrine\Bundle\DoctrineBundle\Dbal\Logging\BacktraceLogger" public="false" abstract="true"/>
-    <service id="doctrine.dbal.logger" class="Symfony\Bridge\Doctrine\Logger\DbalLogger" public="false">
-      <tag name="monolog.logger" channel="doctrine"/>
-      <argument type="service" id="logger" on-invalid="null"/>
-      <argument type="service" id="debug.stopwatch" on-invalid="null"/>
-    </service>
-    <service id="data_collector.doctrine" class="Doctrine\Bundle\DoctrineBundle\DataCollector\DoctrineDataCollector" public="false">
-      <tag name="data_collector" template="@Doctrine/Collector/db.html.twig" id="db" priority="250"/>
-      <argument type="service" id="doctrine"/>
-      <argument>true</argument>
-      <call method="addLogger">
-        <argument>default</argument>
-        <argument type="service" id="doctrine.dbal.logger.profiling.default"/>
-      </call>
-    </service>
-    <service id="doctrine.dbal.connection_factory" class="Doctrine\Bundle\DoctrineBundle\ConnectionFactory">
-      <argument type="collection"/>
-    </service>
-    <service id="doctrine.dbal.connection" class="Doctrine\DBAL\Connection" abstract="true">
-      <factory service="doctrine.dbal.connection_factory" method="createConnection"/>
-    </service>
-    <service id="doctrine.dbal.connection.event_manager" class="Symfony\Bridge\Doctrine\ContainerAwareEventManager" public="false" abstract="true">
-      <argument type="service" id="service_container"/>
-    </service>
-    <service id="doctrine.dbal.connection.configuration" class="Doctrine\DBAL\Configuration" public="false" abstract="true"/>
-    <service id="doctrine" class="Doctrine\Bundle\DoctrineBundle\Registry" public="true">
-      <tag name="kernel.reset" method="reset"/>
-      <argument type="service" id="service_container"/>
-      <argument>%doctrine.connections%</argument>
-      <argument>%doctrine.entity_managers%</argument>
-      <argument>default</argument>
-      <argument>default</argument>
-    </service>
-    <service id="doctrine.twig.doctrine_extension" class="Doctrine\Bundle\DoctrineBundle\Twig\DoctrineExtension" public="false">
-      <tag name="twig.extension"/>
-    </service>
-    <service id="doctrine.dbal.schema_asset_filter_manager" class="Doctrine\Bundle\DoctrineBundle\Dbal\SchemaAssetsFilterManager" public="false" abstract="true"/>
-    <service id="doctrine.dbal.well_known_schema_asset_filter" class="Doctrine\Bundle\DoctrineBundle\Dbal\BlacklistSchemaAssetFilter" public="false">
-      <argument type="collection"/>
-    </service>
-    <service id="doctrine.database_create_command" class="Doctrine\Bundle\DoctrineBundle\Command\CreateDatabaseDoctrineCommand">
-      <tag name="console.command" command="doctrine:database:create"/>
-      <tag name="container.no_preload"/>
-      <argument type="service" id="doctrine"/>
-      <call method="setName">
-        <argument>doctrine:database:create</argument>
-      </call>
-    </service>
-    <service id="doctrine.database_drop_command" class="Doctrine\Bundle\DoctrineBundle\Command\DropDatabaseDoctrineCommand">
-      <tag name="console.command" command="doctrine:database:drop"/>
-      <tag name="container.no_preload"/>
-      <argument type="service" id="doctrine"/>
-      <call method="setName">
-        <argument>doctrine:database:drop</argument>
-      </call>
-    </service>
-    <service id="doctrine.database_import_command" class="Doctrine\Bundle\DoctrineBundle\Command\Proxy\ImportDoctrineCommand">
-      <tag name="console.command" command="doctrine:database:import"/>
-      <tag name="container.no_preload"/>
-      <call method="setName">
-        <argument>doctrine:database:import</argument>
-      </call>
-    </service>
-    <service id="doctrine.query_sql_command" class="Doctrine\Bundle\DoctrineBundle\Command\Proxy\RunSqlDoctrineCommand">
-      <tag name="console.command" command="doctrine:query:sql"/>
-      <tag name="container.no_preload"/>
-      <call method="setName">
-        <argument>doctrine:query:sql</argument>
-      </call>
-    </service>
-    <service id="doctrine.dbal.default_connection.configuration" class="Doctrine\DBAL\Configuration" public="false">
-      <call method="setSQLLogger">
-        <argument type="service" id="doctrine.dbal.logger.chain.default"/>
-      </call>
-    </service>
-    <service id="doctrine.dbal.logger.profiling.default" class="Doctrine\DBAL\Logging\DebugStack" public="false"/>
-    <service id="doctrine.dbal.logger.chain.default" class="Doctrine\DBAL\Logging\LoggerChain" public="false">
-      <call method="addLogger">
-        <argument type="service" id="doctrine.dbal.logger"/>
-      </call>
-      <call method="addLogger">
-        <argument type="service" id="doctrine.dbal.logger.profiling.default"/>
-      </call>
-    </service>
-    <service id="doctrine.dbal.default_connection.event_manager" class="Symfony\Bridge\Doctrine\ContainerAwareEventManager" public="false">
-      <argument type="service" id=".service_locator.xxFfgCP"/>
-      <call method="addEventSubscriber">
-        <argument type="service" id="doctrine.orm.listeners.pdo_cache_adapter_doctrine_schema_subscriber"/>
-      </call>
-      <call method="addEventListener">
-        <argument type="collection">
-          <argument>loadClassMetadata</argument>
-        </argument>
-        <argument>doctrine.orm.default_listeners.attach_entity_listeners</argument>
-      </call>
-    </service>
-    <service id="doctrine.dbal.default_connection" class="Doctrine\DBAL\Connection" public="true">
-      <argument type="collection">
-        <argument key="url">%env(resolve:DATABASE_URL)%</argument>
-        <argument key="host">localhost</argument>
-        <argument key="port">null</argument>
-        <argument key="user">root</argument>
-        <argument key="password">null</argument>
-        <argument key="driver">pdo_mysql</argument>
-        <argument key="driverOptions" type="collection"/>
-        <argument key="defaultTableOptions" type="collection"/>
-      </argument>
-      <argument type="service" id="doctrine.dbal.default_connection.configuration"/>
-      <argument type="service" id="doctrine.dbal.default_connection.event_manager"/>
-      <argument type="collection"/>
-      <factory service="doctrine.dbal.connection_factory" method="createConnection"/>
-    </service>
-    <service id=".1_ServiceLocator~WHd2_hd" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
-      <argument type="collection"/>
-    </service>
-    <service id="doctrine.orm.proxy_cache_warmer" class="Symfony\Bridge\Doctrine\CacheWarmer\ProxyCacheWarmer" public="false">
-      <tag name="kernel.cache_warmer"/>
-      <argument type="service" id="doctrine"/>
-    </service>
-    <service id="form.type_guesser.doctrine" class="Symfony\Bridge\Doctrine\Form\DoctrineOrmTypeGuesser">
-      <tag name="form.type_guesser"/>
-      <argument type="service" id="doctrine"/>
-    </service>
-    <service id="form.type.entity" class="Symfony\Bridge\Doctrine\Form\Type\EntityType">
-      <tag name="form.type" alias="entity"/>
-      <argument type="service" id="doctrine"/>
-    </service>
-    <service id="doctrine.orm.configuration" class="Doctrine\ORM\Configuration" public="false" abstract="true"/>
-    <service id="doctrine.orm.entity_manager.abstract" class="Doctrine\ORM\EntityManager" lazy="true" abstract="true">
-      <factory class="Doctrine\ORM\EntityManager" method="create"/>
-    </service>
-    <service id="doctrine.orm.container_repository_factory" class="Doctrine\Bundle\DoctrineBundle\Repository\ContainerRepositoryFactory" public="false">
-      <argument type="service" id=".service_locator.yeGm_XR"/>
-    </service>
-    <service id="doctrine.orm.manager_configurator.abstract" class="Doctrine\Bundle\DoctrineBundle\ManagerConfigurator" abstract="true">
-      <argument type="collection"/>
-      <argument type="collection"/>
-    </service>
-    <service id="doctrine.orm.validator.unique" class="Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntityValidator">
-      <tag name="validator.constraint_validator" alias="doctrine.orm.validator.unique"/>
-      <argument type="service" id="doctrine"/>
-    </service>
-    <service id="doctrine.orm.validator_initializer" class="Symfony\Bridge\Doctrine\Validator\DoctrineInitializer">
-      <tag name="validator.initializer"/>
-      <argument type="service" id="doctrine"/>
-    </service>
-    <service id="doctrine.orm.security.user.provider" class="Symfony\Bridge\Doctrine\Security\User\EntityUserProvider" public="false" abstract="true">
-      <argument type="service" id="doctrine"/>
-    </service>
-    <service id="doctrine.orm.listeners.resolve_target_entity" class="Doctrine\ORM\Tools\ResolveTargetEntityListener" public="false"/>
-    <service id="doctrine.orm.listeners.pdo_cache_adapter_doctrine_schema_subscriber" class="Symfony\Bridge\Doctrine\SchemaListener\PdoCacheAdapterDoctrineSchemaSubscriber">
-      <tag name="doctrine.event_subscriber"/>
-      <argument type="collection"/>
-    </service>
-    <service id="doctrine.orm.naming_strategy.default" class="Doctrine\ORM\Mapping\DefaultNamingStrategy" public="false"/>
-    <service id="doctrine.orm.naming_strategy.underscore" class="Doctrine\ORM\Mapping\UnderscoreNamingStrategy" public="false"/>
-    <service id="doctrine.orm.naming_strategy.underscore_number_aware" class="Doctrine\ORM\Mapping\UnderscoreNamingStrategy" public="false">
-      <argument>0</argument>
-      <argument>true</argument>
-    </service>
-    <service id="doctrine.orm.quote_strategy.default" class="Doctrine\ORM\Mapping\DefaultQuoteStrategy" public="false"/>
-    <service id="doctrine.orm.quote_strategy.ansi" class="Doctrine\ORM\Mapping\AnsiQuoteStrategy" public="false"/>
-    <service id="doctrine.cache_clear_metadata_command" class="Doctrine\Bundle\DoctrineBundle\Command\Proxy\ClearMetadataCacheDoctrineCommand">
-      <tag name="console.command" command="doctrine:cache:clear-metadata"/>
-      <tag name="container.no_preload"/>
-      <call method="setName">
-        <argument>doctrine:cache:clear-metadata</argument>
-      </call>
-    </service>
-    <service id="doctrine.cache_clear_query_cache_command" class="Doctrine\Bundle\DoctrineBundle\Command\Proxy\ClearQueryCacheDoctrineCommand">
-      <tag name="console.command" command="doctrine:cache:clear-query"/>
-      <tag name="container.no_preload"/>
-      <call method="setName">
-        <argument>doctrine:cache:clear-query</argument>
-      </call>
-    </service>
-    <service id="doctrine.cache_clear_result_command" class="Doctrine\Bundle\DoctrineBundle\Command\Proxy\ClearResultCacheDoctrineCommand">
-      <tag name="console.command" command="doctrine:cache:clear-result"/>
-      <tag name="container.no_preload"/>
-      <call method="setName">
-        <argument>doctrine:cache:clear-result</argument>
-      </call>
-    </service>
-    <service id="doctrine.cache_collection_region_command" class="Doctrine\Bundle\DoctrineBundle\Command\Proxy\CollectionRegionDoctrineCommand">
-      <tag name="console.command" command="doctrine:cache:clear-collection-region"/>
-      <tag name="container.no_preload"/>
-      <call method="setName">
-        <argument>doctrine:cache:clear-collection-region</argument>
-      </call>
-    </service>
-    <service id="doctrine.mapping_convert_command" class="Doctrine\Bundle\DoctrineBundle\Command\Proxy\ConvertMappingDoctrineCommand">
-      <tag name="console.command" command="doctrine:mapping:convert"/>
-      <tag name="container.no_preload"/>
-      <call method="setName">
-        <argument>doctrine:mapping:convert</argument>
-      </call>
-    </service>
-    <service id="doctrine.schema_create_command" class="Doctrine\Bundle\DoctrineBundle\Command\Proxy\CreateSchemaDoctrineCommand">
-      <tag name="console.command" command="doctrine:schema:create"/>
-      <tag name="container.no_preload"/>
-      <call method="setName">
-        <argument>doctrine:schema:create</argument>
-      </call>
-    </service>
-    <service id="doctrine.schema_drop_command" class="Doctrine\Bundle\DoctrineBundle\Command\Proxy\DropSchemaDoctrineCommand">
-      <tag name="console.command" command="doctrine:schema:drop"/>
-      <tag name="container.no_preload"/>
-      <call method="setName">
-        <argument>doctrine:schema:drop</argument>
-      </call>
-    </service>
-    <service id="doctrine.ensure_production_settings_command" class="Doctrine\Bundle\DoctrineBundle\Command\Proxy\EnsureProductionSettingsDoctrineCommand">
-      <tag name="console.command" command="doctrine:ensure-production-settings"/>
-      <tag name="container.no_preload"/>
-      <call method="setName">
-        <argument>doctrine:ensure-production-settings</argument>
-      </call>
-    </service>
-    <service id="doctrine.clear_entity_region_command" class="Doctrine\Bundle\DoctrineBundle\Command\Proxy\EntityRegionCacheDoctrineCommand">
-      <tag name="console.command" command="doctrine:cache:clear-entity-region"/>
-      <tag name="container.no_preload"/>
-      <call method="setName">
-        <argument>doctrine:cache:clear-entity-region</argument>
-      </call>
-    </service>
-    <service id="doctrine.mapping_info_command" class="Doctrine\Bundle\DoctrineBundle\Command\Proxy\InfoDoctrineCommand">
-      <tag name="console.command" command="doctrine:mapping:info"/>
-      <tag name="container.no_preload"/>
-      <call method="setName">
-        <argument>doctrine:mapping:info</argument>
-      </call>
-    </service>
-    <service id="doctrine.clear_query_region_command" class="Doctrine\Bundle\DoctrineBundle\Command\Proxy\QueryRegionCacheDoctrineCommand">
-      <tag name="console.command" command="doctrine:cache:clear-query-region"/>
-      <tag name="container.no_preload"/>
-      <call method="setName">
-        <argument>doctrine:cache:clear-query-region</argument>
-      </call>
-    </service>
-    <service id="doctrine.query_dql_command" class="Doctrine\Bundle\DoctrineBundle\Command\Proxy\RunDqlDoctrineCommand">
-      <tag name="console.command" command="doctrine:query:dql"/>
-      <tag name="container.no_preload"/>
-      <call method="setName">
-        <argument>doctrine:query:dql</argument>
-      </call>
-    </service>
-    <service id="doctrine.schema_update_command" class="Doctrine\Bundle\DoctrineBundle\Command\Proxy\UpdateSchemaDoctrineCommand">
-      <tag name="console.command" command="doctrine:schema:update"/>
-      <tag name="container.no_preload"/>
-      <call method="setName">
-        <argument>doctrine:schema:update</argument>
-      </call>
-    </service>
-    <service id="doctrine.schema_validate_command" class="Doctrine\Bundle\DoctrineBundle\Command\Proxy\ValidateSchemaCommand">
-      <tag name="console.command" command="doctrine:schema:validate"/>
-      <tag name="container.no_preload"/>
-      <call method="setName">
-        <argument>doctrine:schema:validate</argument>
-      </call>
-    </service>
-    <service id="doctrine.mapping_import_command" class="Doctrine\Bundle\DoctrineBundle\Command\ImportMappingDoctrineCommand">
-      <tag name="console.command" command="doctrine:mapping:import"/>
-      <tag name="container.no_preload"/>
-      <argument type="service" id="doctrine"/>
-      <argument>%kernel.bundles%</argument>
-      <call method="setName">
-        <argument>doctrine:mapping:import</argument>
-      </call>
-    </service>
-    <service id="doctrine.orm.default_configuration" class="Doctrine\ORM\Configuration" public="false">
-      <call method="setEntityNamespaces">
-        <argument type="collection">
-          <argument key="App">App\Entity</argument>
-        </argument>
-      </call>
-      <call method="setMetadataCacheImpl">
-        <argument type="service" id="doctrine.orm.cache.provider.cache.doctrine.orm.default.metadata"/>
-      </call>
-      <call method="setQueryCacheImpl">
-        <argument type="service" id="doctrine.orm.cache.provider.cache.doctrine.orm.default.query"/>
-      </call>
-      <call method="setResultCacheImpl">
-        <argument type="service" id="doctrine.orm.cache.provider.cache.doctrine.orm.default.result"/>
-      </call>
-      <call method="setMetadataDriverImpl">
-        <argument type="service" id="doctrine.orm.default_metadata_driver"/>
-      </call>
-      <call method="setProxyDir">
-        <argument>/var/www/project/var/cache/dev/doctrine/orm/Proxies</argument>
-      </call>
-      <call method="setProxyNamespace">
-        <argument>Proxies</argument>
-      </call>
-      <call method="setAutoGenerateProxyClasses">
-        <argument>true</argument>
-      </call>
-      <call method="setClassMetadataFactoryName">
-        <argument>Doctrine\ORM\Mapping\ClassMetadataFactory</argument>
-      </call>
-      <call method="setDefaultRepositoryClassName">
-        <argument>Doctrine\ORM\EntityRepository</argument>
-      </call>
-      <call method="setNamingStrategy">
-        <argument type="service" id="doctrine.orm.naming_strategy.underscore_number_aware"/>
-      </call>
-      <call method="setQuoteStrategy">
-        <argument type="service" id="doctrine.orm.quote_strategy.default"/>
-      </call>
-      <call method="setEntityListenerResolver">
-        <argument type="service" id="doctrine.orm.default_entity_listener_resolver"/>
-      </call>
-      <call method="setRepositoryFactory">
-        <argument type="service" id="doctrine.orm.container_repository_factory"/>
-      </call>
-    </service>
-    <service id="doctrine.orm.default_annotation_metadata_driver" class="Doctrine\ORM\Mapping\Driver\AnnotationDriver" public="false">
-      <argument type="service" id="annotations.cached_reader"/>
-      <argument type="collection">
-        <argument>/var/www/project/src/Entity</argument>
-      </argument>
-    </service>
-    <service id="doctrine.orm.default_metadata_driver" class="Doctrine\Persistence\Mapping\Driver\MappingDriverChain" public="false">
-      <call method="addDriver">
-        <argument type="service" id="doctrine.orm.default_annotation_metadata_driver"/>
-        <argument>App\Entity</argument>
-      </call>
-    </service>
-    <service id="cache.doctrine.orm.default.metadata" class="Symfony\Component\Cache\Adapter\ArrayAdapter">
-      <tag name="cache.pool"/>
-    </service>
-    <service id="doctrine.orm.cache.provider.cache.doctrine.orm.default.metadata" class="Symfony\Component\Cache\DoctrineProvider">
-      <argument type="service" id="cache.doctrine.orm.default.metadata"/>
-    </service>
-    <service id="cache.doctrine.orm.default.result" class="Symfony\Component\Cache\Adapter\ArrayAdapter">
-      <tag name="cache.pool"/>
-    </service>
-    <service id="doctrine.orm.cache.provider.cache.doctrine.orm.default.result" class="Symfony\Component\Cache\DoctrineProvider">
-      <argument type="service" id="cache.doctrine.orm.default.result"/>
-    </service>
-    <service id="cache.doctrine.orm.default.query" class="Symfony\Component\Cache\Adapter\ArrayAdapter">
-      <tag name="cache.pool"/>
-    </service>
-    <service id="doctrine.orm.cache.provider.cache.doctrine.orm.default.query" class="Symfony\Component\Cache\DoctrineProvider">
-      <argument type="service" id="cache.doctrine.orm.default.query"/>
-    </service>
-    <service id="doctrine.orm.default_entity_listener_resolver" class="Doctrine\Bundle\DoctrineBundle\Mapping\ContainerEntityListenerResolver">
-      <argument type="service" id="service_container"/>
-    </service>
-    <service id="doctrine.orm.default_listeners.attach_entity_listeners" class="Doctrine\ORM\Tools\AttachEntityListenersListener">
-      <tag name="doctrine.event_listener" event="loadClassMetadata"/>
-    </service>
-    <service id="doctrine.orm.default_manager_configurator" class="Doctrine\Bundle\DoctrineBundle\ManagerConfigurator">
-      <argument type="collection"/>
-      <argument type="collection"/>
-    </service>
-    <service id="doctrine.orm.default_entity_manager" class="Doctrine\ORM\EntityManager" public="true" lazy="true">
-      <tag name="container.preload" class="Doctrine\ORM\Proxy\Autoloader"/>
-      <argument type="service" id="doctrine.dbal.default_connection"/>
-      <argument type="service" id="doctrine.orm.default_configuration"/>
-      <factory class="Doctrine\ORM\EntityManager" method="create"/>
-      <configurator service="doctrine.orm.default_manager_configurator" method="configure"/>
-    </service>
-    <service id="doctrine.orm.default_entity_manager.validator_loader" class="Symfony\Bridge\Doctrine\Validator\DoctrineLoader">
-      <tag name="validator.auto_mapper" priority="-100"/>
-      <argument type="service" id="doctrine.orm.default_entity_manager"/>
-    </service>
-    <service id="doctrine.migrations.dependency_factory" class="Doctrine\Migrations\DependencyFactory" public="false">
-      <argument type="service" id="doctrine.migrations.configuration_loader"/>
-      <argument type="service" id="doctrine.migrations.em_loader"/>
-      <argument type="service" id="logger" on-invalid="null"/>
-      <factory class="Doctrine\Migrations\DependencyFactory" method="fromEntityManager"/>
-    </service>
-    <service id="doctrine.migrations.configuration_loader" class="Doctrine\Migrations\Configuration\Migration\ExistingConfiguration" public="false">
-      <argument type="service" id="doctrine.migrations.configuration"/>
-    </service>
-    <service id="doctrine.migrations.connection_loader" class="Doctrine\Migrations\Configuration\Connection\ExistingConnection" public="false"/>
-    <service id="doctrine.migrations.em_loader" class="Doctrine\Migrations\Configuration\EntityManager\ExistingEntityManager" public="false">
-      <argument type="service" id="doctrine.orm.default_entity_manager"/>
-    </service>
-    <service id="doctrine.migrations.configuration" class="Doctrine\Migrations\Configuration\Configuration" public="false">
-      <call method="addMigrationsDirectory">
-        <argument>DoctrineMigrations</argument>
-        <argument>/var/www/project/migrations</argument>
-      </call>
-      <call method="setAllOrNothing">
-        <argument>false</argument>
-      </call>
-      <call method="setCheckDatabasePlatform">
-        <argument>true</argument>
-      </call>
-      <call method="setMetadataStorageConfiguration">
-        <argument type="service" id="doctrine.migrations.storage.table_storage"/>
-      </call>
-    </service>
-    <service id="doctrine_migrations.diff_command" class="Doctrine\Migrations\Tools\Console\Command\DiffCommand">
-      <tag name="console.command" command="doctrine:migrations:diff"/>
-      <tag name="container.no_preload"/>
-      <argument type="service" id="doctrine.migrations.dependency_factory"/>
-      <argument>doctrine:migrations:diff</argument>
-      <call method="setName">
-        <argument>doctrine:migrations:diff</argument>
-      </call>
-    </service>
-    <service id="doctrine_migrations.sync_metadata_command" class="Doctrine\Migrations\Tools\Console\Command\SyncMetadataCommand">
-      <tag name="console.command" command="doctrine:migrations:sync-metadata-storage"/>
-      <tag name="container.no_preload"/>
-      <argument type="service" id="doctrine.migrations.dependency_factory"/>
-      <argument>doctrine:migrations:sync-metadata-storage</argument>
-      <call method="setName">
-        <argument>doctrine:migrations:sync-metadata-storage</argument>
-      </call>
-    </service>
-    <service id="doctrine_migrations.versions_command" class="Doctrine\Migrations\Tools\Console\Command\ListCommand">
-      <tag name="console.command" command="doctrine:migrations:list"/>
-      <tag name="container.no_preload"/>
-      <argument type="service" id="doctrine.migrations.dependency_factory"/>
-      <argument>doctrine:migrations:versions</argument>
-      <call method="setName">
-        <argument>doctrine:migrations:list</argument>
-      </call>
-    </service>
-    <service id="doctrine_migrations.current_command" class="Doctrine\Migrations\Tools\Console\Command\CurrentCommand">
-      <tag name="console.command" command="doctrine:migrations:current"/>
-      <tag name="container.no_preload"/>
-      <argument type="service" id="doctrine.migrations.dependency_factory"/>
-      <argument>doctrine:migrations:current</argument>
-      <call method="setName">
-        <argument>doctrine:migrations:current</argument>
-      </call>
-    </service>
-    <service id="doctrine_migrations.dump_schema_command" class="Doctrine\Migrations\Tools\Console\Command\DumpSchemaCommand">
-      <tag name="console.command" command="doctrine:migrations:dump-schema"/>
-      <tag name="container.no_preload"/>
-      <argument type="service" id="doctrine.migrations.dependency_factory"/>
-      <argument>doctrine:migrations:dump-schema</argument>
-      <call method="setName">
-        <argument>doctrine:migrations:dump-schema</argument>
-      </call>
-    </service>
-    <service id="doctrine_migrations.execute_command" class="Doctrine\Migrations\Tools\Console\Command\ExecuteCommand">
-      <tag name="console.command" command="doctrine:migrations:execute"/>
-      <tag name="container.no_preload"/>
-      <argument type="service" id="doctrine.migrations.dependency_factory"/>
-      <argument>doctrine:migrations:execute</argument>
-      <call method="setName">
-        <argument>doctrine:migrations:execute</argument>
-      </call>
-    </service>
-    <service id="doctrine_migrations.generate_command" class="Doctrine\Migrations\Tools\Console\Command\GenerateCommand">
-      <tag name="console.command" command="doctrine:migrations:generate"/>
-      <tag name="container.no_preload"/>
-      <argument type="service" id="doctrine.migrations.dependency_factory"/>
-      <argument>doctrine:migrations:generate</argument>
-      <call method="setName">
-        <argument>doctrine:migrations:generate</argument>
-      </call>
-    </service>
-    <service id="doctrine_migrations.latest_command" class="Doctrine\Migrations\Tools\Console\Command\LatestCommand">
-      <tag name="console.command" command="doctrine:migrations:latest"/>
-      <tag name="container.no_preload"/>
-      <argument type="service" id="doctrine.migrations.dependency_factory"/>
-      <argument>doctrine:migrations:latest</argument>
-      <call method="setName">
-        <argument>doctrine:migrations:latest</argument>
-      </call>
-    </service>
-    <service id="doctrine_migrations.migrate_command" class="Doctrine\Migrations\Tools\Console\Command\MigrateCommand">
-      <tag name="console.command" command="doctrine:migrations:migrate"/>
-      <tag name="container.no_preload"/>
-      <argument type="service" id="doctrine.migrations.dependency_factory"/>
-      <argument>doctrine:migrations:migrate</argument>
-      <call method="setName">
-        <argument>doctrine:migrations:migrate</argument>
-      </call>
-    </service>
-    <service id="doctrine_migrations.rollup_command" class="Doctrine\Migrations\Tools\Console\Command\RollupCommand">
-      <tag name="console.command" command="doctrine:migrations:rollup"/>
-      <tag name="container.no_preload"/>
-      <argument type="service" id="doctrine.migrations.dependency_factory"/>
-      <argument>doctrine:migrations:rollup</argument>
-      <call method="setName">
-        <argument>doctrine:migrations:rollup</argument>
-      </call>
-    </service>
-    <service id="doctrine_migrations.status_command" class="Doctrine\Migrations\Tools\Console\Command\StatusCommand">
-      <tag name="console.command" command="doctrine:migrations:status"/>
-      <tag name="container.no_preload"/>
-      <argument type="service" id="doctrine.migrations.dependency_factory"/>
-      <argument>doctrine:migrations:status</argument>
-      <call method="setName">
-        <argument>doctrine:migrations:status</argument>
-      </call>
-    </service>
-    <service id="doctrine_migrations.up_to_date_command" class="Doctrine\Migrations\Tools\Console\Command\UpToDateCommand">
-      <tag name="console.command" command="doctrine:migrations:up-to-date"/>
-      <tag name="container.no_preload"/>
-      <argument type="service" id="doctrine.migrations.dependency_factory"/>
-      <argument>doctrine:migrations:up-to-date</argument>
-      <call method="setName">
-        <argument>doctrine:migrations:up-to-date</argument>
-      </call>
-    </service>
-    <service id="doctrine_migrations.version_command" class="Doctrine\Migrations\Tools\Console\Command\VersionCommand">
-      <tag name="console.command" command="doctrine:migrations:version"/>
-      <tag name="container.no_preload"/>
-      <argument type="service" id="doctrine.migrations.dependency_factory"/>
-      <argument>doctrine:migrations:version</argument>
-      <call method="setName">
-        <argument>doctrine:migrations:version</argument>
-      </call>
-    </service>
-    <service id="doctrine.migrations.storage.table_storage" class="Doctrine\Migrations\Metadata\Storage\TableMetadataStorageConfiguration"/>
-    <service id="Psy\Configuration" class="Psy\Configuration">
-      <call method="setHistoryFile">
-        <argument>/var/www/project/var/cache/dev/psysh_history</argument>
-      </call>
-    </service>
-    <service id="psysh.shell" class="Psy\Shell">
-      <argument type="service" id="Psy\Configuration"/>
-      <call method="setScopeVariables">
-        <argument type="collection">
-          <argument key="container" type="service" id="test.service_container"/>
-          <argument key="kernel" type="service" id="kernel"/>
-          <argument key="self" type="service" id="psysh.shell"/>
-          <argument key="parameters" type="expression">service('test.service_container').getParameterBag().all()</argument>
-        </argument>
-      </call>
-      <call method="addCommands">
-        <argument type="collection"/>
-      </call>
-    </service>
-    <service id="psysh.command.shell_command" class="Fidry\PsyshBundle\Command\PsyshCommand" public="true">
-      <tag name="console.command" command="psysh"/>
-      <tag name="container.no_preload"/>
-      <argument type="service" id="psysh.shell"/>
-      <call method="setName">
-        <argument>psysh</argument>
-      </call>
-    </service>
     <service id="psysh.facade" class="Fidry\PsyshBundle\PsyshFacade" public="true">
       <call method="setContainer">
         <argument type="service" id="test.service_container"/>
@@ -3559,357 +2279,6 @@
       <argument type="collection">
         <argument key="App\Repository\ContactRepository" type="service" id="App\Repository\ContactRepository" on-invalid="ignore_uninitialized"/>
         <argument key="App\Twig\AppExtension" type="service" id="App\Twig\AppExtension" on-invalid="ignore_uninitialized"/>
-        <argument key="Doctrine\Common\Annotations\Reader" type="service" id="annotations.cached_reader" on-invalid="ignore_uninitialized"/>
-        <argument key="Doctrine\Common\Persistence\ManagerRegistry" type="service" id="doctrine" on-invalid="ignore_uninitialized"/>
-        <argument key="Doctrine\DBAL\Connection" type="service" id="doctrine.dbal.default_connection" on-invalid="ignore_uninitialized"/>
-        <argument key="Doctrine\DBAL\Driver\Connection" type="service" id="doctrine.dbal.default_connection" on-invalid="ignore_uninitialized"/>
-        <argument key="Doctrine\ORM\EntityManagerInterface" type="service" id="doctrine.orm.default_entity_manager" on-invalid="ignore_uninitialized"/>
-        <argument key="Doctrine\Persistence\ManagerRegistry" type="service" id="doctrine" on-invalid="ignore_uninitialized"/>
-        <argument key="Psr\Cache\CacheItemPoolInterface" type="service" id="cache.app" on-invalid="ignore_uninitialized"/>
-        <argument key="Psr\Container\ContainerInterface" type="service" id="service_container" on-invalid="ignore_uninitialized"/>
-        <argument key="Psr\Container\ContainerInterface $parameterBag" type="service" id="parameter_bag" on-invalid="ignore_uninitialized"/>
-        <argument key="Psr\EventDispatcher\EventDispatcherInterface" type="service" id="debug.event_dispatcher" on-invalid="ignore_uninitialized"/>
-        <argument key="Psr\Log\LoggerInterface" type="service" id="logger" on-invalid="ignore_uninitialized"/>
-        <argument key="Psy\Configuration" type="service" id="Psy\Configuration" on-invalid="ignore_uninitialized"/>
-        <argument key="SessionHandlerInterface" type="service" id="session.handler.native_file" on-invalid="ignore_uninitialized"/>
-        <argument key="Symfony\Component\Cache\Adapter\AdapterInterface" type="service" id="cache.app" on-invalid="ignore_uninitialized"/>
-        <argument key="Symfony\Component\DependencyInjection\ContainerInterface" type="service" id="service_container" on-invalid="ignore_uninitialized"/>
-        <argument key="Symfony\Component\DependencyInjection\ParameterBag\ContainerBagInterface" type="service" id="parameter_bag" on-invalid="ignore_uninitialized"/>
-        <argument key="Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface" type="service" id="parameter_bag" on-invalid="ignore_uninitialized"/>
-        <argument key="Symfony\Component\DependencyInjection\ReverseContainer" type="service" id="reverse_container" on-invalid="ignore_uninitialized"/>
-        <argument key="Symfony\Component\EventDispatcher\EventDispatcherInterface" type="service" id="debug.event_dispatcher" on-invalid="ignore_uninitialized"/>
-        <argument key="Symfony\Component\Filesystem\Filesystem" type="service" id="filesystem" on-invalid="ignore_uninitialized"/>
-        <argument key="Symfony\Component\HttpFoundation\RequestStack" type="service" id="request_stack" on-invalid="ignore_uninitialized"/>
-        <argument key="Symfony\Component\HttpFoundation\Session\Flash\FlashBagInterface" type="service" id="session.flash_bag" on-invalid="ignore_uninitialized"/>
-        <argument key="Symfony\Component\HttpFoundation\Session\SessionInterface" type="service" id="session" on-invalid="ignore_uninitialized"/>
-        <argument key="Symfony\Component\HttpFoundation\Session\Storage\SessionStorageInterface" type="service" id="session.storage.native" on-invalid="ignore_uninitialized"/>
-        <argument key="Symfony\Component\HttpFoundation\UrlHelper" type="service" id="url_helper" on-invalid="ignore_uninitialized"/>
-        <argument key="Symfony\Component\HttpKernel\Config\FileLocator" type="service" id="file_locator" on-invalid="ignore_uninitialized"/>
-        <argument key="Symfony\Component\HttpKernel\Debug\FileLinkFormatter" type="service" id="debug.file_link_formatter" on-invalid="ignore_uninitialized"/>
-        <argument key="Symfony\Component\HttpKernel\HttpKernelInterface" type="service" id="http_kernel" on-invalid="ignore_uninitialized"/>
-        <argument key="Symfony\Component\HttpKernel\KernelInterface" type="service" id="kernel" on-invalid="ignore_uninitialized"/>
-        <argument key="Symfony\Component\HttpKernel\UriSigner" type="service" id="uri_signer" on-invalid="ignore_uninitialized"/>
-        <argument key="Symfony\Component\Routing\Generator\UrlGeneratorInterface" type="service" id="router.default" on-invalid="ignore_uninitialized"/>
-        <argument key="Symfony\Component\Routing\Matcher\UrlMatcherInterface" type="service" id="router.default" on-invalid="ignore_uninitialized"/>
-        <argument key="Symfony\Component\Routing\RequestContext" type="service" id="router.request_context" on-invalid="ignore_uninitialized"/>
-        <argument key="Symfony\Component\Routing\RequestContextAwareInterface" type="service" id="router.default" on-invalid="ignore_uninitialized"/>
-        <argument key="Symfony\Component\Routing\RouterInterface" type="service" id="router.default" on-invalid="ignore_uninitialized"/>
-        <argument key="Symfony\Component\Stopwatch\Stopwatch" type="service" id="debug.stopwatch" on-invalid="ignore_uninitialized"/>
-        <argument key="Symfony\Component\String\Slugger\SluggerInterface" type="service" id="slugger" on-invalid="ignore_uninitialized"/>
-        <argument key="Symfony\Contracts\Cache\CacheInterface" type="service" id="cache.app" on-invalid="ignore_uninitialized"/>
-        <argument key="Symfony\Contracts\Cache\TagAwareCacheInterface" type="service" id="cache.app.taggable" on-invalid="ignore_uninitialized"/>
-        <argument key="Symfony\Contracts\EventDispatcher\EventDispatcherInterface" type="service" id="debug.event_dispatcher" on-invalid="ignore_uninitialized"/>
-        <argument key="Twig\Environment" type="service" id="twig" on-invalid="ignore_uninitialized"/>
-        <argument key="Twig_Environment" type="service" id="twig" on-invalid="ignore_uninitialized"/>
-        <argument key="annotation_reader" type="service" id="annotations.cached_reader" on-invalid="ignore_uninitialized"/>
-        <argument key="annotations.cache" type="service" id="annotations.cache" on-invalid="ignore_uninitialized"/>
-        <argument key="annotations.cache_warmer" type="service" id="annotations.cache_warmer" on-invalid="ignore_uninitialized"/>
-        <argument key="annotations.cached_reader" type="service" id="annotations.cached_reader" on-invalid="ignore_uninitialized"/>
-        <argument key="annotations.dummy_registry" type="service" id="annotations.dummy_registry" on-invalid="ignore_uninitialized"/>
-        <argument key="annotations.filesystem_cache" type="service" id="annotations.filesystem_cache" on-invalid="ignore_uninitialized"/>
-        <argument key="annotations.reader" type="service" id="annotations.reader" on-invalid="ignore_uninitialized"/>
-        <argument key="argument_metadata_factory" type="service" id="argument_metadata_factory" on-invalid="ignore_uninitialized"/>
-        <argument key="argument_resolver" type="service" id="debug.argument_resolver" on-invalid="ignore_uninitialized"/>
-        <argument key="argument_resolver.controller_locator" type="service" id=".service_locator.730tY7l" on-invalid="ignore_uninitialized"/>
-        <argument key="argument_resolver.default" type="service" id="debug.argument_resolver.default" on-invalid="ignore_uninitialized"/>
-        <argument key="argument_resolver.not_tagged_controller" type="service" id="debug.argument_resolver.not_tagged_controller" on-invalid="ignore_uninitialized"/>
-        <argument key="argument_resolver.request" type="service" id="debug.argument_resolver.request" on-invalid="ignore_uninitialized"/>
-        <argument key="argument_resolver.request_attribute" type="service" id="debug.argument_resolver.request_attribute" on-invalid="ignore_uninitialized"/>
-        <argument key="argument_resolver.service" type="service" id="debug.argument_resolver.service" on-invalid="ignore_uninitialized"/>
-        <argument key="argument_resolver.session" type="service" id="debug.argument_resolver.session" on-invalid="ignore_uninitialized"/>
-        <argument key="argument_resolver.variadic" type="service" id="debug.argument_resolver.variadic" on-invalid="ignore_uninitialized"/>
-        <argument key="cache.annotations" type="service" id="cache.annotations" on-invalid="ignore_uninitialized"/>
-        <argument key="cache.app.taggable" type="service" id="cache.app.taggable" on-invalid="ignore_uninitialized"/>
-        <argument key="cache.default_clearer" type="service" id="cache.default_clearer" on-invalid="ignore_uninitialized"/>
-        <argument key="cache.default_marshaller" type="service" id="cache.default_marshaller" on-invalid="ignore_uninitialized"/>
-        <argument key="cache.default_memcached_provider" type="service" id=".cache_connection.JKE6keX" on-invalid="ignore_uninitialized"/>
-        <argument key="cache.default_pdo_provider" type="service" id="doctrine.dbal.default_connection" on-invalid="ignore_uninitialized"/>
-        <argument key="cache.default_redis_provider" type="service" id=".cache_connection.GD_MSZC" on-invalid="ignore_uninitialized"/>
-        <argument key="cache.doctrine.orm.default.metadata" type="service" id="cache.doctrine.orm.default.metadata" on-invalid="ignore_uninitialized"/>
-        <argument key="cache.doctrine.orm.default.query" type="service" id="cache.doctrine.orm.default.query" on-invalid="ignore_uninitialized"/>
-        <argument key="cache.doctrine.orm.default.result" type="service" id="cache.doctrine.orm.default.result" on-invalid="ignore_uninitialized"/>
-        <argument key="cache.property_info" type="service" id="cache.property_info" on-invalid="ignore_uninitialized"/>
-        <argument key="cache.serializer" type="service" id="cache.serializer" on-invalid="ignore_uninitialized"/>
-        <argument key="cache.validator" type="service" id="cache.validator" on-invalid="ignore_uninitialized"/>
-        <argument key="config.resource.self_checking_resource_checker" type="service" id="config.resource.self_checking_resource_checker" on-invalid="ignore_uninitialized"/>
-        <argument key="config_cache_factory" type="service" id="config_cache_factory" on-invalid="ignore_uninitialized"/>
-        <argument key="console.command.about" type="service" id="console.command.about" on-invalid="ignore_uninitialized"/>
-        <argument key="console.command.assets_install" type="service" id="console.command.assets_install" on-invalid="ignore_uninitialized"/>
-        <argument key="console.command.cache_clear" type="service" id="console.command.cache_clear" on-invalid="ignore_uninitialized"/>
-        <argument key="console.command.cache_pool_clear" type="service" id="console.command.cache_pool_clear" on-invalid="ignore_uninitialized"/>
-        <argument key="console.command.cache_pool_delete" type="service" id="console.command.cache_pool_delete" on-invalid="ignore_uninitialized"/>
-        <argument key="console.command.cache_pool_list" type="service" id="console.command.cache_pool_list" on-invalid="ignore_uninitialized"/>
-        <argument key="console.command.cache_pool_prune" type="service" id="console.command.cache_pool_prune" on-invalid="ignore_uninitialized"/>
-        <argument key="console.command.cache_warmup" type="service" id="console.command.cache_warmup" on-invalid="ignore_uninitialized"/>
-        <argument key="console.command.config_debug" type="service" id="console.command.config_debug" on-invalid="ignore_uninitialized"/>
-        <argument key="console.command.config_dump_reference" type="service" id="console.command.config_dump_reference" on-invalid="ignore_uninitialized"/>
-        <argument key="console.command.container_debug" type="service" id="console.command.container_debug" on-invalid="ignore_uninitialized"/>
-        <argument key="console.command.container_lint" type="service" id="console.command.container_lint" on-invalid="ignore_uninitialized"/>
-        <argument key="console.command.debug_autowiring" type="service" id="console.command.debug_autowiring" on-invalid="ignore_uninitialized"/>
-        <argument key="console.command.event_dispatcher_debug" type="service" id="console.command.event_dispatcher_debug" on-invalid="ignore_uninitialized"/>
-        <argument key="console.command.router_debug" type="service" id="console.command.router_debug" on-invalid="ignore_uninitialized"/>
-        <argument key="console.command.router_match" type="service" id="console.command.router_match" on-invalid="ignore_uninitialized"/>
-        <argument key="console.command.secrets_decrypt_to_local" type="service" id="console.command.secrets_decrypt_to_local" on-invalid="ignore_uninitialized"/>
-        <argument key="console.command.secrets_encrypt_from_local" type="service" id="console.command.secrets_encrypt_from_local" on-invalid="ignore_uninitialized"/>
-        <argument key="console.command.secrets_generate_key" type="service" id="console.command.secrets_generate_key" on-invalid="ignore_uninitialized"/>
-        <argument key="console.command.secrets_list" type="service" id="console.command.secrets_list" on-invalid="ignore_uninitialized"/>
-        <argument key="console.command.secrets_remove" type="service" id="console.command.secrets_remove" on-invalid="ignore_uninitialized"/>
-        <argument key="console.command.secrets_set" type="service" id="console.command.secrets_set" on-invalid="ignore_uninitialized"/>
-        <argument key="console.command.yaml_lint" type="service" id="console.command.yaml_lint" on-invalid="ignore_uninitialized"/>
-        <argument key="console.error_listener" type="service" id="console.error_listener" on-invalid="ignore_uninitialized"/>
-        <argument key="console.suggest_missing_package_subscriber" type="service" id="console.suggest_missing_package_subscriber" on-invalid="ignore_uninitialized"/>
-        <argument key="container.env_var_processor" type="service" id="container.env_var_processor" on-invalid="ignore_uninitialized"/>
-        <argument key="container.getenv" type="service" id="container.getenv" on-invalid="ignore_uninitialized"/>
-        <argument key="controller_resolver" type="service" id="debug.controller_resolver" on-invalid="ignore_uninitialized"/>
-        <argument key="data_collector.doctrine" type="service" id="data_collector.doctrine" on-invalid="ignore_uninitialized"/>
-        <argument key="data_collector.twig" type="service" id="data_collector.twig" on-invalid="ignore_uninitialized"/>
-        <argument key="debug.argument_resolver" type="service" id="debug.argument_resolver" on-invalid="ignore_uninitialized"/>
-        <argument key="debug.argument_resolver.default" type="service" id="debug.argument_resolver.default" on-invalid="ignore_uninitialized"/>
-        <argument key="debug.argument_resolver.default.inner" type="service" id="debug.argument_resolver.default.inner" on-invalid="ignore_uninitialized"/>
-        <argument key="debug.argument_resolver.inner" type="service" id="debug.argument_resolver.inner" on-invalid="ignore_uninitialized"/>
-        <argument key="debug.argument_resolver.not_tagged_controller" type="service" id="debug.argument_resolver.not_tagged_controller" on-invalid="ignore_uninitialized"/>
-        <argument key="debug.argument_resolver.not_tagged_controller.inner" type="service" id="debug.argument_resolver.not_tagged_controller.inner" on-invalid="ignore_uninitialized"/>
-        <argument key="debug.argument_resolver.request" type="service" id="debug.argument_resolver.request" on-invalid="ignore_uninitialized"/>
-        <argument key="debug.argument_resolver.request.inner" type="service" id="debug.argument_resolver.request.inner" on-invalid="ignore_uninitialized"/>
-        <argument key="debug.argument_resolver.request_attribute" type="service" id="debug.argument_resolver.request_attribute" on-invalid="ignore_uninitialized"/>
-        <argument key="debug.argument_resolver.request_attribute.inner" type="service" id="debug.argument_resolver.request_attribute.inner" on-invalid="ignore_uninitialized"/>
-        <argument key="debug.argument_resolver.service" type="service" id="debug.argument_resolver.service" on-invalid="ignore_uninitialized"/>
-        <argument key="debug.argument_resolver.service.inner" type="service" id="debug.argument_resolver.service.inner" on-invalid="ignore_uninitialized"/>
-        <argument key="debug.argument_resolver.session" type="service" id="debug.argument_resolver.session" on-invalid="ignore_uninitialized"/>
-        <argument key="debug.argument_resolver.session.inner" type="service" id="debug.argument_resolver.session.inner" on-invalid="ignore_uninitialized"/>
-        <argument key="debug.argument_resolver.variadic" type="service" id="debug.argument_resolver.variadic" on-invalid="ignore_uninitialized"/>
-        <argument key="debug.argument_resolver.variadic.inner" type="service" id="debug.argument_resolver.variadic.inner" on-invalid="ignore_uninitialized"/>
-        <argument key="debug.controller_resolver" type="service" id="debug.controller_resolver" on-invalid="ignore_uninitialized"/>
-        <argument key="debug.controller_resolver.inner" type="service" id="debug.controller_resolver.inner" on-invalid="ignore_uninitialized"/>
-        <argument key="debug.debug_handlers_listener" type="service" id="debug.debug_handlers_listener" on-invalid="ignore_uninitialized"/>
-        <argument key="debug.event_dispatcher" type="service" id="debug.event_dispatcher" on-invalid="ignore_uninitialized"/>
-        <argument key="debug.event_dispatcher.inner" type="service" id="debug.event_dispatcher.inner" on-invalid="ignore_uninitialized"/>
-        <argument key="debug.file_link_formatter" type="service" id="debug.file_link_formatter" on-invalid="ignore_uninitialized"/>
-        <argument key="debug.stopwatch" type="service" id="debug.stopwatch" on-invalid="ignore_uninitialized"/>
-        <argument key="dependency_injection.config.container_parameters_resource_checker" type="service" id="dependency_injection.config.container_parameters_resource_checker" on-invalid="ignore_uninitialized"/>
-        <argument key="disallow_search_engine_index_response_listener" type="service" id="disallow_search_engine_index_response_listener" on-invalid="ignore_uninitialized"/>
-        <argument key="doctrine.cache_clear_metadata_command" type="service" id="doctrine.cache_clear_metadata_command" on-invalid="ignore_uninitialized"/>
-        <argument key="doctrine.cache_clear_query_cache_command" type="service" id="doctrine.cache_clear_query_cache_command" on-invalid="ignore_uninitialized"/>
-        <argument key="doctrine.cache_clear_result_command" type="service" id="doctrine.cache_clear_result_command" on-invalid="ignore_uninitialized"/>
-        <argument key="doctrine.cache_collection_region_command" type="service" id="doctrine.cache_collection_region_command" on-invalid="ignore_uninitialized"/>
-        <argument key="doctrine.clear_entity_region_command" type="service" id="doctrine.clear_entity_region_command" on-invalid="ignore_uninitialized"/>
-        <argument key="doctrine.clear_query_region_command" type="service" id="doctrine.clear_query_region_command" on-invalid="ignore_uninitialized"/>
-        <argument key="doctrine.database_create_command" type="service" id="doctrine.database_create_command" on-invalid="ignore_uninitialized"/>
-        <argument key="doctrine.database_drop_command" type="service" id="doctrine.database_drop_command" on-invalid="ignore_uninitialized"/>
-        <argument key="doctrine.database_import_command" type="service" id="doctrine.database_import_command" on-invalid="ignore_uninitialized"/>
-        <argument key="doctrine.dbal.connection_factory" type="service" id="doctrine.dbal.connection_factory" on-invalid="ignore_uninitialized"/>
-        <argument key="doctrine.dbal.default_connection.configuration" type="service" id="doctrine.dbal.default_connection.configuration" on-invalid="ignore_uninitialized"/>
-        <argument key="doctrine.dbal.default_connection.event_manager" type="service" id="doctrine.dbal.default_connection.event_manager" on-invalid="ignore_uninitialized"/>
-        <argument key="doctrine.dbal.event_manager" type="service" id="doctrine.dbal.default_connection.event_manager" on-invalid="ignore_uninitialized"/>
-        <argument key="doctrine.dbal.logger" type="service" id="doctrine.dbal.logger" on-invalid="ignore_uninitialized"/>
-        <argument key="doctrine.dbal.logger.chain.default" type="service" id="doctrine.dbal.logger.chain.default" on-invalid="ignore_uninitialized"/>
-        <argument key="doctrine.dbal.logger.profiling.default" type="service" id="doctrine.dbal.logger.profiling.default" on-invalid="ignore_uninitialized"/>
-        <argument key="doctrine.dbal.well_known_schema_asset_filter" type="service" id="doctrine.dbal.well_known_schema_asset_filter" on-invalid="ignore_uninitialized"/>
-        <argument key="doctrine.ensure_production_settings_command" type="service" id="doctrine.ensure_production_settings_command" on-invalid="ignore_uninitialized"/>
-        <argument key="doctrine.mapping_convert_command" type="service" id="doctrine.mapping_convert_command" on-invalid="ignore_uninitialized"/>
-        <argument key="doctrine.mapping_import_command" type="service" id="doctrine.mapping_import_command" on-invalid="ignore_uninitialized"/>
-        <argument key="doctrine.mapping_info_command" type="service" id="doctrine.mapping_info_command" on-invalid="ignore_uninitialized"/>
-        <argument key="doctrine.migrations.configuration" type="service" id="doctrine.migrations.configuration" on-invalid="ignore_uninitialized"/>
-        <argument key="doctrine.migrations.configuration_loader" type="service" id="doctrine.migrations.configuration_loader" on-invalid="ignore_uninitialized"/>
-        <argument key="doctrine.migrations.connection_loader" type="service" id="doctrine.migrations.connection_loader" on-invalid="ignore_uninitialized"/>
-        <argument key="doctrine.migrations.dependency_factory" type="service" id="doctrine.migrations.dependency_factory" on-invalid="ignore_uninitialized"/>
-        <argument key="doctrine.migrations.em_loader" type="service" id="doctrine.migrations.em_loader" on-invalid="ignore_uninitialized"/>
-        <argument key="doctrine.migrations.metadata_storage" type="service" id="doctrine.migrations.storage.table_storage" on-invalid="ignore_uninitialized"/>
-        <argument key="doctrine.migrations.storage.table_storage" type="service" id="doctrine.migrations.storage.table_storage" on-invalid="ignore_uninitialized"/>
-        <argument key="doctrine.orm.cache.provider.cache.doctrine.orm.default.metadata" type="service" id="doctrine.orm.cache.provider.cache.doctrine.orm.default.metadata" on-invalid="ignore_uninitialized"/>
-        <argument key="doctrine.orm.cache.provider.cache.doctrine.orm.default.query" type="service" id="doctrine.orm.cache.provider.cache.doctrine.orm.default.query" on-invalid="ignore_uninitialized"/>
-        <argument key="doctrine.orm.cache.provider.cache.doctrine.orm.default.result" type="service" id="doctrine.orm.cache.provider.cache.doctrine.orm.default.result" on-invalid="ignore_uninitialized"/>
-        <argument key="doctrine.orm.container_repository_factory" type="service" id="doctrine.orm.container_repository_factory" on-invalid="ignore_uninitialized"/>
-        <argument key="doctrine.orm.default_annotation_metadata_driver" type="service" id="doctrine.orm.default_annotation_metadata_driver" on-invalid="ignore_uninitialized"/>
-        <argument key="doctrine.orm.default_configuration" type="service" id="doctrine.orm.default_configuration" on-invalid="ignore_uninitialized"/>
-        <argument key="doctrine.orm.default_entity_listener_resolver" type="service" id="doctrine.orm.default_entity_listener_resolver" on-invalid="ignore_uninitialized"/>
-        <argument key="doctrine.orm.default_entity_manager.event_manager" type="service" id="doctrine.dbal.default_connection.event_manager" on-invalid="ignore_uninitialized"/>
-        <argument key="doctrine.orm.default_entity_manager.validator_loader" type="service" id="doctrine.orm.default_entity_manager.validator_loader" on-invalid="ignore_uninitialized"/>
-        <argument key="doctrine.orm.default_listeners.attach_entity_listeners" type="service" id="doctrine.orm.default_listeners.attach_entity_listeners" on-invalid="ignore_uninitialized"/>
-        <argument key="doctrine.orm.default_manager_configurator" type="service" id="doctrine.orm.default_manager_configurator" on-invalid="ignore_uninitialized"/>
-        <argument key="doctrine.orm.default_metadata_cache" type="service" id="doctrine.orm.cache.provider.cache.doctrine.orm.default.metadata" on-invalid="ignore_uninitialized"/>
-        <argument key="doctrine.orm.default_metadata_driver" type="service" id="doctrine.orm.default_metadata_driver" on-invalid="ignore_uninitialized"/>
-        <argument key="doctrine.orm.default_query_cache" type="service" id="doctrine.orm.cache.provider.cache.doctrine.orm.default.query" on-invalid="ignore_uninitialized"/>
-        <argument key="doctrine.orm.default_result_cache" type="service" id="doctrine.orm.cache.provider.cache.doctrine.orm.default.result" on-invalid="ignore_uninitialized"/>
-        <argument key="doctrine.orm.listeners.pdo_cache_adapter_doctrine_schema_subscriber" type="service" id="doctrine.orm.listeners.pdo_cache_adapter_doctrine_schema_subscriber" on-invalid="ignore_uninitialized"/>
-        <argument key="doctrine.orm.listeners.resolve_target_entity" type="service" id="doctrine.orm.listeners.resolve_target_entity" on-invalid="ignore_uninitialized"/>
-        <argument key="doctrine.orm.metadata.annotation_reader" type="service" id="annotations.cached_reader" on-invalid="ignore_uninitialized"/>
-        <argument key="doctrine.orm.naming_strategy.default" type="service" id="doctrine.orm.naming_strategy.default" on-invalid="ignore_uninitialized"/>
-        <argument key="doctrine.orm.naming_strategy.underscore" type="service" id="doctrine.orm.naming_strategy.underscore" on-invalid="ignore_uninitialized"/>
-        <argument key="doctrine.orm.naming_strategy.underscore_number_aware" type="service" id="doctrine.orm.naming_strategy.underscore_number_aware" on-invalid="ignore_uninitialized"/>
-        <argument key="doctrine.orm.proxy_cache_warmer" type="service" id="doctrine.orm.proxy_cache_warmer" on-invalid="ignore_uninitialized"/>
-        <argument key="doctrine.orm.quote_strategy.ansi" type="service" id="doctrine.orm.quote_strategy.ansi" on-invalid="ignore_uninitialized"/>
-        <argument key="doctrine.orm.quote_strategy.default" type="service" id="doctrine.orm.quote_strategy.default" on-invalid="ignore_uninitialized"/>
-        <argument key="doctrine.orm.validator.unique" type="service" id="doctrine.orm.validator.unique" on-invalid="ignore_uninitialized"/>
-        <argument key="doctrine.orm.validator_initializer" type="service" id="doctrine.orm.validator_initializer" on-invalid="ignore_uninitialized"/>
-        <argument key="doctrine.query_dql_command" type="service" id="doctrine.query_dql_command" on-invalid="ignore_uninitialized"/>
-        <argument key="doctrine.query_sql_command" type="service" id="doctrine.query_sql_command" on-invalid="ignore_uninitialized"/>
-        <argument key="doctrine.schema_create_command" type="service" id="doctrine.schema_create_command" on-invalid="ignore_uninitialized"/>
-        <argument key="doctrine.schema_drop_command" type="service" id="doctrine.schema_drop_command" on-invalid="ignore_uninitialized"/>
-        <argument key="doctrine.schema_update_command" type="service" id="doctrine.schema_update_command" on-invalid="ignore_uninitialized"/>
-        <argument key="doctrine.schema_validate_command" type="service" id="doctrine.schema_validate_command" on-invalid="ignore_uninitialized"/>
-        <argument key="doctrine.twig.doctrine_extension" type="service" id="doctrine.twig.doctrine_extension" on-invalid="ignore_uninitialized"/>
-        <argument key="doctrine_migrations.current_command" type="service" id="doctrine_migrations.current_command" on-invalid="ignore_uninitialized"/>
-        <argument key="doctrine_migrations.diff_command" type="service" id="doctrine_migrations.diff_command" on-invalid="ignore_uninitialized"/>
-        <argument key="doctrine_migrations.dump_schema_command" type="service" id="doctrine_migrations.dump_schema_command" on-invalid="ignore_uninitialized"/>
-        <argument key="doctrine_migrations.execute_command" type="service" id="doctrine_migrations.execute_command" on-invalid="ignore_uninitialized"/>
-        <argument key="doctrine_migrations.generate_command" type="service" id="doctrine_migrations.generate_command" on-invalid="ignore_uninitialized"/>
-        <argument key="doctrine_migrations.latest_command" type="service" id="doctrine_migrations.latest_command" on-invalid="ignore_uninitialized"/>
-        <argument key="doctrine_migrations.migrate_command" type="service" id="doctrine_migrations.migrate_command" on-invalid="ignore_uninitialized"/>
-        <argument key="doctrine_migrations.rollup_command" type="service" id="doctrine_migrations.rollup_command" on-invalid="ignore_uninitialized"/>
-        <argument key="doctrine_migrations.status_command" type="service" id="doctrine_migrations.status_command" on-invalid="ignore_uninitialized"/>
-        <argument key="doctrine_migrations.sync_metadata_command" type="service" id="doctrine_migrations.sync_metadata_command" on-invalid="ignore_uninitialized"/>
-        <argument key="doctrine_migrations.up_to_date_command" type="service" id="doctrine_migrations.up_to_date_command" on-invalid="ignore_uninitialized"/>
-        <argument key="doctrine_migrations.version_command" type="service" id="doctrine_migrations.version_command" on-invalid="ignore_uninitialized"/>
-        <argument key="doctrine_migrations.versions_command" type="service" id="doctrine_migrations.versions_command" on-invalid="ignore_uninitialized"/>
-        <argument key="error_handler.error_renderer.html" type="service" id="error_handler.error_renderer.html" on-invalid="ignore_uninitialized"/>
-        <argument key="error_renderer" type="service" id="twig.error_renderer.html" on-invalid="ignore_uninitialized"/>
-        <argument key="error_renderer.html" type="service" id="twig.error_renderer.html" on-invalid="ignore_uninitialized"/>
-        <argument key="exception_listener" type="service" id="exception_listener" on-invalid="ignore_uninitialized"/>
-        <argument key="file_locator" type="service" id="file_locator" on-invalid="ignore_uninitialized"/>
-        <argument key="form.type.entity" type="service" id="form.type.entity" on-invalid="ignore_uninitialized"/>
-        <argument key="form.type_guesser.doctrine" type="service" id="form.type_guesser.doctrine" on-invalid="ignore_uninitialized"/>
-        <argument key="fragment.handler" type="service" id="fragment.handler" on-invalid="ignore_uninitialized"/>
-        <argument key="fragment.renderer.inline" type="service" id="fragment.renderer.inline" on-invalid="ignore_uninitialized"/>
-        <argument key="locale_aware_listener" type="service" id="locale_aware_listener" on-invalid="ignore_uninitialized"/>
-        <argument key="locale_listener" type="service" id="locale_listener" on-invalid="ignore_uninitialized"/>
-        <argument key="logger" type="service" id="logger" on-invalid="ignore_uninitialized"/>
-        <argument key="maker.auto_command.make_auth" type="service" id="maker.auto_command.make_auth" on-invalid="ignore_uninitialized"/>
-        <argument key="maker.auto_command.make_command" type="service" id="maker.auto_command.make_command" on-invalid="ignore_uninitialized"/>
-        <argument key="maker.auto_command.make_controller" type="service" id="maker.auto_command.make_controller" on-invalid="ignore_uninitialized"/>
-        <argument key="maker.auto_command.make_crud" type="service" id="maker.auto_command.make_crud" on-invalid="ignore_uninitialized"/>
-        <argument key="maker.auto_command.make_docker_database" type="service" id="maker.auto_command.make_docker_database" on-invalid="ignore_uninitialized"/>
-        <argument key="maker.auto_command.make_entity" type="service" id="maker.auto_command.make_entity" on-invalid="ignore_uninitialized"/>
-        <argument key="maker.auto_command.make_fixtures" type="service" id="maker.auto_command.make_fixtures" on-invalid="ignore_uninitialized"/>
-        <argument key="maker.auto_command.make_form" type="service" id="maker.auto_command.make_form" on-invalid="ignore_uninitialized"/>
-        <argument key="maker.auto_command.make_functional_test" type="service" id="maker.auto_command.make_functional_test" on-invalid="ignore_uninitialized"/>
-        <argument key="maker.auto_command.make_message" type="service" id="maker.auto_command.make_message" on-invalid="ignore_uninitialized"/>
-        <argument key="maker.auto_command.make_messenger_middleware" type="service" id="maker.auto_command.make_messenger_middleware" on-invalid="ignore_uninitialized"/>
-        <argument key="maker.auto_command.make_migration" type="service" id="maker.auto_command.make_migration" on-invalid="ignore_uninitialized"/>
-        <argument key="maker.auto_command.make_registration_form" type="service" id="maker.auto_command.make_registration_form" on-invalid="ignore_uninitialized"/>
-        <argument key="maker.auto_command.make_reset_password" type="service" id="maker.auto_command.make_reset_password" on-invalid="ignore_uninitialized"/>
-        <argument key="maker.auto_command.make_serializer_encoder" type="service" id="maker.auto_command.make_serializer_encoder" on-invalid="ignore_uninitialized"/>
-        <argument key="maker.auto_command.make_serializer_normalizer" type="service" id="maker.auto_command.make_serializer_normalizer" on-invalid="ignore_uninitialized"/>
-        <argument key="maker.auto_command.make_subscriber" type="service" id="maker.auto_command.make_subscriber" on-invalid="ignore_uninitialized"/>
-        <argument key="maker.auto_command.make_twig_extension" type="service" id="maker.auto_command.make_twig_extension" on-invalid="ignore_uninitialized"/>
-        <argument key="maker.auto_command.make_unit_test" type="service" id="maker.auto_command.make_unit_test" on-invalid="ignore_uninitialized"/>
-        <argument key="maker.auto_command.make_user" type="service" id="maker.auto_command.make_user" on-invalid="ignore_uninitialized"/>
-        <argument key="maker.auto_command.make_validator" type="service" id="maker.auto_command.make_validator" on-invalid="ignore_uninitialized"/>
-        <argument key="maker.auto_command.make_voter" type="service" id="maker.auto_command.make_voter" on-invalid="ignore_uninitialized"/>
-        <argument key="maker.autoloader_finder" type="service" id="maker.autoloader_finder" on-invalid="ignore_uninitialized"/>
-        <argument key="maker.autoloader_util" type="service" id="maker.autoloader_util" on-invalid="ignore_uninitialized"/>
-        <argument key="maker.console_error_listener" type="service" id="maker.console_error_listener" on-invalid="ignore_uninitialized"/>
-        <argument key="maker.doctrine_helper" type="service" id="maker.doctrine_helper" on-invalid="ignore_uninitialized"/>
-        <argument key="maker.entity_class_generator" type="service" id="maker.entity_class_generator" on-invalid="ignore_uninitialized"/>
-        <argument key="maker.event_registry" type="service" id="maker.event_registry" on-invalid="ignore_uninitialized"/>
-        <argument key="maker.file_link_formatter" type="service" id="maker.file_link_formatter" on-invalid="ignore_uninitialized"/>
-        <argument key="maker.file_manager" type="service" id="maker.file_manager" on-invalid="ignore_uninitialized"/>
-        <argument key="maker.generator" type="service" id="maker.generator" on-invalid="ignore_uninitialized"/>
-        <argument key="maker.maker.make_authenticator" type="service" id="maker.maker.make_authenticator" on-invalid="ignore_uninitialized"/>
-        <argument key="maker.maker.make_command" type="service" id="maker.maker.make_command" on-invalid="ignore_uninitialized"/>
-        <argument key="maker.maker.make_controller" type="service" id="maker.maker.make_controller" on-invalid="ignore_uninitialized"/>
-        <argument key="maker.maker.make_crud" type="service" id="maker.maker.make_crud" on-invalid="ignore_uninitialized"/>
-        <argument key="maker.maker.make_docker_database" type="service" id="maker.maker.make_docker_database" on-invalid="ignore_uninitialized"/>
-        <argument key="maker.maker.make_entity" type="service" id="maker.maker.make_entity" on-invalid="ignore_uninitialized"/>
-        <argument key="maker.maker.make_fixtures" type="service" id="maker.maker.make_fixtures" on-invalid="ignore_uninitialized"/>
-        <argument key="maker.maker.make_form" type="service" id="maker.maker.make_form" on-invalid="ignore_uninitialized"/>
-        <argument key="maker.maker.make_functional_test" type="service" id="maker.maker.make_functional_test" on-invalid="ignore_uninitialized"/>
-        <argument key="maker.maker.make_message" type="service" id="maker.maker.make_message" on-invalid="ignore_uninitialized"/>
-        <argument key="maker.maker.make_messenger_middleware" type="service" id="maker.maker.make_messenger_middleware" on-invalid="ignore_uninitialized"/>
-        <argument key="maker.maker.make_migration" type="service" id="maker.maker.make_migration" on-invalid="ignore_uninitialized"/>
-        <argument key="maker.maker.make_registration_form" type="service" id="maker.maker.make_registration_form" on-invalid="ignore_uninitialized"/>
-        <argument key="maker.maker.make_reset_password" type="service" id="maker.maker.make_reset_password" on-invalid="ignore_uninitialized"/>
-        <argument key="maker.maker.make_serializer_encoder" type="service" id="maker.maker.make_serializer_encoder" on-invalid="ignore_uninitialized"/>
-        <argument key="maker.maker.make_serializer_normalizer" type="service" id="maker.maker.make_serializer_normalizer" on-invalid="ignore_uninitialized"/>
-        <argument key="maker.maker.make_subscriber" type="service" id="maker.maker.make_subscriber" on-invalid="ignore_uninitialized"/>
-        <argument key="maker.maker.make_twig_extension" type="service" id="maker.maker.make_twig_extension" on-invalid="ignore_uninitialized"/>
-        <argument key="maker.maker.make_unit_test" type="service" id="maker.maker.make_unit_test" on-invalid="ignore_uninitialized"/>
-        <argument key="maker.maker.make_user" type="service" id="maker.maker.make_user" on-invalid="ignore_uninitialized"/>
-        <argument key="maker.maker.make_validator" type="service" id="maker.maker.make_validator" on-invalid="ignore_uninitialized"/>
-        <argument key="maker.maker.make_voter" type="service" id="maker.maker.make_voter" on-invalid="ignore_uninitialized"/>
-        <argument key="maker.renderer.form_type_renderer" type="service" id="maker.renderer.form_type_renderer" on-invalid="ignore_uninitialized"/>
-        <argument key="maker.security_config_updater" type="service" id="maker.security_config_updater" on-invalid="ignore_uninitialized"/>
-        <argument key="maker.user_class_builder" type="service" id="maker.user_class_builder" on-invalid="ignore_uninitialized"/>
-        <argument key="parameter_bag" type="service" id="parameter_bag" on-invalid="ignore_uninitialized"/>
-        <argument key="psysh.shell" type="service" id="psysh.shell" on-invalid="ignore_uninitialized"/>
-        <argument key="response_listener" type="service" id="response_listener" on-invalid="ignore_uninitialized"/>
-        <argument key="reverse_container" type="service" id="reverse_container" on-invalid="ignore_uninitialized"/>
-        <argument key="router.cache_warmer" type="service" id="router.cache_warmer" on-invalid="ignore_uninitialized"/>
-        <argument key="router.default" type="service" id="router.default" on-invalid="ignore_uninitialized"/>
-        <argument key="router.expression_language_provider" type="service" id="router.expression_language_provider" on-invalid="ignore_uninitialized"/>
-        <argument key="router.request_context" type="service" id="router.request_context" on-invalid="ignore_uninitialized"/>
-        <argument key="router_listener" type="service" id="router_listener" on-invalid="ignore_uninitialized"/>
-        <argument key="routing.loader.annotation" type="service" id="routing.loader.annotation" on-invalid="ignore_uninitialized"/>
-        <argument key="routing.loader.annotation.directory" type="service" id="routing.loader.annotation.directory" on-invalid="ignore_uninitialized"/>
-        <argument key="routing.loader.annotation.file" type="service" id="routing.loader.annotation.file" on-invalid="ignore_uninitialized"/>
-        <argument key="routing.loader.container" type="service" id="routing.loader.container" on-invalid="ignore_uninitialized"/>
-        <argument key="routing.loader.directory" type="service" id="routing.loader.directory" on-invalid="ignore_uninitialized"/>
-        <argument key="routing.loader.glob" type="service" id="routing.loader.glob" on-invalid="ignore_uninitialized"/>
-        <argument key="routing.loader.php" type="service" id="routing.loader.php" on-invalid="ignore_uninitialized"/>
-        <argument key="routing.loader.xml" type="service" id="routing.loader.xml" on-invalid="ignore_uninitialized"/>
-        <argument key="routing.loader.yml" type="service" id="routing.loader.yml" on-invalid="ignore_uninitialized"/>
-        <argument key="routing.resolver" type="service" id="routing.resolver" on-invalid="ignore_uninitialized"/>
-        <argument key="secrets.decryption_key" type="service" id="secrets.decryption_key" on-invalid="ignore_uninitialized"/>
-        <argument key="secrets.local_vault" type="service" id="secrets.local_vault" on-invalid="ignore_uninitialized"/>
-        <argument key="secrets.vault" type="service" id="secrets.vault" on-invalid="ignore_uninitialized"/>
-        <argument key="session.abstract_handler" type="service" id="session.abstract_handler" on-invalid="ignore_uninitialized"/>
-        <argument key="session.attribute_bag" type="service" id="session.attribute_bag" on-invalid="ignore_uninitialized"/>
-        <argument key="session.flash_bag" type="service" id="session.flash_bag" on-invalid="ignore_uninitialized"/>
-        <argument key="session.handler" type="service" id="session.handler.native_file" on-invalid="ignore_uninitialized"/>
-        <argument key="session.handler.native_file" type="service" id="session.handler.native_file" on-invalid="ignore_uninitialized"/>
-        <argument key="session.marshaller" type="service" id="session.marshaller" on-invalid="ignore_uninitialized"/>
-        <argument key="session.storage" type="service" id="session.storage.native" on-invalid="ignore_uninitialized"/>
-        <argument key="session.storage.filesystem" type="service" id="session.storage.mock_file" on-invalid="ignore_uninitialized"/>
-        <argument key="session.storage.metadata_bag" type="service" id="session.storage.metadata_bag" on-invalid="ignore_uninitialized"/>
-        <argument key="session.storage.mock_file" type="service" id="session.storage.mock_file" on-invalid="ignore_uninitialized"/>
-        <argument key="session.storage.native" type="service" id="session.storage.native" on-invalid="ignore_uninitialized"/>
-        <argument key="session.storage.php_bridge" type="service" id="session.storage.php_bridge" on-invalid="ignore_uninitialized"/>
-        <argument key="session_listener" type="service" id="session_listener" on-invalid="ignore_uninitialized"/>
-        <argument key="slugger" type="service" id="slugger" on-invalid="ignore_uninitialized"/>
-        <argument key="streamed_response_listener" type="service" id="streamed_response_listener" on-invalid="ignore_uninitialized"/>
-        <argument key="twig.app_variable" type="service" id="twig.app_variable" on-invalid="ignore_uninitialized"/>
-        <argument key="twig.command.debug" type="service" id="twig.command.debug" on-invalid="ignore_uninitialized"/>
-        <argument key="twig.command.lint" type="service" id="twig.command.lint" on-invalid="ignore_uninitialized"/>
-        <argument key="twig.configurator.environment" type="service" id="twig.configurator.environment" on-invalid="ignore_uninitialized"/>
-        <argument key="twig.error_renderer.html" type="service" id="twig.error_renderer.html" on-invalid="ignore_uninitialized"/>
-        <argument key="twig.error_renderer.html.inner" type="service" id="error_handler.error_renderer.html" on-invalid="ignore_uninitialized"/>
-        <argument key="twig.extension.code" type="service" id="twig.extension.code" on-invalid="ignore_uninitialized"/>
-        <argument key="twig.extension.debug" type="service" id="twig.extension.debug" on-invalid="ignore_uninitialized"/>
-        <argument key="twig.extension.debug.stopwatch" type="service" id="twig.extension.debug.stopwatch" on-invalid="ignore_uninitialized"/>
-        <argument key="twig.extension.expression" type="service" id="twig.extension.expression" on-invalid="ignore_uninitialized"/>
-        <argument key="twig.extension.httpfoundation" type="service" id="twig.extension.httpfoundation" on-invalid="ignore_uninitialized"/>
-        <argument key="twig.extension.httpkernel" type="service" id="twig.extension.httpkernel" on-invalid="ignore_uninitialized"/>
-        <argument key="twig.extension.profiler" type="service" id="twig.extension.profiler" on-invalid="ignore_uninitialized"/>
-        <argument key="twig.extension.routing" type="service" id="twig.extension.routing" on-invalid="ignore_uninitialized"/>
-        <argument key="twig.extension.trans" type="service" id="twig.extension.trans" on-invalid="ignore_uninitialized"/>
-        <argument key="twig.extension.weblink" type="service" id="twig.extension.weblink" on-invalid="ignore_uninitialized"/>
-        <argument key="twig.extension.yaml" type="service" id="twig.extension.yaml" on-invalid="ignore_uninitialized"/>
-        <argument key="twig.loader" type="service" id="twig.loader.native_filesystem" on-invalid="ignore_uninitialized"/>
-        <argument key="twig.loader.chain" type="service" id="twig.loader.chain" on-invalid="ignore_uninitialized"/>
-        <argument key="twig.loader.filesystem" type="service" id="twig.loader.native_filesystem" on-invalid="ignore_uninitialized"/>
-        <argument key="twig.loader.native_filesystem" type="service" id="twig.loader.native_filesystem" on-invalid="ignore_uninitialized"/>
-        <argument key="twig.profile" type="service" id="twig.profile" on-invalid="ignore_uninitialized"/>
-        <argument key="twig.runtime.httpkernel" type="service" id="twig.runtime.httpkernel" on-invalid="ignore_uninitialized"/>
-        <argument key="twig.runtime_loader" type="service" id="twig.runtime_loader" on-invalid="ignore_uninitialized"/>
-        <argument key="twig.template_cache_warmer" type="service" id="twig.template_cache_warmer" on-invalid="ignore_uninitialized"/>
-        <argument key="twig.template_iterator" type="service" id="twig.template_iterator" on-invalid="ignore_uninitialized"/>
-        <argument key="uri_signer" type="service" id="uri_signer" on-invalid="ignore_uninitialized"/>
-        <argument key="url_helper" type="service" id="url_helper" on-invalid="ignore_uninitialized"/>
-        <argument key="validate_request_listener" type="service" id="validate_request_listener" on-invalid="ignore_uninitialized"/>
-=======
-    <service id="psysh.facade" class="Fidry\PsyshBundle\PsyshFacade" public="true">
-      <call method="setContainer">
-        <argument type="service" id="test.service_container"/>
-      </call>
-    </service>
-    <service id="test.service_container" class="Symfony\Bundle\FrameworkBundle\Test\TestContainer" public="true">
-      <argument type="service" id="kernel"/>
-      <argument>test.private_services_locator</argument>
-    </service>
-    <service id="test.private_services_locator" class="Symfony\Component\DependencyInjection\ServiceLocator" public="true">
-      <tag name="container.service_locator"/>
-      <argument type="collection">
-        <argument key="App\Repository\ContactRepository" type="service" id="App\Repository\ContactRepository" on-invalid="ignore_uninitialized"/>
         <argument key="Doctrine\Common\Annotations\Reader" type="service" id="annotations.cached_reader" on-invalid="ignore_uninitialized"/>
         <argument key="Doctrine\Common\Persistence\ManagerRegistry" type="service" id="doctrine" on-invalid="ignore_uninitialized"/>
         <argument key="Doctrine\DBAL\Connection" type="service" id="doctrine.dbal.default_connection" on-invalid="ignore_uninitialized"/>
@@ -4329,19 +2698,18 @@
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="_default" type="service" id="webpack_encore.entrypoint_lookup[_default]"/>
->>>>>>> emma
       </argument>
     </service>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\ContactController" class="App\Controller\ContactController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\ContactController" class="App\Controller\ContactController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\ContactController" class="App\Controller\ContactController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\UserController" class="App\Controller\UserController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\UserController" class="App\Controller\UserController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\UserController" class="App\Controller\UserController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\ContactRepository" class="App\Repository\ContactRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\ContactRepository" class="App\Repository\ContactRepository" autowire="true" autoconfigure="true" abstract="true"/>
-<<<<<<< HEAD
     <service id=".instanceof.Twig\Extension\ExtensionInterface.0.App\Twig\AppExtension" class="App\Twig\AppExtension" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Twig\AppExtension" class="App\Twig\AppExtension" autowire="true" autoconfigure="true" abstract="true"/>
-=======
->>>>>>> emma
     <service id=".service_locator.WaGDpDt" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -4601,24 +2969,10 @@
         <argument key="contactRepository" type="service" id="App\Repository\ContactRepository"/>
       </argument>
     </service>
-<<<<<<< HEAD
-    <service id=".service_locator.S6iF3Lw" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
-      <tag name="container.service_locator"/>
-      <argument type="collection">
-        <argument key="contact" type="service" id=".errored..service_locator.S6iF3Lw.App\Entity\Contact"/>
-      </argument>
-    </service>
-    <service id=".service_locator.730tY7l" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
-      <tag name="container.service_locator"/>
-      <argument type="collection">
-        <argument key="App\Controller\ContactController::index" type="service" id=".service_locator.DIAC.T0"/>
-        <argument key="App\Controller\ContactController::show" type="service" id=".service_locator.S6iF3Lw"/>
-=======
     <service id=".service_locator.wmYH4KP" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\ContactController::index" type="service" id=".service_locator.DIAC.T0"/>
->>>>>>> emma
         <argument key="App\Kernel::loadRoutes" type="service" id=".service_locator.C9JCBPC"/>
         <argument key="App\Kernel::registerContainerConfiguration" type="service" id=".service_locator.C9JCBPC"/>
         <argument key="App\Kernel::terminate" type="service" id=".service_locator.beq5mCo"/>
@@ -4626,10 +2980,6 @@
         <argument key="kernel::registerContainerConfiguration" type="service" id=".service_locator.C9JCBPC"/>
         <argument key="kernel::terminate" type="service" id=".service_locator.beq5mCo"/>
         <argument key="App\Controller\ContactController:index" type="service" id=".service_locator.DIAC.T0"/>
-<<<<<<< HEAD
-        <argument key="App\Controller\ContactController:show" type="service" id=".service_locator.S6iF3Lw"/>
-=======
->>>>>>> emma
         <argument key="kernel:loadRoutes" type="service" id=".service_locator.C9JCBPC"/>
         <argument key="kernel:registerContainerConfiguration" type="service" id=".service_locator.C9JCBPC"/>
         <argument key="kernel:terminate" type="service" id=".service_locator.beq5mCo"/>
@@ -4704,6 +3054,12 @@
     <service id=".service_locator.g9CqTPp.App\Controller\ContactController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator_context" id="App\Controller\ContactController"/>
       <argument>App\Controller\ContactController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.g9CqTPp" method="withContext"/>
+    </service>
+    <service id=".service_locator.g9CqTPp.App\Controller\UserController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator_context" id="App\Controller\UserController"/>
+      <argument>App\Controller\UserController</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.g9CqTPp" method="withContext"/>
     </service>
@@ -4792,24 +3148,15 @@
     <service id="debug.argument_resolver.request.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\RequestValueResolver" public="false"/>
     <service id="debug.argument_resolver.session.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\SessionValueResolver" public="false"/>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
-<<<<<<< HEAD
-      <argument type="service" id=".service_locator.730tY7l"/>
-=======
       <argument type="service" id=".service_locator.wmYH4KP"/>
->>>>>>> emma
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver" public="false"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver" public="false">
-<<<<<<< HEAD
-      <argument type="service" id=".service_locator.730tY7l"/>
-=======
       <argument type="service" id=".service_locator.wmYH4KP"/>
->>>>>>> emma
     </service>
     <service id=".errored..service_locator.beq5mCo.Symfony\Component\HttpFoundation\Response" class="Symfony\Component\HttpFoundation\Response"/>
     <service id=".errored..service_locator.C9JCBPC.Symfony\Component\Config\Loader\LoaderInterface" class="Symfony\Component\Config\Loader\LoaderInterface"/>
-    <service id=".errored..service_locator.S6iF3Lw.App\Entity\Contact" class="App\Entity\Contact"/>
     <service id="console.command_loader" class="Symfony\Component\Console\CommandLoader\ContainerCommandLoader" public="true">
       <tag name="container.no_preload"/>
       <argument type="service" id=".service_locator.pMHWwnu"/>
@@ -5053,13 +3400,6 @@
     <service id="doctrine.orm.default_query_cache" alias="doctrine.orm.cache.provider.cache.doctrine.orm.default.query" public="false"/>
     <service id="doctrine.orm.default_entity_manager.event_manager" alias="doctrine.dbal.default_connection.event_manager" public="false"/>
     <service id="doctrine.migrations.metadata_storage" alias="doctrine.migrations.storage.table_storage"/>
-<<<<<<< HEAD
-    <service id="container.env_var_processors_locator" alias=".service_locator.WaGDpDt" public="true"/>
-    <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem" public="false"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.730tY7l"/>
-    <service id="twig.loader" alias="twig.loader.native_filesystem"/>
-    <service id="Psr\Log\LoggerInterface" alias="logger" public="false"/>
-=======
     <service id="Symfony\WebpackEncoreBundle\Asset\EntrypointLookupCollectionInterface" alias="webpack_encore.entrypoint_lookup_collection" public="false"/>
     <service id="Symfony\WebpackEncoreBundle\Asset\EntrypointLookupInterface" alias="webpack_encore.entrypoint_lookup[_default]"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.WaGDpDt" public="true"/>
@@ -5068,7 +3408,6 @@
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface" alias="logger" public="false"/>
     <service id=".service_locator.A.pnDXl" alias=".1_ServiceLocator~u8bVcnc" public="false"/>
->>>>>>> emma
     <service id="event_dispatcher" alias="debug.event_dispatcher" public="true"/>
     <service id="controller_resolver" alias="debug.controller_resolver" public="false"/>
     <service id="argument_resolver" alias="debug.argument_resolver" public="false"/>
