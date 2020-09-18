@@ -9,6 +9,7 @@ return [
     false, // $matchHost
     [ // $staticRoutes
         '/' => [[['_route' => 'home', '_controller' => 'App\\Controller\\ContactController::index'], null, null, null, false, false, null]],
+        '/user' => [[['_route' => 'user', '_controller' => 'App\\Controller\\UserController::index'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'
