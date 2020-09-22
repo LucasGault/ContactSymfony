@@ -1,11 +1,10 @@
 <?php
 
 namespace App\Controller;
-
+use App\Entity\Contact;
 use App\Repository\ContactRepository;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-
 
 class ContactController extends AbstractController
 {

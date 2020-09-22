@@ -54,7 +54,7 @@ class __TwigTemplate_937cdd5b8024371b42d9534d6aeb0ea20a19415fd76fe551e5c64a90a8e
         echo "    </head>
     <body color=\"info\">
     <header>
-    <nav class=\"navbar navbar-expand-lg navbar-light bg-light\">
+    <nav class=\"navbar navbar-expand-lg navbar-light bg-light\" style=\"hieght:100px\">
             <a class=\"navbar-brand\" href=\"#\">Contactony</a>
             <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
                 <span class=\"navbar-toggler-icon\"></span>
@@ -64,8 +64,8 @@ class __TwigTemplate_937cdd5b8024371b42d9534d6aeb0ea20a19415fd76fe551e5c64a90a8e
                 <ul class=\"navbar-nav mr-auto\">
                     <li class=\"nav-item active\">
                         <!-- Button trigger modal -->
-                        <button type=\"button\" class=\"btn btn-primary\" data-toggle=\"modal\" data-target=\"#ModalForm\">
-                        Ajouter un contact
+                        <button type=\"button\" class=\"btn btn-rounded\" data-toggle=\"modal\" data-target=\"#ModalForm\">
+                        <svg aria-hidden=\"true\" focusable=\"false\" data-prefix=\"far\" data-icon=\"plus\" role=\"img\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 384 512\" class=\"svg-inline--fa fa-plus fa-w-12 fa-2x\"><path fill=\"currentColor\" d=\"M368 224H224V80c0-8.84-7.16-16-16-16h-32c-8.84 0-16 7.16-16 16v144H16c-8.84 0-16 7.16-16 16v32c0 8.84 7.16 16 16 16h144v144c0 8.84 7.16 16 16 16h32c8.84 0 16-7.16 16-16V288h144c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16z\" class=\"\"></path></svg>
                         </button>
 
                         <!-- Modal -->
@@ -110,21 +110,20 @@ class __TwigTemplate_937cdd5b8024371b42d9534d6aeb0ea20a19415fd76fe551e5c64a90a8e
                     
 </ul>
                 <form class=\"form-inline my-2 my-lg-0\">
-                    <button class=\"btn btn-outline-primary my-2 my-sm-0\" type=\"submit\">Sign in</button>
+                    <button class=\"btn btn-danger my-2 my-sm-0\" type=\"submit\">Déconnexion</button>
                     
-                    <button class=\"btn btn-outline-primary my-2 my-sm-0\" type=\"submit\">Sign up</button>
                 </form>
             </div>
         </nav>
     </header>
 
         ";
-        // line 80
+        // line 79
         $this->displayBlock('body', $context, $blocks);
-        // line 81
+        // line 80
         echo "        ";
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 83
+        // line 82
         echo "    </body>
 </html>
 ";
@@ -150,7 +149,7 @@ class __TwigTemplate_937cdd5b8024371b42d9534d6aeb0ea20a19415fd76fe551e5c64a90a8e
 
     }
 
-    // line 80
+    // line 79
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -162,14 +161,14 @@ class __TwigTemplate_937cdd5b8024371b42d9534d6aeb0ea20a19415fd76fe551e5c64a90a8e
 
     }
 
-    // line 81
+    // line 80
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 82
+        // line 81
         echo "        ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -183,7 +182,7 @@ class __TwigTemplate_937cdd5b8024371b42d9534d6aeb0ea20a19415fd76fe551e5c64a90a8e
 
     public function getDebugInfo()
     {
-        return array (  173 => 82,  166 => 81,  154 => 80,  137 => 8,  128 => 83,  125 => 81,  123 => 80,  54 => 13,  52 => 8,  43 => 1,);
+        return array (  172 => 81,  165 => 80,  153 => 79,  136 => 8,  127 => 82,  124 => 80,  122 => 79,  54 => 13,  52 => 8,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -203,7 +202,7 @@ class __TwigTemplate_937cdd5b8024371b42d9534d6aeb0ea20a19415fd76fe551e5c64a90a8e
     </head>
     <body color=\"info\">
     <header>
-    <nav class=\"navbar navbar-expand-lg navbar-light bg-light\">
+    <nav class=\"navbar navbar-expand-lg navbar-light bg-light\" style=\"hieght:100px\">
             <a class=\"navbar-brand\" href=\"#\">Contactony</a>
             <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
                 <span class=\"navbar-toggler-icon\"></span>
@@ -213,8 +212,8 @@ class __TwigTemplate_937cdd5b8024371b42d9534d6aeb0ea20a19415fd76fe551e5c64a90a8e
                 <ul class=\"navbar-nav mr-auto\">
                     <li class=\"nav-item active\">
                         <!-- Button trigger modal -->
-                        <button type=\"button\" class=\"btn btn-primary\" data-toggle=\"modal\" data-target=\"#ModalForm\">
-                        Ajouter un contact
+                        <button type=\"button\" class=\"btn btn-rounded\" data-toggle=\"modal\" data-target=\"#ModalForm\">
+                        <svg aria-hidden=\"true\" focusable=\"false\" data-prefix=\"far\" data-icon=\"plus\" role=\"img\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 384 512\" class=\"svg-inline--fa fa-plus fa-w-12 fa-2x\"><path fill=\"currentColor\" d=\"M368 224H224V80c0-8.84-7.16-16-16-16h-32c-8.84 0-16 7.16-16 16v144H16c-8.84 0-16 7.16-16 16v32c0 8.84 7.16 16 16 16h144v144c0 8.84 7.16 16 16 16h32c8.84 0 16-7.16 16-16V288h144c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16z\" class=\"\"></path></svg>
                         </button>
 
                         <!-- Modal -->
@@ -259,9 +258,8 @@ class __TwigTemplate_937cdd5b8024371b42d9534d6aeb0ea20a19415fd76fe551e5c64a90a8e
                     
 </ul>
                 <form class=\"form-inline my-2 my-lg-0\">
-                    <button class=\"btn btn-outline-primary my-2 my-sm-0\" type=\"submit\">Sign in</button>
+                    <button class=\"btn btn-danger my-2 my-sm-0\" type=\"submit\">Déconnexion</button>
                     
-                    <button class=\"btn btn-outline-primary my-2 my-sm-0\" type=\"submit\">Sign up</button>
                 </form>
             </div>
         </nav>
