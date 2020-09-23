@@ -1,6 +1,7 @@
 body{
     margin:auto;
-    background-color:#eeeeee;
+    background-image: url('bg.png');
+    background-size: auto;
 }
 
 
@@ -24,8 +25,8 @@ body{
 
 .contactButtons{
     position:absolute;
-    width:160px;
-    left: 55%;
+    width:156px;
+    left: 56%;
     background-color:#4f8a8b;
     height:82px;
     z-index: -1;
