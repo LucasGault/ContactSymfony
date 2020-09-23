@@ -4,5 +4,6 @@
 
 return [
     '_preview_error' => [['code', '_format'], ['_controller' => 'error_controller::preview', '_format' => 'html'], ['code' => '\\d+'], [['variable', '.', '[^/]++', '_format', true], ['variable', '/', '\\d+', 'code', true], ['text', '/_error']], [], []],
+    'create' => [[], ['_controller' => 'App\\Controller\\ContactController::create'], [], [['text', '/create']], [], []],
     'home' => [[], ['_controller' => 'App\\Controller\\SearchController::recherche'], [], [['text', '/']], [], []],
 ];
