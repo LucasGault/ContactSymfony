@@ -8,7 +8,7 @@
 section {
     position: relative;
     min-height: 100vh;
-    background: #5131a7;
+    background: #4f8a8b;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -38,7 +38,7 @@ section .container .user .imgBx {
     position: relative;
     width: 50%;
     height: 100%;
-    background: #513;
+    background: #fbd46d;
     transition: 0.5s;
 }
 
@@ -55,7 +55,7 @@ section .container .user .formBx {
     position: relative;
     width: 50%;
     height: 100%;
-    background: #fff;
+    background: #eeee;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -79,7 +79,7 @@ section .container .user .formBx form input {
     position: relative;
     width: 100%;
     padding: 10px;
-    background: #f5f5f5;
+    background: #fbd46d;
     color: #333;
     border: none;
     outline: none;
@@ -92,7 +92,7 @@ section .container .user .formBx form input {
 
 section .container .user .formBx form input[type="submit"] {
     /* max-width: 100px; */
-    background: #677eff;
+    background: #222831;
     color: #fff;
     cursor: pointer;
     font-size: 14px;
