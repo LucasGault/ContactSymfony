@@ -1,6 +1,11 @@
 body{
     margin:auto;
+<<<<<<< HEAD
     background-color:#eeeeee;
+=======
+    background-image: url('bg.png');
+    background-size: auto;
+>>>>>>> emma
 }
 
 
@@ -24,13 +29,20 @@ body{
 
 .contactButtons{
     position:absolute;
+<<<<<<< HEAD
     width:160px;
     left: 55%;
+=======
+    width:156px;
+    left: 64.5%;
+    top: 0%;
+>>>>>>> emma
     background-color:#4f8a8b;
     height:82px;
     z-index: -1;
     border-radius:5px; 
     box-shadow: -1px 2px 10px 3px rgba(0, 0, 0, 0.3) inset;
+<<<<<<< HEAD
 
 }
 #buttonEdit{
@@ -42,12 +54,43 @@ body{
 #buttonSupress{
     position:absolute;
     right:45px;
+=======
+   
+
+}
+#buttonSupress{
+    position:absolute;
+    right:25px;
+    width: 32px;
+    height:33px;
+    top: 25px;
+    background-image: url('times-solid.png');
+    border: 0;
+}
+#buttonEdit{
+    position:absolute;
+    right:28px;
+>>>>>>> emma
     width: 30px;
     top: 25px;
 }
 h1{
     margin-left:10%;
 }
+.navbar-brand{
+    padding-bottom:15px; 
+    color:#fbd46d;
+     font-size:1.5em;
+}
+#navbar{
+    position:fixed; 
+    top: 0px; 
+    width:100%;
+    padding-top:10px;
+    background-color: #222831;
+    z-index: 15;
+}
+
 .card {
     border: 1px solid #4f8a8b;
 }
@@ -85,13 +128,29 @@ svg{
 #container .contactButtons {
     display:none;
 
+<<<<<<< HEAD
 
 }
 
+=======
+}
+#container #buttonSupress {
+    
+    display:none;
+
+}
+>>>>>>> emma
 #container:hover .contactButtons {
     display:block;
 
 }
+<<<<<<< HEAD
+=======
+#container:hover #buttonSupress {
+    display:block;
+
+}
+>>>>>>> emma
 
 .addContact{
     position:fixed;

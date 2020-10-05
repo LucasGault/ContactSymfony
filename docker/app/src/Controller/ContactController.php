@@ -6,34 +6,31 @@ use App\Repository\ContactRepository;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\Form\Extension\Core\Type\NumberType;
+use Doctrine\ORM\EntityManagerInterface;
+use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 
 class ContactController extends AbstractController
 {
     /**
      * @Route("/", name="home")
      */
-    public function index(ContactRepository $contactRepository)
+    public function index(ContactRepository $contactRepository) : Response 
     {
         $contacts = $contactRepository->findBy(array(), array('firstname'=>'ASC'));
         return $this->render('contact/index.html.twig',compact('contacts'));
     }
 
     /**
-     * @Route("/create", name="app_contact_create")
+     * @Route("/delete/{id}", name="app_contact_delete", methods={"DELETE"})
      */
-    public function create(): Response 
+    public function delete($id,EntityManagerInterface $em): Response
     {
-        $form = $this->createFormBuilder()
-            ->add('firstname')
-            ->add('lastname')
-            ->add('phonenumber', NumberType::class)
-            ->add('submit')
-            ->getForm()
-        ;
+        $contact = $this->getDoctrine()
+        ->getRepository(Contact::class)
+        ->find($id);
 
-        return $this->render('contact/create.html.twig', [
-            'formulaireAjout' => $form->createView()
-        ]) ;
+        $em->remove($contact);
+        $em->flush();
+        return $this->redirectToRoute('home');
     }
 }

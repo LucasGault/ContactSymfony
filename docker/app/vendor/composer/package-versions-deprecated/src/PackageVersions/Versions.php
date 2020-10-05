@@ -81,7 +81,10 @@ final class Versions
   'symfony/http-kernel' => 'v5.1.5@3e32676e6cb5d2081c91a56783471ff8a7f7110b',
   'symfony/intl' => 'v5.1.5@b6886c43cc1ae3367c569c5a8d4182555dd694fb',
   'symfony/options-resolver' => 'v5.1.5@9ff59517938f88d90b6e65311fef08faa640f681',
+<<<<<<< HEAD
   'symfony/orm-pack' => 'v2.0.0@46aa731f213140388ee11ff3d2b6776a3b4a0d90',
+=======
+>>>>>>> emma
   'symfony/polyfill-intl-grapheme' => 'v1.18.1@b740103edbdcc39602239ee8860f0f45a8eb9aa5',
   'symfony/polyfill-intl-icu' => 'v1.18.1@4e45a6e39041a9cc78835b11abc47874ae302a55',
   'symfony/polyfill-intl-normalizer' => 'v1.18.1@37078a8dd4a2a1e9ab0231af7c6cb671b2ed5a7e',
@@ -91,6 +94,11 @@ final class Versions
   'symfony/property-access' => 'v5.1.5@c2a95da4d3b88523d00903a3d04636717766d674',
   'symfony/property-info' => 'v5.1.5@a10524dfdadc418c2e4b52667be7d6421b7da26f',
   'symfony/routing' => 'v5.1.5@47b0218344cb6af25c93ca8ee1137fafbee5005d',
+  'symfony/security-bundle' => 'v5.1.5@c761866b9aa13add16e6f7dec5f40ab85c2a3ad7',
+  'symfony/security-core' => 'v5.1.5@0b965da49ccf070764baa2a23bbb926036b6c6b2',
+  'symfony/security-csrf' => 'v5.1.5@962323e4db4458d731d5006f14019a22a2f84b06',
+  'symfony/security-guard' => 'v5.1.5@85c368be963e9f0df9e93d830f966fc0af531703',
+  'symfony/security-http' => 'v5.1.5@7741021221548e2b5768ec0cf502c91b6c55b209',
   'symfony/service-contracts' => 'v2.2.0@d15da7ba4957ffb8f1747218be9e1a121fd298a1',
   'symfony/stopwatch' => 'v5.1.5@0f7c58cf81dbb5dd67d423a89d577524a2ec0323',
   'symfony/string' => 'v5.1.5@0de4cc1e18bb596226c06a82e2e7e9bc6001a63a',

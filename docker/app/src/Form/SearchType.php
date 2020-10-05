@@ -18,9 +18,12 @@ class SearchType extends AbstractType
             ->add('lastname')
             ->add('phonenumber')
         ;
+<<<<<<< HEAD
         $builder->addEventListener(FormEvents::PRE_SET_DATA, function (FormEvent $event) {
             
         });
+=======
+>>>>>>> emma
     }
 
     public function configureOptions(OptionsResolver $resolver)
