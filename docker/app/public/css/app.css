@@ -1,0 +1,163 @@
+body{
+    margin:auto;
+    background-image: url('bg.png');
+    background-size: auto;
+}
+
+
+.page{
+    margin-left:auto;
+    margin-right:auto;
+    justify-content: center;
+}
+#contactCard {width:100%;
+    -webkit-transition: all 0.5s ease; /* Safari and Chrome */
+    -moz-transition: all 0.5s ease; /* Firefox */
+    -ms-transition: all 0.5s ease; /* IE 9 */
+    -o-transition: all 0.5s ease; /* Opera */
+    transition: all 0.5s ease;
+
+}
+#container:hover #contactCard{
+    margin-left:-90px;
+
+}
+
+.contactButtons{
+    position:absolute;
+    width:156px;
+    left: 64.5%;
+    top: 0%;
+    background-color:#4f8a8b;
+    height:82px;
+    z-index: -1;
+    border-radius:5px; 
+    box-shadow: -1px 2px 10px 3px rgba(0, 0, 0, 0.3) inset;
+   
+
+}
+#buttonSupress{
+    position:absolute;
+    right:25px;
+    width: 32px;
+    height:33px;
+    top: 25px;
+    background-image: url('times-solid.png');
+    border: 0;
+}
+#buttonEdit{
+    position:absolute;
+    right:28px;
+    width: 30px;
+    top: 25px;
+}
+h1{
+    margin-left:10%;
+}
+.navbar-brand{
+    padding-bottom:15px; 
+    color:#fbd46d;
+     font-size:1.5em;
+}
+#navbar{
+    position:fixed; 
+    top: 0px; 
+    width:100%;
+    padding-top:10px;
+    background-color: #222831;
+    z-index: 15;
+}
+
+.card {
+    border: 1px solid #4f8a8b;
+}
+.card-header {
+    background-color: #4f8a8b;
+    color :#eeeeee;
+    height: 50px;
+    padding-left:10%;
+}
+
+.card-body {
+    height: 30px; 
+    padding-left:10%;
+    padding-top:1px;
+    background-color:#eeeeee;
+    color: #222831;
+
+}
+
+#container #contactInfo {
+    display:none;
+
+}
+
+#container:hover #contactInfo {
+    display:block;
+
+}
+svg{
+    width: 15px;
+}
+.button {
+    width:20px;
+}
+#container .contactButtons {
+    display:none;
+
+}
+#container #buttonSupress {
+    
+    display:none;
+
+}
+#container:hover .contactButtons {
+    display:block;
+
+}
+#container:hover #buttonSupress {
+    display:block;
+
+}
+
+.addContact{
+    position:fixed;
+    right:20%;
+    bottom:25%;
+    transition-duration: 2s;
+    -webkit-transition: all 0.5s ease; /* Safari and Chrome */
+    -moz-transition: all 0.5s ease; /* Firefox */
+    -ms-transition: all 0.5s ease; /* IE 9 */
+    -o-transition: all 0.5s ease; /* Opera */
+    transition: all 0.5s ease;
+    background-color:#fbd46d; 
+    color:white;
+    border-radius: 50%; 
+    width:60px;
+    height:60px;
+}
+.addContact #addText {
+    transition-duration: 2s;
+    -webkit-transition: all 0.5s ease; /* Safari and Chrome */
+    -moz-transition: all 0.5s ease; /* Firefox */
+    -ms-transition: all 0.5s ease; /* IE 9 */
+    -o-transition: all 0.5s ease; /* Opera */
+    transition: all 0.5s ease;
+    transition-duration: 2s;
+
+}
+.addContact:hover {
+    visibility:visible;
+    transition-duration: 2s;
+    transition: all 0.5s ease;
+    width:200px;
+}
+#addText{
+    height:60px;
+    -webkit-transition: all 0.5s ease; /* Safari and Chrome */
+    -moz-transition: all 0.5s ease; /* Firefox */
+    -ms-transition: all 0.5s ease; /* IE 9 */
+    -o-transition: all 0.5s ease; /* Opera */
+    transition: all 0.5s ease;
+    transition-duration: 2s;
+}
