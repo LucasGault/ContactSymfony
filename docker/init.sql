@@ -21,13 +21,13 @@ CREATE TABLE if not exists user (
                 PRIMARY KEY (id), 
                 UNIQUE emailunique (email)) ENGINE = InnoDB;
 
-CREATE TRIGGER if not exists InsertContact 
-AFTER INSERT ON user 
-FOR EACH ROW 
-INSERT INTO contact (firstname,lastname,phonenumber,email,user_id) 
-VALUES (new.firstname,new.lastname,new.phonenumber,new.email,new.id);
+-- CREATE TRIGGER if not exists InsertContact 
+-- AFTER INSERT ON user 
+-- FOR EACH ROW 
+-- INSERT INTO contact (firstname,lastname,phonenumber,email,user_id) 
+-- VALUES (new.firstname,new.lastname,new.phonenumber,new.email,new.id);
 
-INSERT INTO user VALUES (null, 'user','user','user@mail.fr','0606060606','password')
+-- INSERT INTO user VALUES (null, 'user','user','user@mail.fr','0606060606','password');
 INSERT INTO contact VALUES  (null, 'Rémi', 'Zouzou', '070707070707', 'remi@mail.fr',1),
                             (null, 'Emma', 'Carena', '070707070707', 'emma@mail.fr',1),
                             (null, 'Jean-Mi', 'Zebeauf', '070707070707', 'jeanmi@mail.fr',1),
@@ -50,5 +50,5 @@ INSERT INTO contact VALUES  (null, 'Rémi', 'Zouzou', '070707070707', 'remi@mail
                             (null, 'Rémi', 'Zouzou', '070707070707', 'remi@mail.fr',1),
                             (null, 'Rémi', 'Zouzou', '070707070707', 'remi@mail.fr',1),
                             (null, 'Rémi', 'Zouzou', '070707070707', 'remi@mail.fr',1),
-                            (null, 'Rémi', 'Zouzou', '070707070707', 'remi@mail.fr',1),
+                            (null, 'Rémi', 'Zouzou', '070707070707', 'remi@mail.fr',1);
 
