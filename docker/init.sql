@@ -1,16 +1,6 @@
 create database if not exists contactony;
 use contactony;
-CREATE TABLE if not exists contact ( 
-                id INT NOT NULL AUTO_INCREMENT , 
-                firstname VARCHAR(255) NOT NULL , 
-                lastname VARCHAR(255) NOT NULL , 
-                phonenumber VARCHAR(255) NOT NULL ,
-                email VARCHAR(255) NOT NULL ,
-                user_id INT NOT NULL,
-                PRIMARY KEY (id),
-                FOREIGN KEY (user_id) REFERENCES user(id)) ENGINE = InnoDB;
 
-CREATE TABLE if not exists contact ( id INT NOT NULL AUTO_INCREMENT , firstname VARCHAR(255) NOT NULL , lastname VARCHAR(255) NOT NULL , phonenumber VARCHAR(255) NOT NULL , PRIMARY KEY (id)) ENGINE = InnoDB;
 CREATE TABLE if not exists user ( 
                 id INT NOT NULL AUTO_INCREMENT , 
                 firstname VARCHAR(255) NOT NULL , 
@@ -21,13 +11,26 @@ CREATE TABLE if not exists user (
                 PRIMARY KEY (id), 
                 UNIQUE emailunique (email)) ENGINE = InnoDB;
 
-CREATE TRIGGER if not exists InsertContact 
-AFTER INSERT ON user 
-FOR EACH ROW 
-INSERT INTO contact (firstname,lastname,phonenumber,email,user_id) 
-VALUES (new.firstname,new.lastname,new.phonenumber,new.email,new.id);
+                
+CREATE TABLE if not exists contact ( 
+                id INT NOT NULL AUTO_INCREMENT , 
+                firstname VARCHAR(255) NOT NULL , 
+                lastname VARCHAR(255) NOT NULL , 
+                phonenumber VARCHAR(255) NOT NULL ,
+                email VARCHAR(255) NOT NULL ,
+                user_id INT NOT NULL,
+                PRIMARY KEY (id),
+                FOREIGN KEY (user_id) REFERENCES user(id)) ENGINE = InnoDB;
 
-INSERT INTO user VALUES (null, 'user','user','user@mail.fr','0606060606','password')
+
+
+-- CREATE TRIGGER if not exists InsertContact 
+-- AFTER INSERT ON user 
+-- FOR EACH ROW 
+-- INSERT INTO contact (firstname,lastname,phonenumber,email,user_id) 
+-- VALUES (new.firstname,new.lastname,new.phonenumber,new.email,new.id);
+
+-- INSERT INTO user VALUES (null, 'user','user','user@mail.fr','0606060606','password')
 INSERT INTO contact VALUES  (null, 'Rémi', 'Zouzou', '070707070707', 'remi@mail.fr',1),
                             (null, 'Emma', 'Carena', '070707070707', 'emma@mail.fr',1),
                             (null, 'Jean-Mi', 'Zebeauf', '070707070707', 'jeanmi@mail.fr',1),

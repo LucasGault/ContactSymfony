@@ -54,14 +54,13 @@ class __TwigTemplate_d1ccd625709ce6f92213afae953df78f32573a6e011f8400bc4b1c5bc5c
         echo "    </head>
     <body color=\"info\">
 
-
         ";
-        // line 21
+        // line 20
         $this->displayBlock('body', $context, $blocks);
-        // line 22
+        // line 21
         echo "        ";
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 24
+        // line 23
         echo "    </body>
 </html>
 ";
@@ -91,7 +90,7 @@ class __TwigTemplate_d1ccd625709ce6f92213afae953df78f32573a6e011f8400bc4b1c5bc5c
 
     }
 
-    // line 21
+    // line 20
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -103,14 +102,14 @@ class __TwigTemplate_d1ccd625709ce6f92213afae953df78f32573a6e011f8400bc4b1c5bc5c
 
     }
 
-    // line 22
+    // line 21
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 23
+        // line 22
         echo "        ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -124,7 +123,7 @@ class __TwigTemplate_d1ccd625709ce6f92213afae953df78f32573a6e011f8400bc4b1c5bc5c
 
     public function getDebugInfo()
     {
-        return array (  114 => 23,  107 => 22,  95 => 21,  74 => 8,  65 => 24,  62 => 22,  60 => 21,  54 => 17,  52 => 8,  43 => 1,);
+        return array (  113 => 22,  106 => 21,  94 => 20,  73 => 8,  64 => 23,  61 => 21,  59 => 20,  54 => 17,  52 => 8,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -147,7 +146,6 @@ class __TwigTemplate_d1ccd625709ce6f92213afae953df78f32573a6e011f8400bc4b1c5bc5c
 <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js\" integrity=\"sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV\" crossorigin=\"anonymous\"></script> {% endblock %}
     </head>
     <body color=\"info\">
-
 
         {% block body %}{% endblock %}
         {% block javascripts %}

@@ -219,7 +219,72 @@ class __TwigTemplate_957090556658fe947fc5fbbc241b2db5dfa467719fb4a80195d10559444
 
 
 </div>
+<div class=\"addContact\" >
+    <button type=\"button\" class=\"btn\" data-toggle=\"modal\" data-target=\"#ModalForm\">                      <svg aria-hidden=\"true\" focusable=\"false\" data-prefix=\"far\" data-icon=\"plus\" role=\"img\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 384 512\" class=\"svg-inline--fa fa-plus fa-w-12 fa-2x\"><path fill=\"currentColor\" d=\"M368 224H224V80c0-8.84-7.16-16-16-16h-32c-8.84 0-16 7.16-16 16v144H16c-8.84 0-16 7.16-16 16v32c0 8.84 7.16 16 16 16h144v144c0 8.84 7.16 16 16 16h32c8.84 0 16-7.16 16-16V288h144c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16z\" class=\"\"></path></svg>
+    </button>
+    <span id=\"addText\" data-toggle=\"modal\" data-target=\"#ModalForm\">  Ajouter un contact </button>
+    </span>
+</div>
 
+                        <!-- Modal -->
+                        <div class=\"modal fade\" id=\"ModalForm\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"ModalLabelFrom\" aria-hidden=\"true\">
+                        <div class=\"modal-dialog\" role=\"document\">
+                            <div class=\"modal-content\">
+                            <div class=\"modal-header\">
+                                <h5 class=\"modal-title\" id=\"ModalLabelFrom\">Nouveau Contact</h5>
+                                <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">
+                                <span aria-hidden=\"true\">&times;</span>
+                                </button>
+                            </div>
+                            <div class=\"modal-body\">
+<form action=\"index.php\" method=\"post\">
+                                <div class=\"form-group\">
+                                    <label for=\"formGroupInputNom\">Nom</label>
+                                    <input type=\"text\" class=\"form-control\" id=\"formGroupInputNom\" placeholder=\"Nom\" name=\"lastname\">
+                                </div>
+                                <div class=\"form-group\">
+                                    <label for=\"formGroupInputPrenom\">Prénom</label>
+                                    <input type=\"text\" class=\"form-control\" id=\"formGroupInputPrenom\" placeholder=\"Prénom\" name=\"firstname\">
+                                </div>
+                                <div class=\"form-group\">
+                                    <label for=\"formGroupInputMail\">Email</label>
+                                    <input type=\"text\" class=\"form-control\" id=\"formGroupInputMail\" placeholder=\"Email\"name=\"mail\">
+                                </div>
+                                <div class=\"form-group\">
+                                    <label for=\"formGroupInputTel\">Téléphone</label>
+                                    <input type=\"text\" class=\"form-control\" id=\"formGroupInputTel\" placeholder=\"Téléphone\" name=\"phone\">
+                                </div>
+                                </form>
+
+                            </div>
+                            <div class=\"modal-footer\">
+                                <button type=\"button\" class=\"btn btn-secondary\" data-dismiss=\"modal\">Close</button>
+                                <button type=\"submit\"  class=\"btn btn-primary\">Save changes</button>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+
+                        <div class=\"form-group\">
+    ";
+        // line 184
+        $this->env->getRuntime("Symfony\\Component\\Form\\FormRenderer")->setTheme((isset($context["searchForm"]) || array_key_exists("searchForm", $context) ? $context["searchForm"] : (function () { throw new RuntimeError('Variable "searchForm" does not exist.', 184, $this->source); })()), [0 => "bootstrap_4_layout.html.twig"], true);
+        // line 185
+        echo "    ";
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["searchForm"]) || array_key_exists("searchForm", $context) ? $context["searchForm"] : (function () { throw new RuntimeError('Variable "searchForm" does not exist.', 185, $this->source); })()), 'form_start');
+        echo "
+    ";
+        // line 187
+        echo "    <button class=\"btn btn-primary\">rechercher</button>
+    ";
+        // line 188
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["searchForm"]) || array_key_exists("searchForm", $context) ? $context["searchForm"] : (function () { throw new RuntimeError('Variable "searchForm" does not exist.', 188, $this->source); })()), 'form_end');
+        echo "
+    
+
+        </section>
+
+        
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -238,7 +303,7 @@ class __TwigTemplate_957090556658fe947fc5fbbc241b2db5dfa467719fb4a80195d10559444
 
     public function getDebugInfo()
     {
-        return array (  160 => 75,  134 => 55,  119 => 45,  112 => 41,  108 => 39,  104 => 38,  74 => 11,  69 => 10,  67 => 9,  59 => 3,  52 => 2,  35 => 1,);
+        return array (  281 => 188,  278 => 187,  273 => 185,  271 => 184,  160 => 75,  134 => 55,  119 => 45,  112 => 41,  108 => 39,  104 => 38,  74 => 11,  69 => 10,  67 => 9,  59 => 3,  52 => 2,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -379,7 +444,63 @@ class __TwigTemplate_957090556658fe947fc5fbbc241b2db5dfa467719fb4a80195d10559444
 
 
 </div>
+<div class=\"addContact\" >
+    <button type=\"button\" class=\"btn\" data-toggle=\"modal\" data-target=\"#ModalForm\">                      <svg aria-hidden=\"true\" focusable=\"false\" data-prefix=\"far\" data-icon=\"plus\" role=\"img\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 384 512\" class=\"svg-inline--fa fa-plus fa-w-12 fa-2x\"><path fill=\"currentColor\" d=\"M368 224H224V80c0-8.84-7.16-16-16-16h-32c-8.84 0-16 7.16-16 16v144H16c-8.84 0-16 7.16-16 16v32c0 8.84 7.16 16 16 16h144v144c0 8.84 7.16 16 16 16h32c8.84 0 16-7.16 16-16V288h144c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16z\" class=\"\"></path></svg>
+    </button>
+    <span id=\"addText\" data-toggle=\"modal\" data-target=\"#ModalForm\">  Ajouter un contact </button>
+    </span>
+</div>
 
+                        <!-- Modal -->
+                        <div class=\"modal fade\" id=\"ModalForm\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"ModalLabelFrom\" aria-hidden=\"true\">
+                        <div class=\"modal-dialog\" role=\"document\">
+                            <div class=\"modal-content\">
+                            <div class=\"modal-header\">
+                                <h5 class=\"modal-title\" id=\"ModalLabelFrom\">Nouveau Contact</h5>
+                                <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">
+                                <span aria-hidden=\"true\">&times;</span>
+                                </button>
+                            </div>
+                            <div class=\"modal-body\">
+<form action=\"index.php\" method=\"post\">
+                                <div class=\"form-group\">
+                                    <label for=\"formGroupInputNom\">Nom</label>
+                                    <input type=\"text\" class=\"form-control\" id=\"formGroupInputNom\" placeholder=\"Nom\" name=\"lastname\">
+                                </div>
+                                <div class=\"form-group\">
+                                    <label for=\"formGroupInputPrenom\">Prénom</label>
+                                    <input type=\"text\" class=\"form-control\" id=\"formGroupInputPrenom\" placeholder=\"Prénom\" name=\"firstname\">
+                                </div>
+                                <div class=\"form-group\">
+                                    <label for=\"formGroupInputMail\">Email</label>
+                                    <input type=\"text\" class=\"form-control\" id=\"formGroupInputMail\" placeholder=\"Email\"name=\"mail\">
+                                </div>
+                                <div class=\"form-group\">
+                                    <label for=\"formGroupInputTel\">Téléphone</label>
+                                    <input type=\"text\" class=\"form-control\" id=\"formGroupInputTel\" placeholder=\"Téléphone\" name=\"phone\">
+                                </div>
+                                </form>
+
+                            </div>
+                            <div class=\"modal-footer\">
+                                <button type=\"button\" class=\"btn btn-secondary\" data-dismiss=\"modal\">Close</button>
+                                <button type=\"submit\"  class=\"btn btn-primary\">Save changes</button>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+
+                        <div class=\"form-group\">
+    {% form_theme searchForm 'bootstrap_4_layout.html.twig' %}
+    {{ form_start(searchForm) }}
+    {# {{ form_row(searchForm.firstname, {'label': \" \", 'attr': {'placeholder': 'mot clé...'}}) }} #}
+    <button class=\"btn btn-primary\">rechercher</button>
+    {{ form_end(searchForm) }}
+    
+
+        </section>
+
+        
 {% endblock %}", "contact/index.html.twig", "/var/www/project/templates/contact/index.html.twig");
     }
 }
