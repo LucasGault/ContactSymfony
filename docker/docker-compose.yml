@@ -48,8 +48,8 @@ services:
         restart: always 
         environment:
             MYSQL_USER: root
-            MYSQL_ROOT_PASSWORD: coucou05
-            MYSQL_PASSWORD: coucou05
+            MYSQL_ROOT_PASSWORD: secret
+            MYSQL_PASSWORD: secret
         networks:
             - nginx-php74-mysql8-node-phpmyadmin
 

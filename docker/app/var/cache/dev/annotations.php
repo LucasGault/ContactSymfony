@@ -65,13 +65,8 @@ return [[
 '%5B%5BC%5DApp%5CController%5CContactController%5D%5B1%5D' => 2,
 '%5BApp%5CController%5CContactController%23index%5D%5B1%5D' => 3,
 '%5B%5BC%5DApp%5CController%5CContactController%23index%5D%5B1%5D' => 2,
-<<<<<<< HEAD
-'%5BApp%5CController%5CContactController%23create%5D%5B1%5D' => 4,
-'%5B%5BC%5DApp%5CController%5CContactController%23create%5D%5B1%5D' => 2,
-=======
 '%5BApp%5CController%5CContactController%23delete%5D%5B1%5D' => 4,
 '%5B%5BC%5DApp%5CController%5CContactController%23delete%5D%5B1%5D' => 2,
->>>>>>> emma
 '%5BApp%5CController%5CSearchController%5D%5B1%5D' => 1,
 '%5B%5BC%5DApp%5CController%5CSearchController%5D%5B1%5D' => 2,
 '%5BApp%5CController%5CSearchController%23recherche%5D%5B1%5D' => 3,
@@ -543,21 +538,6 @@ return [[
 '%5BSymfony%5CBundle%5CFrameworkBundle%5CController%5CRedirectController%24router%5D%5B1%5D' => 1,
 '%5B%5BC%5DSymfony%5CBundle%5CFrameworkBundle%5CController%5CRedirectController%24router%5D%5B1%5D' => 2,
 '%5BSymfony%5CBundle%5CFrameworkBundle%5CController%5CRedirectController%24httpPort%5D%5B1%5D' => 1,
-<<<<<<< HEAD
-'%5B%5BC%5DSymfony%5CBundle%5CFrameworkBundle%5CController%5CRedirectController%24httpPort%5D%5B1%5D' => 9,
-'%5BSymfony%5CBundle%5CFrameworkBundle%5CController%5CRedirectController%24httpsPort%5D%5B1%5D' => 1,
-'%5B%5BC%5DSymfony%5CBundle%5CFrameworkBundle%5CController%5CRedirectController%24httpsPort%5D%5B1%5D' => 9,
-'%5BSymfony%5CBundle%5CFrameworkBundle%5CController%5CTemplateController%5D%5B1%5D' => 1,
-'%5B%5BC%5DSymfony%5CBundle%5CFrameworkBundle%5CController%5CTemplateController%5D%5B1%5D' => 9,
-'%5BSymfony%5CBundle%5CFrameworkBundle%5CController%5CTemplateController%23__construct%5D%5B1%5D' => 1,
-'%5B%5BC%5DSymfony%5CBundle%5CFrameworkBundle%5CController%5CTemplateController%23__construct%5D%5B1%5D' => 9,
-'%5BSymfony%5CBundle%5CFrameworkBundle%5CController%5CTemplateController%23templateAction%5D%5B1%5D' => 1,
-'%5B%5BC%5DSymfony%5CBundle%5CFrameworkBundle%5CController%5CTemplateController%23templateAction%5D%5B1%5D' => 9,
-'%5BSymfony%5CBundle%5CFrameworkBundle%5CController%5CTemplateController%23__invoke%5D%5B1%5D' => 1,
-'%5B%5BC%5DSymfony%5CBundle%5CFrameworkBundle%5CController%5CTemplateController%23__invoke%5D%5B1%5D' => 9,
-'%5BSymfony%5CBundle%5CFrameworkBundle%5CController%5CTemplateController%24twig%5D%5B1%5D' => 1,
-'%5B%5BC%5DSymfony%5CBundle%5CFrameworkBundle%5CController%5CTemplateController%24twig%5D%5B1%5D' => 9,
-=======
 '%5B%5BC%5DSymfony%5CBundle%5CFrameworkBundle%5CController%5CRedirectController%24httpPort%5D%5B1%5D' => 2,
 '%5BSymfony%5CBundle%5CFrameworkBundle%5CController%5CRedirectController%24httpsPort%5D%5B1%5D' => 1,
 '%5B%5BC%5DSymfony%5CBundle%5CFrameworkBundle%5CController%5CRedirectController%24httpsPort%5D%5B1%5D' => 2,
@@ -581,17 +561,12 @@ return [[
 '%5B%5BC%5DSymfony%5CComponent%5CSecurity%5CHttp%5CController%5CUserValueResolver%23resolve%5D%5B1%5D' => 2,
 '%5BSymfony%5CComponent%5CSecurity%5CHttp%5CController%5CUserValueResolver%24tokenStorage%5D%5B1%5D' => 1,
 '%5B%5BC%5DSymfony%5CComponent%5CSecurity%5CHttp%5CController%5CUserValueResolver%24tokenStorage%5D%5B1%5D' => 2,
->>>>>>> emma
 
 ], [
 
 0 => 'N;',
 1 => [],
-<<<<<<< HEAD
-2 => 1600792435,
-=======
 2 => 1600882208,
->>>>>>> emma
 3 => static function () {
     return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
         $o = [
@@ -623,12 +598,6 @@ return [[
         [
             'Symfony\\Component\\Routing\\Annotation\\Route' => [
                 'path' => [
-<<<<<<< HEAD
-                    '/create',
-                ],
-                'name' => [
-                    'create',
-=======
                     '/delete/{id}',
                 ],
                 'name' => [
@@ -638,7 +607,6 @@ return [[
                     [
                         'DELETE',
                     ],
->>>>>>> emma
                 ],
             ],
         ],

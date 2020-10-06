@@ -15,10 +15,7 @@
       <parameter key="PsyshBundle">Fidry\PsyshBundle\PsyshBundle</parameter>
       <parameter key="WebpackEncoreBundle">Symfony\WebpackEncoreBundle\WebpackEncoreBundle</parameter>
       <parameter key="KnpPaginatorBundle">Knp\Bundle\PaginatorBundle\KnpPaginatorBundle</parameter>
-<<<<<<< HEAD
-=======
       <parameter key="SecurityBundle">Symfony\Bundle\SecurityBundle\SecurityBundle</parameter>
->>>>>>> emma
     </parameter>
     <parameter key="kernel.bundles_metadata" type="collection">
       <parameter key="FrameworkBundle" type="collection">
@@ -53,13 +50,10 @@
         <parameter key="path">/var/www/project/vendor/knplabs/knp-paginator-bundle</parameter>
         <parameter key="namespace">Knp\Bundle\PaginatorBundle</parameter>
       </parameter>
-<<<<<<< HEAD
-=======
       <parameter key="SecurityBundle" type="collection">
         <parameter key="path">/var/www/project/vendor/symfony/security-bundle</parameter>
         <parameter key="namespace">Symfony\Bundle\SecurityBundle</parameter>
       </parameter>
->>>>>>> emma
     </parameter>
     <parameter key="kernel.charset">UTF-8</parameter>
     <parameter key="kernel.container_class">App_KernelDevDebugContainer</parameter>
@@ -110,12 +104,8 @@
     </parameter>
     <parameter key="session.save_path">/var/www/project/var/cache/dev/sessions</parameter>
     <parameter key="session.metadata.update_threshold">0</parameter>
-<<<<<<< HEAD
-    <parameter key="form.type_extension.csrf.enabled">false</parameter>
-=======
     <parameter key="form.type_extension.csrf.enabled">true</parameter>
     <parameter key="form.type_extension.csrf.field_name">_token</parameter>
->>>>>>> emma
     <parameter key="asset.request_context.base_path">null</parameter>
     <parameter key="asset.request_context.secure">null</parameter>
     <parameter key="validator.mapping.cache.file">/var/www/project/var/cache/dev/validation.php</parameter>
@@ -209,8 +199,6 @@
     <parameter key="knp_paginator.template.sortable">@KnpPaginator/Pagination/sortable_link.html.twig</parameter>
     <parameter key="knp_paginator.page_range">5</parameter>
     <parameter key="knp_paginator.page_limit">null</parameter>
-<<<<<<< HEAD
-=======
     <parameter key="security.role_hierarchy.roles" type="collection"/>
     <parameter key="security.access.denied_url">null</parameter>
     <parameter key="security.authentication.manager.erase_credentials">true</parameter>
@@ -221,7 +209,6 @@
       <parameter>dev</parameter>
       <parameter>main</parameter>
     </parameter>
->>>>>>> emma
     <parameter key="console.command.ids" type="collection"/>
   </parameters>
   <services>
@@ -244,8 +231,6 @@
         <argument type="service" id=".service_locator.g9CqTPp.App\Controller\SearchController"/>
       </call>
     </service>
-<<<<<<< HEAD
-=======
     <service id="App\Controller\SecurityController" class="App\Controller\SecurityController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
@@ -255,7 +240,6 @@
     </service>
     <service id="App\Entity\Contact" class="App\Entity\Contact" autowire="true" autoconfigure="true"/>
     <service id="App\Entity\User" class="App\Entity\User" autowire="true" autoconfigure="true"/>
->>>>>>> emma
     <service id="App\Form\SearchType" class="App\Form\SearchType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
@@ -651,10 +635,7 @@
       <argument type="collection">
         <argument>/var/www/project/vendor/symfony/validator/Resources/translations</argument>
         <argument>/var/www/project/vendor/symfony/form/Resources/translations</argument>
-<<<<<<< HEAD
-=======
         <argument>/var/www/project/vendor/symfony/security-core/Resources/translations</argument>
->>>>>>> emma
       </argument>
       <argument type="collection">
         <argument>/var/www/project/vendor/knplabs/knp-paginator-bundle/templates</argument>
@@ -676,10 +657,7 @@
       <argument type="collection">
         <argument>/var/www/project/vendor/symfony/validator/Resources/translations</argument>
         <argument>/var/www/project/vendor/symfony/form/Resources/translations</argument>
-<<<<<<< HEAD
-=======
         <argument>/var/www/project/vendor/symfony/security-core/Resources/translations</argument>
->>>>>>> emma
       </argument>
       <argument type="collection">
         <argument>/var/www/project/vendor/knplabs/knp-paginator-bundle/templates</argument>
@@ -727,10 +705,7 @@
         <argument>Symfony\Component\Form\Extension\Validator\Type\RepeatedTypeValidatorExtension</argument>
         <argument>Symfony\Component\Form\Extension\Validator\Type\SubmitTypeValidatorExtension</argument>
         <argument>Symfony\Component\Form\Extension\Validator\Type\UploadValidatorExtension</argument>
-<<<<<<< HEAD
-=======
         <argument>Symfony\Component\Form\Extension\Csrf\Type\FormTypeCsrfExtension</argument>
->>>>>>> emma
       </argument>
       <argument type="collection">
         <argument>Symfony\Component\Form\Extension\Validator\ValidatorTypeGuesser</argument>
@@ -1060,8 +1035,6 @@
       <argument>true</argument>
     </service>
     <service id="session.marshaller" class="Symfony\Component\HttpFoundation\Session\Storage\Handler\IdentityMarshaller" public="false"/>
-<<<<<<< HEAD
-=======
     <service id="security.csrf.token_generator" class="Symfony\Component\Security\Csrf\TokenGenerator\UriSafeTokenGenerator" public="false"/>
     <service id="security.csrf.token_storage" class="Symfony\Component\Security\Csrf\TokenStorage\SessionTokenStorage" public="false">
       <argument type="service" id="session"/>
@@ -1078,7 +1051,6 @@
     <service id="twig.extension.security_csrf" class="Symfony\Bridge\Twig\Extension\CsrfExtension" public="false">
       <tag name="twig.extension"/>
     </service>
->>>>>>> emma
     <service id="form.resolved_type_factory" class="Symfony\Component\Form\ResolvedFormTypeFactory" public="false"/>
     <service id="form.registry" class="Symfony\Component\Form\FormRegistry" public="false">
       <argument type="collection">
@@ -1097,10 +1069,7 @@
           <argument type="service" id="form.type_extension.form.http_foundation"/>
           <argument type="service" id="form.type_extension.form.validator"/>
           <argument type="service" id="form.type_extension.upload.validator"/>
-<<<<<<< HEAD
-=======
           <argument type="service" id="form.type_extension.csrf"/>
->>>>>>> emma
         </argument>
         <argument key="Symfony\Component\Form\Extension\Core\Type\RepeatedType" type="iterator">
           <argument type="service" id="form.type_extension.repeated.validator"/>
@@ -1172,8 +1141,6 @@
       <argument type="service" id="translator.default"/>
       <argument>validators</argument>
     </service>
-<<<<<<< HEAD
-=======
     <service id="form.type_extension.csrf" class="Symfony\Component\Form\Extension\Csrf\Type\FormTypeCsrfExtension" public="false">
       <tag name="form.type_extension"/>
       <argument type="service" id="security.csrf.token_manager"/>
@@ -1183,7 +1150,6 @@
       <argument>validators</argument>
       <argument type="service" id="form.server_params"/>
     </service>
->>>>>>> emma
     <service id="assets.packages" class="Symfony\Component\Asset\Packages" public="false">
       <argument type="service" id="assets._default_package"/>
       <argument type="collection"/>
@@ -1282,11 +1248,7 @@
       <factory class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" method="create"/>
     </service>
     <service id="validator.validator_factory" class="Symfony\Component\Validator\ContainerConstraintValidatorFactory" public="false">
-<<<<<<< HEAD
-      <argument type="service" id=".service_locator._rsIVwc"/>
-=======
       <argument type="service" id=".service_locator.Xl5XdWY"/>
->>>>>>> emma
     </service>
     <service id="validator.expression" class="Symfony\Component\Validator\Constraints\ExpressionValidator" public="false">
       <tag name="validator.constraint_validator" alias="validator.expression"/>
@@ -1361,52 +1323,34 @@
           <argument key="ar" type="collection">
             <argument>/var/www/project/vendor/symfony/validator/Resources/translations/validators.ar.xlf</argument>
             <argument>/var/www/project/vendor/symfony/form/Resources/translations/validators.ar.xlf</argument>
-<<<<<<< HEAD
-=======
             <argument>/var/www/project/vendor/symfony/security-core/Resources/translations/security.ar.xlf</argument>
->>>>>>> emma
             <argument>/var/www/project/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.ar.xliff</argument>
           </argument>
           <argument key="az" type="collection">
             <argument>/var/www/project/vendor/symfony/validator/Resources/translations/validators.az.xlf</argument>
             <argument>/var/www/project/vendor/symfony/form/Resources/translations/validators.az.xlf</argument>
-<<<<<<< HEAD
-=======
             <argument>/var/www/project/vendor/symfony/security-core/Resources/translations/security.az.xlf</argument>
->>>>>>> emma
           </argument>
           <argument key="be" type="collection">
             <argument>/var/www/project/vendor/symfony/validator/Resources/translations/validators.be.xlf</argument>
             <argument>/var/www/project/vendor/symfony/form/Resources/translations/validators.be.xlf</argument>
-<<<<<<< HEAD
-=======
             <argument>/var/www/project/vendor/symfony/security-core/Resources/translations/security.be.xlf</argument>
->>>>>>> emma
           </argument>
           <argument key="bg" type="collection">
             <argument>/var/www/project/vendor/symfony/validator/Resources/translations/validators.bg.xlf</argument>
             <argument>/var/www/project/vendor/symfony/form/Resources/translations/validators.bg.xlf</argument>
-<<<<<<< HEAD
-=======
             <argument>/var/www/project/vendor/symfony/security-core/Resources/translations/security.bg.xlf</argument>
->>>>>>> emma
             <argument>/var/www/project/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.bg.xliff</argument>
           </argument>
           <argument key="ca" type="collection">
             <argument>/var/www/project/vendor/symfony/validator/Resources/translations/validators.ca.xlf</argument>
             <argument>/var/www/project/vendor/symfony/form/Resources/translations/validators.ca.xlf</argument>
-<<<<<<< HEAD
-=======
             <argument>/var/www/project/vendor/symfony/security-core/Resources/translations/security.ca.xlf</argument>
->>>>>>> emma
           </argument>
           <argument key="cs" type="collection">
             <argument>/var/www/project/vendor/symfony/validator/Resources/translations/validators.cs.xlf</argument>
             <argument>/var/www/project/vendor/symfony/form/Resources/translations/validators.cs.xlf</argument>
-<<<<<<< HEAD
-=======
             <argument>/var/www/project/vendor/symfony/security-core/Resources/translations/security.cs.xlf</argument>
->>>>>>> emma
             <argument>/var/www/project/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.cs.xliff</argument>
           </argument>
           <argument key="cy" type="collection">
@@ -1415,45 +1359,30 @@
           <argument key="da" type="collection">
             <argument>/var/www/project/vendor/symfony/validator/Resources/translations/validators.da.xlf</argument>
             <argument>/var/www/project/vendor/symfony/form/Resources/translations/validators.da.xlf</argument>
-<<<<<<< HEAD
-=======
             <argument>/var/www/project/vendor/symfony/security-core/Resources/translations/security.da.xlf</argument>
->>>>>>> emma
             <argument>/var/www/project/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.da.xliff</argument>
           </argument>
           <argument key="de" type="collection">
             <argument>/var/www/project/vendor/symfony/validator/Resources/translations/validators.de.xlf</argument>
             <argument>/var/www/project/vendor/symfony/form/Resources/translations/validators.de.xlf</argument>
-<<<<<<< HEAD
-=======
             <argument>/var/www/project/vendor/symfony/security-core/Resources/translations/security.de.xlf</argument>
->>>>>>> emma
             <argument>/var/www/project/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.de.xliff</argument>
           </argument>
           <argument key="el" type="collection">
             <argument>/var/www/project/vendor/symfony/validator/Resources/translations/validators.el.xlf</argument>
             <argument>/var/www/project/vendor/symfony/form/Resources/translations/validators.el.xlf</argument>
-<<<<<<< HEAD
-=======
             <argument>/var/www/project/vendor/symfony/security-core/Resources/translations/security.el.xlf</argument>
->>>>>>> emma
           </argument>
           <argument key="en" type="collection">
             <argument>/var/www/project/vendor/symfony/validator/Resources/translations/validators.en.xlf</argument>
             <argument>/var/www/project/vendor/symfony/form/Resources/translations/validators.en.xlf</argument>
-<<<<<<< HEAD
-=======
             <argument>/var/www/project/vendor/symfony/security-core/Resources/translations/security.en.xlf</argument>
->>>>>>> emma
             <argument>/var/www/project/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.en.xliff</argument>
           </argument>
           <argument key="es" type="collection">
             <argument>/var/www/project/vendor/symfony/validator/Resources/translations/validators.es.xlf</argument>
             <argument>/var/www/project/vendor/symfony/form/Resources/translations/validators.es.xlf</argument>
-<<<<<<< HEAD
-=======
             <argument>/var/www/project/vendor/symfony/security-core/Resources/translations/security.es.xlf</argument>
->>>>>>> emma
             <argument>/var/www/project/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.es.xliff</argument>
           </argument>
           <argument key="et" type="collection">
@@ -1463,19 +1392,13 @@
           <argument key="eu" type="collection">
             <argument>/var/www/project/vendor/symfony/validator/Resources/translations/validators.eu.xlf</argument>
             <argument>/var/www/project/vendor/symfony/form/Resources/translations/validators.eu.xlf</argument>
-<<<<<<< HEAD
-=======
             <argument>/var/www/project/vendor/symfony/security-core/Resources/translations/security.eu.xlf</argument>
->>>>>>> emma
             <argument>/var/www/project/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.eu.xliff</argument>
           </argument>
           <argument key="fa" type="collection">
             <argument>/var/www/project/vendor/symfony/validator/Resources/translations/validators.fa.xlf</argument>
             <argument>/var/www/project/vendor/symfony/form/Resources/translations/validators.fa.xlf</argument>
-<<<<<<< HEAD
-=======
             <argument>/var/www/project/vendor/symfony/security-core/Resources/translations/security.fa.xlf</argument>
->>>>>>> emma
             <argument>/var/www/project/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.fa.xliff</argument>
           </argument>
           <argument key="fi" type="collection">
@@ -1485,43 +1408,28 @@
           <argument key="fr" type="collection">
             <argument>/var/www/project/vendor/symfony/validator/Resources/translations/validators.fr.xlf</argument>
             <argument>/var/www/project/vendor/symfony/form/Resources/translations/validators.fr.xlf</argument>
-<<<<<<< HEAD
-=======
             <argument>/var/www/project/vendor/symfony/security-core/Resources/translations/security.fr.xlf</argument>
->>>>>>> emma
             <argument>/var/www/project/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.fr.xliff</argument>
           </argument>
           <argument key="gl" type="collection">
             <argument>/var/www/project/vendor/symfony/validator/Resources/translations/validators.gl.xlf</argument>
             <argument>/var/www/project/vendor/symfony/form/Resources/translations/validators.gl.xlf</argument>
-<<<<<<< HEAD
-=======
             <argument>/var/www/project/vendor/symfony/security-core/Resources/translations/security.gl.xlf</argument>
->>>>>>> emma
           </argument>
           <argument key="he" type="collection">
             <argument>/var/www/project/vendor/symfony/validator/Resources/translations/validators.he.xlf</argument>
             <argument>/var/www/project/vendor/symfony/form/Resources/translations/validators.he.xlf</argument>
-<<<<<<< HEAD
-=======
             <argument>/var/www/project/vendor/symfony/security-core/Resources/translations/security.he.xlf</argument>
->>>>>>> emma
           </argument>
           <argument key="hr" type="collection">
             <argument>/var/www/project/vendor/symfony/validator/Resources/translations/validators.hr.xlf</argument>
             <argument>/var/www/project/vendor/symfony/form/Resources/translations/validators.hr.xlf</argument>
-<<<<<<< HEAD
-=======
             <argument>/var/www/project/vendor/symfony/security-core/Resources/translations/security.hr.xlf</argument>
->>>>>>> emma
           </argument>
           <argument key="hu" type="collection">
             <argument>/var/www/project/vendor/symfony/validator/Resources/translations/validators.hu.xlf</argument>
             <argument>/var/www/project/vendor/symfony/form/Resources/translations/validators.hu.xlf</argument>
-<<<<<<< HEAD
-=======
             <argument>/var/www/project/vendor/symfony/security-core/Resources/translations/security.hu.xlf</argument>
->>>>>>> emma
             <argument>/var/www/project/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.hu.xliff</argument>
           </argument>
           <argument key="hy" type="collection">
@@ -1531,54 +1439,36 @@
           <argument key="id" type="collection">
             <argument>/var/www/project/vendor/symfony/validator/Resources/translations/validators.id.xlf</argument>
             <argument>/var/www/project/vendor/symfony/form/Resources/translations/validators.id.xlf</argument>
-<<<<<<< HEAD
-=======
             <argument>/var/www/project/vendor/symfony/security-core/Resources/translations/security.id.xlf</argument>
->>>>>>> emma
             <argument>/var/www/project/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.id.xliff</argument>
           </argument>
           <argument key="it" type="collection">
             <argument>/var/www/project/vendor/symfony/validator/Resources/translations/validators.it.xlf</argument>
             <argument>/var/www/project/vendor/symfony/form/Resources/translations/validators.it.xlf</argument>
-<<<<<<< HEAD
-=======
             <argument>/var/www/project/vendor/symfony/security-core/Resources/translations/security.it.xlf</argument>
->>>>>>> emma
             <argument>/var/www/project/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.it.xliff</argument>
           </argument>
           <argument key="ja" type="collection">
             <argument>/var/www/project/vendor/symfony/validator/Resources/translations/validators.ja.xlf</argument>
             <argument>/var/www/project/vendor/symfony/form/Resources/translations/validators.ja.xlf</argument>
-<<<<<<< HEAD
-=======
             <argument>/var/www/project/vendor/symfony/security-core/Resources/translations/security.ja.xlf</argument>
->>>>>>> emma
             <argument>/var/www/project/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.ja.xliff</argument>
           </argument>
           <argument key="lb" type="collection">
             <argument>/var/www/project/vendor/symfony/validator/Resources/translations/validators.lb.xlf</argument>
             <argument>/var/www/project/vendor/symfony/form/Resources/translations/validators.lb.xlf</argument>
-<<<<<<< HEAD
-=======
             <argument>/var/www/project/vendor/symfony/security-core/Resources/translations/security.lb.xlf</argument>
->>>>>>> emma
           </argument>
           <argument key="lt" type="collection">
             <argument>/var/www/project/vendor/symfony/validator/Resources/translations/validators.lt.xlf</argument>
             <argument>/var/www/project/vendor/symfony/form/Resources/translations/validators.lt.xlf</argument>
-<<<<<<< HEAD
-=======
             <argument>/var/www/project/vendor/symfony/security-core/Resources/translations/security.lt.xlf</argument>
->>>>>>> emma
             <argument>/var/www/project/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.lt.xliff</argument>
           </argument>
           <argument key="lv" type="collection">
             <argument>/var/www/project/vendor/symfony/validator/Resources/translations/validators.lv.xlf</argument>
             <argument>/var/www/project/vendor/symfony/form/Resources/translations/validators.lv.xlf</argument>
-<<<<<<< HEAD
-=======
             <argument>/var/www/project/vendor/symfony/security-core/Resources/translations/security.lv.xlf</argument>
->>>>>>> emma
           </argument>
           <argument key="mn" type="collection">
             <argument>/var/www/project/vendor/symfony/validator/Resources/translations/validators.mn.xlf</argument>
@@ -1587,44 +1477,29 @@
           <argument key="nb" type="collection">
             <argument>/var/www/project/vendor/symfony/validator/Resources/translations/validators.nb.xlf</argument>
             <argument>/var/www/project/vendor/symfony/form/Resources/translations/validators.nb.xlf</argument>
-<<<<<<< HEAD
-=======
             <argument>/var/www/project/vendor/symfony/security-core/Resources/translations/security.nb.xlf</argument>
->>>>>>> emma
           </argument>
           <argument key="nl" type="collection">
             <argument>/var/www/project/vendor/symfony/validator/Resources/translations/validators.nl.xlf</argument>
             <argument>/var/www/project/vendor/symfony/form/Resources/translations/validators.nl.xlf</argument>
-<<<<<<< HEAD
-=======
             <argument>/var/www/project/vendor/symfony/security-core/Resources/translations/security.nl.xlf</argument>
->>>>>>> emma
             <argument>/var/www/project/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.nl.xliff</argument>
           </argument>
           <argument key="nn" type="collection">
             <argument>/var/www/project/vendor/symfony/validator/Resources/translations/validators.nn.xlf</argument>
             <argument>/var/www/project/vendor/symfony/form/Resources/translations/validators.nn.xlf</argument>
-<<<<<<< HEAD
-=======
             <argument>/var/www/project/vendor/symfony/security-core/Resources/translations/security.nn.xlf</argument>
->>>>>>> emma
           </argument>
           <argument key="no" type="collection">
             <argument>/var/www/project/vendor/symfony/validator/Resources/translations/validators.no.xlf</argument>
             <argument>/var/www/project/vendor/symfony/form/Resources/translations/validators.no.xlf</argument>
-<<<<<<< HEAD
-=======
             <argument>/var/www/project/vendor/symfony/security-core/Resources/translations/security.no.xlf</argument>
->>>>>>> emma
             <argument>/var/www/project/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.no.xliff</argument>
           </argument>
           <argument key="pl" type="collection">
             <argument>/var/www/project/vendor/symfony/validator/Resources/translations/validators.pl.xlf</argument>
             <argument>/var/www/project/vendor/symfony/form/Resources/translations/validators.pl.xlf</argument>
-<<<<<<< HEAD
-=======
             <argument>/var/www/project/vendor/symfony/security-core/Resources/translations/security.pl.xlf</argument>
->>>>>>> emma
             <argument>/var/www/project/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.pl.xliff</argument>
           </argument>
           <argument key="pt" type="collection">
@@ -1634,45 +1509,30 @@
           <argument key="pt_BR" type="collection">
             <argument>/var/www/project/vendor/symfony/validator/Resources/translations/validators.pt_BR.xlf</argument>
             <argument>/var/www/project/vendor/symfony/form/Resources/translations/validators.pt_BR.xlf</argument>
-<<<<<<< HEAD
-=======
             <argument>/var/www/project/vendor/symfony/security-core/Resources/translations/security.pt_BR.xlf</argument>
->>>>>>> emma
             <argument>/var/www/project/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.pt_BR.xliff</argument>
           </argument>
           <argument key="ro" type="collection">
             <argument>/var/www/project/vendor/symfony/validator/Resources/translations/validators.ro.xlf</argument>
             <argument>/var/www/project/vendor/symfony/form/Resources/translations/validators.ro.xlf</argument>
-<<<<<<< HEAD
-=======
             <argument>/var/www/project/vendor/symfony/security-core/Resources/translations/security.ro.xlf</argument>
->>>>>>> emma
             <argument>/var/www/project/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.ro.xliff</argument>
           </argument>
           <argument key="ru" type="collection">
             <argument>/var/www/project/vendor/symfony/validator/Resources/translations/validators.ru.xlf</argument>
             <argument>/var/www/project/vendor/symfony/form/Resources/translations/validators.ru.xlf</argument>
-<<<<<<< HEAD
-=======
             <argument>/var/www/project/vendor/symfony/security-core/Resources/translations/security.ru.xlf</argument>
->>>>>>> emma
             <argument>/var/www/project/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.ru.xliff</argument>
           </argument>
           <argument key="sk" type="collection">
             <argument>/var/www/project/vendor/symfony/validator/Resources/translations/validators.sk.xlf</argument>
             <argument>/var/www/project/vendor/symfony/form/Resources/translations/validators.sk.xlf</argument>
-<<<<<<< HEAD
-=======
             <argument>/var/www/project/vendor/symfony/security-core/Resources/translations/security.sk.xlf</argument>
->>>>>>> emma
           </argument>
           <argument key="sl" type="collection">
             <argument>/var/www/project/vendor/symfony/validator/Resources/translations/validators.sl.xlf</argument>
             <argument>/var/www/project/vendor/symfony/form/Resources/translations/validators.sl.xlf</argument>
-<<<<<<< HEAD
-=======
             <argument>/var/www/project/vendor/symfony/security-core/Resources/translations/security.sl.xlf</argument>
->>>>>>> emma
           </argument>
           <argument key="sq" type="collection">
             <argument>/var/www/project/vendor/symfony/validator/Resources/translations/validators.sq.xlf</argument>
@@ -1680,86 +1540,56 @@
           <argument key="sr_Cyrl" type="collection">
             <argument>/var/www/project/vendor/symfony/validator/Resources/translations/validators.sr_Cyrl.xlf</argument>
             <argument>/var/www/project/vendor/symfony/form/Resources/translations/validators.sr_Cyrl.xlf</argument>
-<<<<<<< HEAD
-=======
             <argument>/var/www/project/vendor/symfony/security-core/Resources/translations/security.sr_Cyrl.xlf</argument>
->>>>>>> emma
           </argument>
           <argument key="sr_Latn" type="collection">
             <argument>/var/www/project/vendor/symfony/validator/Resources/translations/validators.sr_Latn.xlf</argument>
             <argument>/var/www/project/vendor/symfony/form/Resources/translations/validators.sr_Latn.xlf</argument>
-<<<<<<< HEAD
-=======
             <argument>/var/www/project/vendor/symfony/security-core/Resources/translations/security.sr_Latn.xlf</argument>
->>>>>>> emma
           </argument>
           <argument key="sv" type="collection">
             <argument>/var/www/project/vendor/symfony/validator/Resources/translations/validators.sv.xlf</argument>
             <argument>/var/www/project/vendor/symfony/form/Resources/translations/validators.sv.xlf</argument>
-<<<<<<< HEAD
-=======
             <argument>/var/www/project/vendor/symfony/security-core/Resources/translations/security.sv.xlf</argument>
->>>>>>> emma
             <argument>/var/www/project/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.sv.xliff</argument>
           </argument>
           <argument key="th" type="collection">
             <argument>/var/www/project/vendor/symfony/validator/Resources/translations/validators.th.xlf</argument>
-<<<<<<< HEAD
-=======
             <argument>/var/www/project/vendor/symfony/security-core/Resources/translations/security.th.xlf</argument>
->>>>>>> emma
           </argument>
           <argument key="tl" type="collection">
             <argument>/var/www/project/vendor/symfony/validator/Resources/translations/validators.tl.xlf</argument>
             <argument>/var/www/project/vendor/symfony/form/Resources/translations/validators.tl.xlf</argument>
-<<<<<<< HEAD
-=======
             <argument>/var/www/project/vendor/symfony/security-core/Resources/translations/security.tl.xlf</argument>
->>>>>>> emma
           </argument>
           <argument key="tr" type="collection">
             <argument>/var/www/project/vendor/symfony/validator/Resources/translations/validators.tr.xlf</argument>
             <argument>/var/www/project/vendor/symfony/form/Resources/translations/validators.tr.xlf</argument>
-<<<<<<< HEAD
-=======
             <argument>/var/www/project/vendor/symfony/security-core/Resources/translations/security.tr.xlf</argument>
->>>>>>> emma
             <argument>/var/www/project/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.tr.xliff</argument>
           </argument>
           <argument key="uk" type="collection">
             <argument>/var/www/project/vendor/symfony/validator/Resources/translations/validators.uk.xlf</argument>
             <argument>/var/www/project/vendor/symfony/form/Resources/translations/validators.uk.xlf</argument>
-<<<<<<< HEAD
-=======
             <argument>/var/www/project/vendor/symfony/security-core/Resources/translations/security.uk.xlf</argument>
->>>>>>> emma
             <argument>/var/www/project/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.uk.xliff</argument>
           </argument>
           <argument key="vi" type="collection">
             <argument>/var/www/project/vendor/symfony/validator/Resources/translations/validators.vi.xlf</argument>
             <argument>/var/www/project/vendor/symfony/form/Resources/translations/validators.vi.xlf</argument>
-<<<<<<< HEAD
-=======
             <argument>/var/www/project/vendor/symfony/security-core/Resources/translations/security.vi.xlf</argument>
->>>>>>> emma
           </argument>
           <argument key="zh_CN" type="collection">
             <argument>/var/www/project/vendor/symfony/validator/Resources/translations/validators.zh_CN.xlf</argument>
             <argument>/var/www/project/vendor/symfony/form/Resources/translations/validators.zh_CN.xlf</argument>
-<<<<<<< HEAD
-=======
             <argument>/var/www/project/vendor/symfony/security-core/Resources/translations/security.zh_CN.xlf</argument>
->>>>>>> emma
           </argument>
           <argument key="zh_TW" type="collection">
             <argument>/var/www/project/vendor/symfony/validator/Resources/translations/validators.zh_TW.xlf</argument>
           </argument>
-<<<<<<< HEAD
-=======
           <argument key="pt_PT" type="collection">
             <argument>/var/www/project/vendor/symfony/security-core/Resources/translations/security.pt_PT.xlf</argument>
           </argument>
->>>>>>> emma
           <argument key="ky" type="collection">
             <argument>/var/www/project/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.ky.xliff</argument>
           </argument>
@@ -1770,10 +1600,7 @@
         <argument key="scanned_directories" type="collection">
           <argument>/var/www/project/vendor/symfony/validator/Resources/translations</argument>
           <argument>/var/www/project/vendor/symfony/form/Resources/translations</argument>
-<<<<<<< HEAD
-=======
           <argument>/var/www/project/vendor/symfony/security-core/Resources/translations</argument>
->>>>>>> emma
           <argument>/var/www/project/vendor/knplabs/knp-paginator-bundle/translations</argument>
           <argument>/var/www/project/translations</argument>
           <argument>/var/www/project/vendor/symfony/framework-bundle/translations</argument>
@@ -1783,19 +1610,13 @@
           <argument>/var/www/project/vendor/doctrine/doctrine-migrations-bundle/translations</argument>
           <argument>/var/www/project/vendor/theofidry/psysh-bundle/src/translations</argument>
           <argument>/var/www/project/vendor/symfony/webpack-encore-bundle/src/translations</argument>
-<<<<<<< HEAD
-=======
           <argument>/var/www/project/vendor/symfony/security-bundle/translations</argument>
->>>>>>> emma
         </argument>
         <argument key="cache_vary" type="collection">
           <argument key="scanned_directories" type="collection">
             <argument>vendor/symfony/validator/Resources/translations</argument>
             <argument>vendor/symfony/form/Resources/translations</argument>
-<<<<<<< HEAD
-=======
             <argument>vendor/symfony/security-core/Resources/translations</argument>
->>>>>>> emma
             <argument>vendor/knplabs/knp-paginator-bundle/translations</argument>
             <argument>translations</argument>
             <argument>vendor/symfony/framework-bundle/translations</argument>
@@ -1805,10 +1626,7 @@
             <argument>vendor/doctrine/doctrine-migrations-bundle/translations</argument>
             <argument>vendor/theofidry/psysh-bundle/src/translations</argument>
             <argument>vendor/symfony/webpack-encore-bundle/src/translations</argument>
-<<<<<<< HEAD
-=======
             <argument>vendor/symfony/security-bundle/translations</argument>
->>>>>>> emma
           </argument>
         </argument>
       </argument>
@@ -2268,8 +2086,6 @@
         <argument>0</argument>
       </call>
       <call method="addListener">
-<<<<<<< HEAD
-=======
         <argument>kernel.response</argument>
         <argument type="collection">
           <argument type="service" id="security.rememberme.response_listener"/>
@@ -2318,7 +2134,6 @@
         <argument>0</argument>
       </call>
       <call method="addListener">
->>>>>>> emma
         <argument>knp_pager.before</argument>
         <argument type="collection">
           <argument type="service" id="knp_paginator.subscriber.paginate"/>
@@ -2799,15 +2614,12 @@
         <argument type="service" id="twig.extension.form"/>
       </call>
       <call method="addExtension">
-<<<<<<< HEAD
-=======
         <argument type="service" id="twig.extension.logout_url"/>
       </call>
       <call method="addExtension">
         <argument type="service" id="twig.extension.security"/>
       </call>
       <call method="addExtension">
->>>>>>> emma
         <argument type="service" id="twig.extension.debug"/>
       </call>
       <call method="addExtension">
@@ -2881,8 +2693,6 @@
         <argument>!KnpPaginator</argument>
       </call>
       <call method="addPath">
-<<<<<<< HEAD
-=======
         <argument>/var/www/project/vendor/symfony/security-bundle/Resources/views</argument>
         <argument>Security</argument>
       </call>
@@ -2891,7 +2701,6 @@
         <argument>!Security</argument>
       </call>
       <call method="addPath">
->>>>>>> emma
         <argument>/var/www/project/templates</argument>
       </call>
       <call method="addPath">
@@ -2969,11 +2778,7 @@
       <argument>,</argument>
     </service>
     <service id="twig.runtime_loader" class="Twig\RuntimeLoader\ContainerRuntimeLoader" public="false">
-<<<<<<< HEAD
-      <argument type="service" id=".service_locator.0zQr_PV"/>
-=======
       <argument type="service" id=".service_locator.MBcj_p5"/>
->>>>>>> emma
     </service>
     <service id="twig.error_renderer.html" class="Symfony\Bridge\Twig\ErrorRenderer\TwigErrorRenderer" public="false">
       <argument type="service" id="twig"/>
@@ -2990,11 +2795,7 @@
     <service id="twig.form.renderer" class="Symfony\Component\Form\FormRenderer" public="false">
       <tag name="twig.runtime"/>
       <argument type="service" id="twig.form.engine"/>
-<<<<<<< HEAD
-      <argument>null</argument>
-=======
       <argument type="service" id="security.csrf.token_manager" on-invalid="null"/>
->>>>>>> emma
     </service>
     <service id="twig.command.debug" class="Symfony\Bridge\Twig\Command\DebugCommand" public="false">
       <tag name="console.command" command="debug:twig"/>
@@ -3581,11 +3382,8 @@
     <service id="test.private_services_locator" class="Symfony\Component\DependencyInjection\ServiceLocator" public="true">
       <tag name="container.service_locator"/>
       <argument type="collection">
-<<<<<<< HEAD
-=======
         <argument key="App\Entity\Contact" type="service" id="App\Entity\Contact" on-invalid="ignore_uninitialized"/>
         <argument key="App\Entity\User" type="service" id="App\Entity\User" on-invalid="ignore_uninitialized"/>
->>>>>>> emma
         <argument key="App\Form\SearchType" type="service" id="App\Form\SearchType" on-invalid="ignore_uninitialized"/>
         <argument key="App\Repository\ContactRepository" type="service" id="App\Repository\ContactRepository" on-invalid="ignore_uninitialized"/>
         <argument key="App\Repository\UserRepository" type="service" id="App\Repository\UserRepository" on-invalid="ignore_uninitialized"/>
@@ -3680,11 +3478,7 @@
         <argument key="annotations.reader" type="service" id="annotations.reader" on-invalid="ignore_uninitialized"/>
         <argument key="argument_metadata_factory" type="service" id="argument_metadata_factory" on-invalid="ignore_uninitialized"/>
         <argument key="argument_resolver" type="service" id="debug.argument_resolver" on-invalid="ignore_uninitialized"/>
-<<<<<<< HEAD
-        <argument key="argument_resolver.controller_locator" type="service" id=".service_locator.3tLuyPh" on-invalid="ignore_uninitialized"/>
-=======
         <argument key="argument_resolver.controller_locator" type="service" id=".service_locator.3R6DAgw" on-invalid="ignore_uninitialized"/>
->>>>>>> emma
         <argument key="argument_resolver.default" type="service" id="debug.argument_resolver.default" on-invalid="ignore_uninitialized"/>
         <argument key="argument_resolver.not_tagged_controller" type="service" id="debug.argument_resolver.not_tagged_controller" on-invalid="ignore_uninitialized"/>
         <argument key="argument_resolver.request" type="service" id="debug.argument_resolver.request" on-invalid="ignore_uninitialized"/>
@@ -3878,10 +3672,7 @@
         <argument key="form.type.color" type="service" id="form.type.color" on-invalid="ignore_uninitialized"/>
         <argument key="form.type.entity" type="service" id="form.type.entity" on-invalid="ignore_uninitialized"/>
         <argument key="form.type.form" type="service" id="form.type.form" on-invalid="ignore_uninitialized"/>
-<<<<<<< HEAD
-=======
         <argument key="form.type_extension.csrf" type="service" id="form.type_extension.csrf" on-invalid="ignore_uninitialized"/>
->>>>>>> emma
         <argument key="form.type_extension.form.http_foundation" type="service" id="form.type_extension.form.http_foundation" on-invalid="ignore_uninitialized"/>
         <argument key="form.type_extension.form.request_handler" type="service" id="form.type_extension.form.request_handler" on-invalid="ignore_uninitialized"/>
         <argument key="form.type_extension.form.transformation_failure_handling" type="service" id="form.type_extension.form.transformation_failure_handling" on-invalid="ignore_uninitialized"/>
@@ -4251,8 +4042,6 @@
       <tag name="twig.extension"/>
       <argument type="service" id="knp_paginator.helper.processor"/>
     </service>
-<<<<<<< HEAD
-=======
     <service id="security.authorization_checker" class="Symfony\Component\Security\Core\Authorization\AuthorizationChecker" public="true">
       <argument type="service" id="security.token_storage"/>
       <argument type="service" id="security.authentication.manager"/>
@@ -4864,19 +4653,15 @@
         <argument>security:encode-password</argument>
       </call>
     </service>
->>>>>>> emma
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\ContactController" class="App\Controller\ContactController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\ContactController" class="App\Controller\ContactController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\ContactController" class="App\Controller\ContactController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\SearchController" class="App\Controller\SearchController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\SearchController" class="App\Controller\SearchController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\SearchController" class="App\Controller\SearchController" autowire="true" autoconfigure="true" abstract="true"/>
-<<<<<<< HEAD
-=======
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\SecurityController" class="App\Controller\SecurityController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\SecurityController" class="App\Controller\SecurityController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\SecurityController" class="App\Controller\SecurityController" autowire="true" autoconfigure="true" abstract="true"/>
->>>>>>> emma
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\SearchType" class="App\Form\SearchType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\SearchType" class="App\Form\SearchType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\ContactRepository" class="App\Repository\ContactRepository" autowire="true" abstract="true"/>
@@ -5142,18 +4927,7 @@
         <argument key="contactRepository" type="service" id="App\Repository\ContactRepository"/>
       </argument>
     </service>
-<<<<<<< HEAD
-    <service id=".service_locator.uH2ckwI" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
-      <tag name="container.service_locator"/>
-      <argument type="collection">
-        <argument key="paginator" type="service" id="knp_paginator"/>
-        <argument key="repo" type="service" id="App\Repository\ContactRepository"/>
-      </argument>
-    </service>
-    <service id=".service_locator.3tLuyPh" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
-=======
     <service id=".service_locator.IFW.IA7" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
->>>>>>> emma
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="em" type="service" id="doctrine.orm.default_entity_manager"/>
@@ -5178,10 +4952,7 @@
         <argument key="App\Controller\ContactController::delete" type="service" id=".service_locator.IFW.IA7"/>
         <argument key="App\Controller\ContactController::index" type="service" id=".service_locator.DIAC.T0"/>
         <argument key="App\Controller\SearchController::recherche" type="service" id=".service_locator.uH2ckwI"/>
-<<<<<<< HEAD
-=======
         <argument key="App\Controller\SecurityController::login" type="service" id=".service_locator.xA8Fw_."/>
->>>>>>> emma
         <argument key="App\Kernel::loadRoutes" type="service" id=".service_locator.C9JCBPC"/>
         <argument key="App\Kernel::registerContainerConfiguration" type="service" id=".service_locator.C9JCBPC"/>
         <argument key="App\Kernel::terminate" type="service" id=".service_locator.beq5mCo"/>
@@ -5191,35 +4962,22 @@
         <argument key="App\Controller\ContactController:delete" type="service" id=".service_locator.IFW.IA7"/>
         <argument key="App\Controller\ContactController:index" type="service" id=".service_locator.DIAC.T0"/>
         <argument key="App\Controller\SearchController:recherche" type="service" id=".service_locator.uH2ckwI"/>
-<<<<<<< HEAD
-=======
         <argument key="App\Controller\SecurityController:login" type="service" id=".service_locator.xA8Fw_."/>
->>>>>>> emma
         <argument key="kernel:loadRoutes" type="service" id=".service_locator.C9JCBPC"/>
         <argument key="kernel:registerContainerConfiguration" type="service" id=".service_locator.C9JCBPC"/>
         <argument key="kernel:terminate" type="service" id=".service_locator.beq5mCo"/>
       </argument>
     </service>
-<<<<<<< HEAD
-    <service id=".service_locator._rsIVwc" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
-      <tag name="container.service_locator"/>
-      <argument type="collection">
-        <argument key="Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntityValidator" type="service" id="doctrine.orm.validator.unique"/>
-=======
     <service id=".service_locator.Xl5XdWY" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntityValidator" type="service" id="doctrine.orm.validator.unique"/>
         <argument key="Symfony\Component\Security\Core\Validator\Constraints\UserPasswordValidator" type="service" id="security.validator.user_password"/>
->>>>>>> emma
         <argument key="Symfony\Component\Validator\Constraints\EmailValidator" type="service" id="validator.email"/>
         <argument key="Symfony\Component\Validator\Constraints\ExpressionValidator" type="service" id="validator.expression"/>
         <argument key="Symfony\Component\Validator\Constraints\NotCompromisedPasswordValidator" type="service" id="validator.not_compromised_password"/>
         <argument key="doctrine.orm.validator.unique" type="service" id="doctrine.orm.validator.unique"/>
-<<<<<<< HEAD
-=======
         <argument key="security.validator.user_password" type="service" id="security.validator.user_password"/>
->>>>>>> emma
         <argument key="validator.expression" type="service" id="validator.expression"/>
       </argument>
     </service>
@@ -5357,15 +5115,12 @@
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.g9CqTPp" method="withContext"/>
     </service>
-<<<<<<< HEAD
-=======
     <service id=".service_locator.g9CqTPp.App\Controller\SecurityController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator_context" id="App\Controller\SecurityController"/>
       <argument>App\Controller\SecurityController</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.g9CqTPp" method="withContext"/>
     </service>
->>>>>>> emma
     <service id=".service_locator.s2oGJED" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -5490,30 +5245,18 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
-<<<<<<< HEAD
-      <argument type="service" id=".service_locator.3tLuyPh"/>
-=======
       <argument type="service" id=".service_locator.3R6DAgw"/>
->>>>>>> emma
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver" public="false"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver" public="false">
-<<<<<<< HEAD
-      <argument type="service" id=".service_locator.3tLuyPh"/>
-=======
       <argument type="service" id=".service_locator.3R6DAgw"/>
->>>>>>> emma
     </service>
     <service id=".errored..service_locator.beq5mCo.Symfony\Component\HttpFoundation\Response" class="Symfony\Component\HttpFoundation\Response"/>
     <service id=".errored..service_locator.C9JCBPC.Symfony\Component\Config\Loader\LoaderInterface" class="Symfony\Component\Config\Loader\LoaderInterface"/>
     <service id="console.command_loader" class="Symfony\Component\Console\CommandLoader\ContainerCommandLoader" public="true">
       <tag name="container.no_preload"/>
-<<<<<<< HEAD
-      <argument type="service" id=".service_locator.ZH7MvA_"/>
-=======
       <argument type="service" id=".service_locator.Mg7P2n0"/>
->>>>>>> emma
       <argument type="collection">
         <argument key="about">console.command.about</argument>
         <argument key="assets:install">console.command.assets_install</argument>
@@ -5602,11 +5345,7 @@
         <argument key="make:migration">maker.auto_command.make_migration</argument>
       </argument>
     </service>
-<<<<<<< HEAD
-    <service id=".service_locator.ZH7MvA_" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
-=======
     <service id=".service_locator.Mg7P2n0" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
->>>>>>> emma
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="console.command.about" type="service" id="console.command.about"/>
@@ -5696,11 +5435,7 @@
         <argument key="twig.command.lint" type="service" id="twig.command.lint"/>
       </argument>
     </service>
-<<<<<<< HEAD
-    <service id=".service_locator.0zQr_PV" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
-=======
     <service id=".service_locator.MBcj_p5" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
->>>>>>> emma
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="Symfony\Bridge\Twig\Extension\CsrfRuntime" type="service" id="twig.runtime.security_csrf"/>
@@ -5748,12 +5483,9 @@
     <service id="session.storage.filesystem" alias="session.storage.mock_file" public="false"/>
     <service id="session.storage" alias="session.storage.native"/>
     <service id="session.handler" alias="session.handler.native_file"/>
-<<<<<<< HEAD
-=======
     <service id="Symfony\Component\Security\Csrf\TokenGenerator\TokenGeneratorInterface" alias="security.csrf.token_generator" public="false"/>
     <service id="Symfony\Component\Security\Csrf\TokenStorage\TokenStorageInterface" alias="security.csrf.token_storage" public="false"/>
     <service id="Symfony\Component\Security\Csrf\CsrfTokenManagerInterface" alias="security.csrf.token_manager" public="false"/>
->>>>>>> emma
     <service id="Symfony\Component\Form\ResolvedFormTypeFactoryInterface" alias="form.resolved_type_factory" public="false"/>
     <service id="Symfony\Component\Form\FormRegistryInterface" alias="form.registry" public="false"/>
     <service id="Symfony\Component\Form\FormFactoryInterface" alias="form.factory" public="false"/>
@@ -5805,15 +5537,6 @@
     <service id="Symfony\WebpackEncoreBundle\Asset\EntrypointLookupCollectionInterface" alias="webpack_encore.entrypoint_lookup_collection" public="false"/>
     <service id="Symfony\WebpackEncoreBundle\Asset\EntrypointLookupInterface" alias="webpack_encore.entrypoint_lookup[_default]"/>
     <service id="Knp\Component\Pager\PaginatorInterface" alias="knp_paginator"/>
-<<<<<<< HEAD
-    <service id="container.env_var_processors_locator" alias=".service_locator.WaGDpDt" public="true"/>
-    <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem" public="false"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.3tLuyPh"/>
-    <service id="twig.loader" alias="twig.loader.native_filesystem"/>
-    <service id="Psr\Log\LoggerInterface" alias="logger" public="false"/>
-    <service id=".service_locator.A.pnDXl" alias=".1_ServiceLocator~u8bVcnc" public="false"/>
-    <service id=".service_locator.c1P1vDm" alias=".service_locator._rsIVwc" public="false"/>
-=======
     <service id="Symfony\Component\Security\Core\Authorization\AuthorizationCheckerInterface" alias="security.authorization_checker" public="false"/>
     <service id="Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface" alias="security.token_storage" public="false"/>
     <service id="Symfony\Component\Security\Core\Security" alias="security.helper" public="false"/>
@@ -5842,7 +5565,6 @@
     <service id="Psr\Log\LoggerInterface" alias="logger" public="false"/>
     <service id=".service_locator.A.pnDXl" alias=".1_ServiceLocator~u8bVcnc" public="false"/>
     <service id=".service_locator.AjmrG8B" alias=".service_locator.Xl5XdWY" public="false"/>
->>>>>>> emma
     <service id="event_dispatcher" alias="debug.event_dispatcher" public="true"/>
     <service id="controller_resolver" alias="debug.controller_resolver" public="false"/>
     <service id="argument_resolver" alias="debug.argument_resolver" public="false"/>

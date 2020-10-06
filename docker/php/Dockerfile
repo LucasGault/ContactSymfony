@@ -13,11 +13,3 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 
 RUN curl -sS https://get.symfony.com/cli/installer | bash
 RUN mv /root/.symfony/bin/symfony /usr/local/bin/symfony
-# FROM node:10-alpine
-
-# RUN mkdir -p /home/node/app/node_modules && chown -R node:node /home/node/app
-# WORKDIR /home/node/app
-# COPY package*.json ./
-# USER node
-# RUN npm install
-# COPY --chown=node:node . .
