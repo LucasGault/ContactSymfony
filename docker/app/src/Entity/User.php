@@ -9,7 +9,7 @@ use Symfony\Component\Security\Core\User\UserInterface;
 /**
  * @ORM\Entity(repositoryClass=UserRepository::class)
  */
-class User implements UserInterface, \Serializable
+class User implements UserInterface
 {
     /**
      * @ORM\Id
@@ -17,6 +17,18 @@ class User implements UserInterface, \Serializable
      * @ORM\Column(type="integer")
      */
     private $id;
+
+    /**
+     * @ORM\Column(type="string", length=255, unique=true)
+     */
+    private $email;
+
+
+    /**
+     * @var string The hashed password
+     * @ORM\Column(type="string")
+     */
+    private $password;
 
     /**
      * @ORM\Column(type="string", length=255)
@@ -31,21 +43,84 @@ class User implements UserInterface, \Serializable
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $email;
-
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $password;
-
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $phonenumber;
+    private $phoneNumber;
 
     public function getId(): ?int
     {
         return $this->id;
+    }
+
+    public function getEmail(): ?string
+    {
+        return $this->email;
+    }
+
+    public function setEmail(string $email): self
+    {
+        $this->email = $email;
+
+        return $this;
+    }
+
+    /**
+     * A visual identifier that represents this user.
+     *
+     * @see UserInterface
+     */
+    public function getUsername(): string
+    {
+        return (string) $this->email;
+    }
+
+    /**
+     * @see UserInterface
+     */
+    public function getRoles(): array
+    {
+        $roles = $this->roles;
+        // guarantee every user at least has ROLE_USER
+        $roles[] = 'ROLE_USER';
+
+        return array_unique($roles);
+    }
+
+    public function setRoles(array $roles): self
+    {
+        $this->roles = $roles;
+
+        return $this;
+    }
+
+    /**
+     * @see UserInterface
+     */
+    public function getPassword(): string
+    {
+        return (string) $this->password;
+    }
+
+    public function setPassword(string $password): self
+    {
+        $this->password = $password;
+
+        return $this;
+    }
+
+    /**
+     * @see UserInterface
+     */
+    public function getSalt()
+    {
+        // not needed when using the "bcrypt" algorithm in security.yaml
+    }
+
+    /**
+     * @see UserInterface
+     */
+    public function eraseCredentials()
+    {
+        // If you store any temporary, sensitive data on the user, clear it here
+        // $this->plainPassword = null;
     }
 
     public function getFirstname(): ?string
@@ -72,86 +147,15 @@ class User implements UserInterface, \Serializable
         return $this;
     }
 
-    public function getEmail(): ?string
+    public function getPhoneNumber(): ?string
     {
-        return $this->email;
+        return $this->phoneNumber;
     }
 
-    public function setEmail(string $email): self
+    public function setPhoneNumber(string $phoneNumber): self
     {
-        $this->email = $email;
-
-        return $this;
-    }
-
-    public function getPassword(): ?string
-    {
-        return $this->password;
-    }
-
-    public function setPassword(string $password): self
-    {
-        $this->password = $password;
+        $this->phoneNumber = $phoneNumber;
 
         return $this;
-    }
-
-    public function getPhonenumber(): ?string
-    {
-        return $this->phonenumber;
-    }
-
-    public function setPhonenumber(string $phonenumber): self
-    {
-        $this->phonenumber = $phonenumber;
-
-        return $this;
-    }
-    public function getUsername()
-    {
-        return $this->email;
-    }
-    public function __construct()
-    {
-        // may not be needed, see section on salt below
-        // $this->salt = md5(uniqid('', true));
-    }
-    public function getSalt()
-    {
-        // you *may* need a real salt depending on your encoder
-        // see section on salt below
-        return null;
-    }
-    public function getRoles()
-    {
-        return array('ROLE_USER');
-    }
-
-    public function eraseCredentials()
-    {
-    }
-
-    /** @see \Serializable::serialize() */
-    public function serialize()
-    {
-        return serialize(array(
-            $this->id,
-            $this->email,
-            $this->password,
-            // see section on salt below
-            // $this->salt,
-        ));
-    }
-
-    /** @see \Serializable::unserialize() */
-    public function unserialize($serialized)
-    {
-        list (
-            $this->id,
-            $this->email,
-            $this->password,
-            // see section on salt below
-            // $this->salt
-        ) = unserialize($serialized, array('allowed_classes' => false));
     }
 }

@@ -18,19 +18,29 @@ class Contact
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @ORM\Column(type="string", length=255)
      */
     private $firstname;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @ORM\Column(type="string", length=255)
      */
     private $lastname;
 
     /**
-     * @ORM\Column(type="integer", nullable=true)
+     * @ORM\Column(type="string", length=255)
      */
     private $phonenumber;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $email;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $user_id;
 
     public function getId(): ?int
     {
@@ -69,6 +79,30 @@ class Contact
     public function setPhonenumber(?string $phonenumber): self
     {
         $this->phonenumber = $phonenumber;
+
+        return $this;
+    }
+
+    public function getEmail(): ?string
+    {
+        return $this->email;
+    }
+
+    public function setEmail(string $email): self
+    {
+        $this->email = $email;
+
+        return $this;
+    }
+
+    public function getUserId(): ?int
+    {
+        return $this->user_id;
+    }
+
+    public function setUserId(int $user_id): self
+    {
+        $this->user_id = $user_id;
 
         return $this;
     }
