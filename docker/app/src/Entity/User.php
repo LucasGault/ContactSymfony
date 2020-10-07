@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\UserRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
 
@@ -23,6 +25,10 @@ class User implements UserInterface
      */
     private $email;
 
+    /**
+     * @ORM\Column(type="json")
+     */
+    private $roles = [];
 
     /**
      * @var string The hashed password
@@ -43,7 +49,17 @@ class User implements UserInterface
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $phoneNumber;
+    private $phonenumber;
+
+    /**
+     * @ORM\OneToMany(targetEntity=Contact::class, mappedBy="user", orphanRemoval=true)
+     */
+    private $contacts;
+
+    public function __construct()
+    {
+        $this->contacts = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -147,14 +163,45 @@ class User implements UserInterface
         return $this;
     }
 
-    public function getPhoneNumber(): ?string
+    public function getPhonenumber(): ?string
     {
-        return $this->phoneNumber;
+        return $this->phonenumber;
     }
 
-    public function setPhoneNumber(string $phoneNumber): self
+    public function setPhonenumber(string $phonenumber): self
     {
-        $this->phoneNumber = $phoneNumber;
+        $this->phonenumber = $phonenumber;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Contact[]
+     */
+    public function getContacts(): Collection
+    {
+        return $this->contacts;
+    }
+
+    public function addContact(Contact $contact): self
+    {
+        if (!$this->contacts->contains($contact)) {
+            $this->contacts[] = $contact;
+            $contact->setUser($this);
+        }
+
+        return $this;
+    }
+
+    public function removeContact(Contact $contact): self
+    {
+        if ($this->contacts->contains($contact)) {
+            $this->contacts->removeElement($contact);
+            // set the owning side to null (unless already changed)
+            if ($contact->getUser() === $this) {
+                $contact->setUser(null);
+            }
+        }
 
         return $this;
     }
