@@ -50,18 +50,18 @@ class __TwigTemplate_d1ccd625709ce6f92213afae953df78f32573a6e011f8400bc4b1c5bc5c
         ";
         // line 8
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 17
+        // line 15
         echo "    </head>
     <body color=\"info\">
 
 
         ";
-        // line 21
+        // line 19
         $this->displayBlock('body', $context, $blocks);
-        // line 22
+        // line 20
         echo "        ";
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 24
+        // line 22
         echo "    </body>
 </html>
 ";
@@ -78,20 +78,18 @@ class __TwigTemplate_d1ccd625709ce6f92213afae953df78f32573a6e011f8400bc4b1c5bc5c
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylesheets"));
 
         echo "\t
-<link rel=\"stylesheet\" href=\"css/app.css\">
-<link rel=\"stylesheet\" href=\"css/style.css\">
-<link rel=\"stylesheet\" 
-          href= 
-\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\"> 
-<script src=\"https://code.jquery.com/jquery-3.5.1.slim.min.js\" integrity=\"sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj\" crossorigin=\"anonymous\"></script>
-<script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js\" integrity=\"sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN\" crossorigin=\"anonymous\"></script>
-<script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js\" integrity=\"sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV\" crossorigin=\"anonymous\"></script> ";
+        <link rel=\"stylesheet\" href=\"css/app.css\">
+        <link rel=\"stylesheet\" href=\"css/style.css\">
+        <link rel=\"stylesheet\"href= \"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\"> 
+        <script src=\"https://code.jquery.com/jquery-3.5.1.slim.min.js\" integrity=\"sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj\" crossorigin=\"anonymous\"></script>
+        <script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js\" integrity=\"sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN\" crossorigin=\"anonymous\"></script>
+        <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js\" integrity=\"sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV\" crossorigin=\"anonymous\"></script> ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
     }
 
-    // line 21
+    // line 19
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -103,14 +101,14 @@ class __TwigTemplate_d1ccd625709ce6f92213afae953df78f32573a6e011f8400bc4b1c5bc5c
 
     }
 
-    // line 22
+    // line 20
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 23
+        // line 21
         echo "        ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -124,7 +122,7 @@ class __TwigTemplate_d1ccd625709ce6f92213afae953df78f32573a6e011f8400bc4b1c5bc5c
 
     public function getDebugInfo()
     {
-        return array (  114 => 23,  107 => 22,  95 => 21,  74 => 8,  65 => 24,  62 => 22,  60 => 21,  54 => 17,  52 => 8,  43 => 1,);
+        return array (  112 => 21,  105 => 20,  93 => 19,  74 => 8,  65 => 22,  62 => 20,  60 => 19,  54 => 15,  52 => 8,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -137,14 +135,12 @@ class __TwigTemplate_d1ccd625709ce6f92213afae953df78f32573a6e011f8400bc4b1c5bc5c
         <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css\" integrity=\"sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z\" crossorigin=\"anonymous\">
         
         {% block stylesheets %}\t
-<link rel=\"stylesheet\" href=\"css/app.css\">
-<link rel=\"stylesheet\" href=\"css/style.css\">
-<link rel=\"stylesheet\" 
-          href= 
-\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\"> 
-<script src=\"https://code.jquery.com/jquery-3.5.1.slim.min.js\" integrity=\"sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj\" crossorigin=\"anonymous\"></script>
-<script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js\" integrity=\"sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN\" crossorigin=\"anonymous\"></script>
-<script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js\" integrity=\"sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV\" crossorigin=\"anonymous\"></script> {% endblock %}
+        <link rel=\"stylesheet\" href=\"css/app.css\">
+        <link rel=\"stylesheet\" href=\"css/style.css\">
+        <link rel=\"stylesheet\"href= \"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\"> 
+        <script src=\"https://code.jquery.com/jquery-3.5.1.slim.min.js\" integrity=\"sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj\" crossorigin=\"anonymous\"></script>
+        <script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js\" integrity=\"sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN\" crossorigin=\"anonymous\"></script>
+        <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js\" integrity=\"sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV\" crossorigin=\"anonymous\"></script> {% endblock %}
     </head>
     <body color=\"info\">
 

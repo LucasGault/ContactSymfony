@@ -55,7 +55,7 @@ section .container .user .formBx {
     position: relative;
     width: 50%;
     height: 100%;
-    background: #eeee;
+    background: #222831;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -71,7 +71,7 @@ section .container .user .formBx form h2{
     text-align: center;
     width: 100%;
     margin-bottom:  10px;
-    color: #555;
+    color: #4F8A8B;
 
 }
 
@@ -79,7 +79,7 @@ section .container .user .formBx form input {
     position: relative;
     width: 100%;
     padding: 10px;
-    background: #fbd46d;
+    /* background: #222831;  */
     color: #333;
     border: none;
     outline: none;
@@ -92,8 +92,8 @@ section .container .user .formBx form input {
 
 section .container .user .formBx form input[type="submit"] {
     /* max-width: 100px; */
-    background: #222831;
-    color: #fff;
+    background: #4F8A8B;
+    color: #222831;
     cursor: pointer;
     font-size: 14px;
     font-weight: 500;
@@ -106,7 +106,7 @@ section .container .user .formBx form .signup {
     margin-top:  20px;
     font-size: 12px;
     letter-spacing: 1px;
-    color: #555;
+    color: #4F8A8B;
     text-transform: uppercase;
     font-weight: 300;
 }
