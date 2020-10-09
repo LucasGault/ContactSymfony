@@ -26,28 +26,11 @@
                         <input type="password" name="password" id="inputPassword" placeholder="Password" required>
                         <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
                         <input type="submit" name="" value="Login">
-                        <p class="signup">Dont't have an account <a href="#" onclick="toggleForm();">Sign Up</a></p>
+                        <p class="signup">Dont't have an account <a href="{{ path('app_register') }}">Sign Up</a></p>
                     </div>
                 </div>
             </div>
-            <div class="user singupBx">
-                <div class="formBx">
-                    <div class ="formForm">
-                        <h2>Create an Account</h2>
-                        <input type="text" name="" placeholder="Firstname">
-                        <input type="text" name="" placeholder="Lastname">
-                        <input type="email" name="" placeholder="Email">
-                        <input type="email" name="" placeholder="Phone">
-                        <input type="password" name="" placeholder="Create Password">
-                        <input type="password" name="" placeholder="Confirm Password">
-
-                        <input type="submit" name="" value="Sign Up">
-                        <p class="signup">Already have an account <a href="#" onclick="toggleForm();">Sign In</a></p>
-                    </div>
-                </div>
-                <div class="imgBx"></div>
-
-            </div>
+            
         </div>
     </section>
 

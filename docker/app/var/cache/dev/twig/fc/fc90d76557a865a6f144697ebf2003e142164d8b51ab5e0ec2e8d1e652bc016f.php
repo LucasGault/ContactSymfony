@@ -103,28 +103,14 @@ class __TwigTemplate_26d6333100d6142846c969117a6f69a627fa462adcf5c1fec29f2576acc
         echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken("authenticate"), "html", null, true);
         echo "\">
                         <input type=\"submit\" name=\"\" value=\"Login\">
-                        <p class=\"signup\">Dont't have an account <a href=\"#\" onclick=\"toggleForm();\">Sign Up</a></p>
+                        <p class=\"signup\">Dont't have an account <a href=\"";
+        // line 29
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_register");
+        echo "\">Sign Up</a></p>
                     </div>
                 </div>
             </div>
-            <div class=\"user singupBx\">
-                <div class=\"formBx\">
-                    <div class =\"formForm\">
-                        <h2>Create an Account</h2>
-                        <input type=\"text\" name=\"\" placeholder=\"Firstname\">
-                        <input type=\"text\" name=\"\" placeholder=\"Lastname\">
-                        <input type=\"email\" name=\"\" placeholder=\"Email\">
-                        <input type=\"email\" name=\"\" placeholder=\"Phone\">
-                        <input type=\"password\" name=\"\" placeholder=\"Create Password\">
-                        <input type=\"password\" name=\"\" placeholder=\"Confirm Password\">
-
-                        <input type=\"submit\" name=\"\" value=\"Sign Up\">
-                        <p class=\"signup\">Already have an account <a href=\"#\" onclick=\"toggleForm();\">Sign In</a></p>
-                    </div>
-                </div>
-                <div class=\"imgBx\"></div>
-
-            </div>
+            
         </div>
     </section>
 
@@ -132,7 +118,7 @@ class __TwigTemplate_26d6333100d6142846c969117a6f69a627fa462adcf5c1fec29f2576acc
     
 
     ";
-        // line 71
+        // line 54
         echo "</form>
 
     <script src=\"css/js.js\"></script>
@@ -155,7 +141,7 @@ class __TwigTemplate_26d6333100d6142846c969117a6f69a627fa462adcf5c1fec29f2576acc
 
     public function getDebugInfo()
     {
-        return array (  136 => 71,  103 => 27,  97 => 25,  87 => 16,  84 => 10,  78 => 8,  76 => 7,  73 => 6,  66 => 5,  53 => 3,  36 => 1,);
+        return array (  122 => 54,  108 => 29,  103 => 27,  97 => 25,  87 => 16,  84 => 10,  78 => 8,  76 => 7,  73 => 6,  66 => 5,  53 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -188,28 +174,11 @@ class __TwigTemplate_26d6333100d6142846c969117a6f69a627fa462adcf5c1fec29f2576acc
                         <input type=\"password\" name=\"password\" id=\"inputPassword\" placeholder=\"Password\" required>
                         <input type=\"hidden\" name=\"_csrf_token\" value=\"{{ csrf_token('authenticate') }}\">
                         <input type=\"submit\" name=\"\" value=\"Login\">
-                        <p class=\"signup\">Dont't have an account <a href=\"#\" onclick=\"toggleForm();\">Sign Up</a></p>
+                        <p class=\"signup\">Dont't have an account <a href=\"{{ path('app_register') }}\">Sign Up</a></p>
                     </div>
                 </div>
             </div>
-            <div class=\"user singupBx\">
-                <div class=\"formBx\">
-                    <div class =\"formForm\">
-                        <h2>Create an Account</h2>
-                        <input type=\"text\" name=\"\" placeholder=\"Firstname\">
-                        <input type=\"text\" name=\"\" placeholder=\"Lastname\">
-                        <input type=\"email\" name=\"\" placeholder=\"Email\">
-                        <input type=\"email\" name=\"\" placeholder=\"Phone\">
-                        <input type=\"password\" name=\"\" placeholder=\"Create Password\">
-                        <input type=\"password\" name=\"\" placeholder=\"Confirm Password\">
-
-                        <input type=\"submit\" name=\"\" value=\"Sign Up\">
-                        <p class=\"signup\">Already have an account <a href=\"#\" onclick=\"toggleForm();\">Sign In</a></p>
-                    </div>
-                </div>
-                <div class=\"imgBx\"></div>
-
-            </div>
+            
         </div>
     </section>
 

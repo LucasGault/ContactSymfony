@@ -152,6 +152,24 @@ section .container.active .singinBx .imgBx {
     left: 100%;
 }
 
+section .container.active .singupBx .formBx .formForm form input{
+    margin: 4px 0;
+}
+
+section .container .user .formBx .formForm .required {
+    display: none;
+}
+
+form[name= "registration_form"] ul{
+    margin:0;
+    color: #4F8A8B;
+
+}
+
+#registration_form_agreeTerms {
+    display:none;
+}
+
 @media (max-width: 991px){
     section .container {
         max-width: 400px;
