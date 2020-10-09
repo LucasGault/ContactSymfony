@@ -86,7 +86,10 @@ class __TwigTemplate_957090556658fe947fc5fbbc241b2db5dfa467719fb4a80195d10559444
         </div>
 
         <form class=\"form-inline\">
-            <button class=\"btn btn-danger\" style=\"position:fixed; right:20px\" type=\"submit\">Déconnexion</button>
+            <a class=\"btn btn-danger\" style=\"position:fixed; right:20px\" href=\"";
+        // line 25
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
+        echo "\">Déconnexion</a>
         </form>
     </nav>
 </header>
@@ -129,7 +132,7 @@ class __TwigTemplate_957090556658fe947fc5fbbc241b2db5dfa467719fb4a80195d10559444
                                 d=\"M476.5 22.9L382.3 1.2c-21.6-5-43.6 6.2-52.3 26.6l-43.5 101.5c-8 18.6-2.6 40.6 13.1 53.4l40 32.7C311 267.8 267.8 311 215.4 339.5l-32.7-40c-12.8-15.7-34.8-21.1-53.4-13.1L27.7 329.9c-20.4 8.7-31.5 30.7-26.6 52.3l21.7 94.2c4.8 20.9 23.2 35.5 44.6 35.5C312.3 512 512 313.7 512 67.5c0-21.4-14.6-39.8-35.5-44.6zM69.3 464l-20.9-90.7 98.2-42.1 55.7 68.1c98.8-46.4 150.6-98 197-197l-68.1-55.7 42.1-98.2L464 69.3C463 286.9 286.9 463 69.3 464z\"
                                 class=\"\"></path>
                         </svg>
-                        <span> 0";
+                        <span> ";
             // line 55
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["contact"], "phonenumber", [], "any", false, false, false, 55), "html", null, true);
             echo " </span>
@@ -238,7 +241,7 @@ class __TwigTemplate_957090556658fe947fc5fbbc241b2db5dfa467719fb4a80195d10559444
 
     public function getDebugInfo()
     {
-        return array (  160 => 75,  134 => 55,  119 => 45,  112 => 41,  108 => 39,  104 => 38,  74 => 11,  69 => 10,  67 => 9,  59 => 3,  52 => 2,  35 => 1,);
+        return array (  163 => 75,  137 => 55,  122 => 45,  115 => 41,  111 => 39,  107 => 38,  91 => 25,  74 => 11,  69 => 10,  67 => 9,  59 => 3,  52 => 2,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -267,7 +270,7 @@ class __TwigTemplate_957090556658fe947fc5fbbc241b2db5dfa467719fb4a80195d10559444
         </div>
 
         <form class=\"form-inline\">
-            <button class=\"btn btn-danger\" style=\"position:fixed; right:20px\" type=\"submit\">Déconnexion</button>
+            <a class=\"btn btn-danger\" style=\"position:fixed; right:20px\" href=\"{{path('app_logout')}}\">Déconnexion</a>
         </form>
     </nav>
 </header>
@@ -297,7 +300,7 @@ class __TwigTemplate_957090556658fe947fc5fbbc241b2db5dfa467719fb4a80195d10559444
                                 d=\"M476.5 22.9L382.3 1.2c-21.6-5-43.6 6.2-52.3 26.6l-43.5 101.5c-8 18.6-2.6 40.6 13.1 53.4l40 32.7C311 267.8 267.8 311 215.4 339.5l-32.7-40c-12.8-15.7-34.8-21.1-53.4-13.1L27.7 329.9c-20.4 8.7-31.5 30.7-26.6 52.3l21.7 94.2c4.8 20.9 23.2 35.5 44.6 35.5C312.3 512 512 313.7 512 67.5c0-21.4-14.6-39.8-35.5-44.6zM69.3 464l-20.9-90.7 98.2-42.1 55.7 68.1c98.8-46.4 150.6-98 197-197l-68.1-55.7 42.1-98.2L464 69.3C463 286.9 286.9 463 69.3 464z\"
                                 class=\"\"></path>
                         </svg>
-                        <span> 0{{contact.phonenumber}} </span>
+                        <span> {{contact.phonenumber}} </span>
                     </div>
                 </div>
 

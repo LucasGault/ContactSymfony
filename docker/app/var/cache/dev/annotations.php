@@ -87,14 +87,26 @@ return [[
 '%5B%5BC%5DApp%5CEntity%5CContact%23getPhonenumber%5D%5B1%5D' => 2,
 '%5BApp%5CEntity%5CContact%23setPhonenumber%5D%5B1%5D' => 1,
 '%5B%5BC%5DApp%5CEntity%5CContact%23setPhonenumber%5D%5B1%5D' => 2,
+'%5BApp%5CEntity%5CContact%23getEmail%5D%5B1%5D' => 1,
+'%5B%5BC%5DApp%5CEntity%5CContact%23getEmail%5D%5B1%5D' => 2,
+'%5BApp%5CEntity%5CContact%23setEmail%5D%5B1%5D' => 1,
+'%5B%5BC%5DApp%5CEntity%5CContact%23setEmail%5D%5B1%5D' => 2,
+'%5BApp%5CEntity%5CContact%23getUser%5D%5B1%5D' => 1,
+'%5B%5BC%5DApp%5CEntity%5CContact%23getUser%5D%5B1%5D' => 2,
+'%5BApp%5CEntity%5CContact%23setUser%5D%5B1%5D' => 1,
+'%5B%5BC%5DApp%5CEntity%5CContact%23setUser%5D%5B1%5D' => 2,
 '%5BApp%5CEntity%5CContact%24id%5D%5B1%5D' => 6,
 '%5B%5BC%5DApp%5CEntity%5CContact%24id%5D%5B1%5D' => 2,
 '%5BApp%5CEntity%5CContact%24firstname%5D%5B1%5D' => 7,
 '%5B%5BC%5DApp%5CEntity%5CContact%24firstname%5D%5B1%5D' => 2,
 '%5BApp%5CEntity%5CContact%24lastname%5D%5B1%5D' => 7,
 '%5B%5BC%5DApp%5CEntity%5CContact%24lastname%5D%5B1%5D' => 2,
-'%5BApp%5CEntity%5CContact%24phonenumber%5D%5B1%5D' => 8,
+'%5BApp%5CEntity%5CContact%24phonenumber%5D%5B1%5D' => 7,
 '%5B%5BC%5DApp%5CEntity%5CContact%24phonenumber%5D%5B1%5D' => 2,
+'%5BApp%5CEntity%5CContact%24email%5D%5B1%5D' => 7,
+'%5B%5BC%5DApp%5CEntity%5CContact%24email%5D%5B1%5D' => 2,
+'%5BApp%5CEntity%5CContact%24user%5D%5B1%5D' => 8,
+'%5B%5BC%5DApp%5CEntity%5CContact%24user%5D%5B1%5D' => 2,
 '%5BDoctrine%5CBundle%5CDoctrineBundle%5CController%5CProfilerController%5D%5B1%5D' => 1,
 '%5B%5BC%5DDoctrine%5CBundle%5CDoctrineBundle%5CController%5CProfilerController%5D%5B1%5D' => 2,
 '%5BDoctrine%5CBundle%5CDoctrineBundle%5CController%5CProfilerController%23setContainer%5D%5B1%5D' => 1,
@@ -566,7 +578,7 @@ return [[
 
 0 => 'N;',
 1 => [],
-2 => 1600882208,
+2 => 1602256956,
 3 => static function () {
     return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
         $o = [
@@ -669,9 +681,6 @@ return [[
                 'length' => [
                     255,
                 ],
-                'nullable' => [
-                    true,
-                ],
             ],
         ],
         [
@@ -683,21 +692,26 @@ return [[
 8 => static function () {
     return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
         $o = [
-            clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Doctrine\\ORM\\Mapping\\Column'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\Column')),
+            clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Mapping\\ManyToOne'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\ManyToOne')),
+            clone ($p['Doctrine\\ORM\\Mapping\\JoinColumn'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\JoinColumn')),
         ],
         null,
         [
             'stdClass' => [
-                'type' => [
-                    'integer',
+                'targetEntity' => [
+                    'App\\Entity\\User',
+                ],
+                'inversedBy' => [
+                    'contacts',
                 ],
                 'nullable' => [
-                    true,
+                    1 => false,
                 ],
             ],
         ],
         [
             $o[0],
+            $o[1],
         ],
         []
     );
