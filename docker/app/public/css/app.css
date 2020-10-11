@@ -1,6 +1,6 @@
 body{
     margin:auto;
-    background-image: url('bg.png') no-repeat center center fixed; 
+    background-image: url('bg.png'); 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -16,6 +16,9 @@ body{
     margin-left:auto;
     margin-right:auto;
     justify-content: center;
+    padding-top:15%;
+    height:100%;
+    overflow:hidden;
 }
 #contactCard {width:100%;
     -webkit-transition: all 0.5s ease; /* Safari and Chrome */
@@ -29,7 +32,10 @@ body{
     margin-left:-90px;
 
 }
-
+::-webkit-scrollbar { 
+    width: 0px; 
+    background: transparent; /* make scrollbar transparent */ 
+} 
 .contactButtons{
     position:absolute;
     width:156px;
@@ -45,12 +51,18 @@ body{
 }
 #buttonSupress{
     position:absolute;
-    right:25px;
+    right:55px;
     width: 32px;
     height:33px;
-    top: 25px;
+    top: 15px;
     background-image: url('times-solid.png');
     border: 0;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease; /* Safari and Chrome */
+    -moz-transition: all 0.5s ease; /* Firefox */
+    -ms-transition: all 0.5s ease; /* IE 9 */
+    -o-transition: all 0.5s ease; /* Opera */
+    transition-duration: 2s;
 }
 #buttonEdit{
     position:absolute;
@@ -115,7 +127,8 @@ svg{
 }
 #container #buttonSupress {
     
-    display:none;
+    opacity:1;
+    z-index:-1;
 
 }
 #container:hover .contactButtons {
@@ -123,7 +136,7 @@ svg{
 
 }
 #container:hover #buttonSupress {
-    display:block;
+    opacity: 1;
 
 }
 
@@ -170,6 +183,6 @@ svg{
 }
 
 .container {
-    height: 400pt;
+    height:85%;
     overflow: auto;
 }

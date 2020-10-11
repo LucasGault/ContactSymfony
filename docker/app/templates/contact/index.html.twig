@@ -26,7 +26,7 @@
         </form>
     </nav>
 </header>
-<div class="page" style="margin-top:15%">
+<div class="page">
 
 
 
@@ -37,7 +37,7 @@
 
         {% for contact in contacts %}
 
-        <div class="row justify-content-center">
+        <div class="row justify-content-center" style="height=100%">
             <form class="col col-lg-6" id="container" action="{{ path('app_contact_delete', {id:contact.id}) }}"
                 method="post" style="width:100%">
                 <div class="shadow-lg card mb-4" id="contactCard">
