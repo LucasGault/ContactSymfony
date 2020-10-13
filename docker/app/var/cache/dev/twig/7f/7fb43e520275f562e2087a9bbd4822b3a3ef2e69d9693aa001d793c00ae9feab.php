@@ -41,7 +41,7 @@ class __TwigTemplate_d1ccd625709ce6f92213afae953df78f32573a6e011f8400bc4b1c5bc5c
 
         // line 1
         echo "<!DOCTYPE html>
-<html>
+<html style=\"height:100%\">
     <head>
         <meta charset=\"UTF-8\">
         
@@ -52,7 +52,7 @@ class __TwigTemplate_d1ccd625709ce6f92213afae953df78f32573a6e011f8400bc4b1c5bc5c
         $this->displayBlock('stylesheets', $context, $blocks);
         // line 15
         echo "    </head>
-    <body color=\"info\">
+    <body>
 
 
         ";
@@ -128,7 +128,7 @@ class __TwigTemplate_d1ccd625709ce6f92213afae953df78f32573a6e011f8400bc4b1c5bc5c
     public function getSourceContext()
     {
         return new Source("<!DOCTYPE html>
-<html>
+<html style=\"height:100%\">
     <head>
         <meta charset=\"UTF-8\">
         
@@ -142,7 +142,7 @@ class __TwigTemplate_d1ccd625709ce6f92213afae953df78f32573a6e011f8400bc4b1c5bc5c
         <script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js\" integrity=\"sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN\" crossorigin=\"anonymous\"></script>
         <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js\" integrity=\"sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV\" crossorigin=\"anonymous\"></script> {% endblock %}
     </head>
-    <body color=\"info\">
+    <body>
 
 
         {% block body %}{% endblock %}

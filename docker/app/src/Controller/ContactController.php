@@ -3,9 +3,12 @@
 namespace App\Controller;
 
 use App\Entity\Contact;
+use App\Entity\User;
+
 use App\Repository\ContactRepository;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+
 use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Symfony\Component\HTTPFoundation\Response;
@@ -17,9 +20,6 @@ class ContactController extends AbstractController
      */
     public function index(ContactRepository $contactRepository) : Response 
     {
-        // if (!$this->getUser()) {
-        //     return $this->redirectToRoute('app_login');
-        // }
         $contacts = $contactRepository->findBy(array(), array('firstname'=>'ASC'));
         return $this->render('contact/index.html.twig',compact('contacts'));
     }

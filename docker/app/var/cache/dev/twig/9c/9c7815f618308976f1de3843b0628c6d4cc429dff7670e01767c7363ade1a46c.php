@@ -93,7 +93,7 @@ class __TwigTemplate_957090556658fe947fc5fbbc241b2db5dfa467719fb4a80195d10559444
         </form>
     </nav>
 </header>
-<div class=\"page\" style=\"margin-top:15%\">
+<div class=\"page\">
 
 
 
@@ -109,7 +109,7 @@ class __TwigTemplate_957090556658fe947fc5fbbc241b2db5dfa467719fb4a80195d10559444
         foreach ($context['_seq'] as $context["_key"] => $context["contact"]) {
             // line 39
             echo "
-        <div class=\"row justify-content-center\">
+        <div class=\"row justify-content-center\" style=\"height=100%\">
             <form class=\"col col-lg-6\" id=\"container\" action=\"";
             // line 41
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_contact_delete", ["id" => twig_get_attribute($this->env, $this->source, $context["contact"], "id", [], "any", false, false, false, 41)]), "html", null, true);
@@ -274,7 +274,7 @@ class __TwigTemplate_957090556658fe947fc5fbbc241b2db5dfa467719fb4a80195d10559444
         </form>
     </nav>
 </header>
-<div class=\"page\" style=\"margin-top:15%\">
+<div class=\"page\">
 
 
 
@@ -285,7 +285,7 @@ class __TwigTemplate_957090556658fe947fc5fbbc241b2db5dfa467719fb4a80195d10559444
 
         {% for contact in contacts %}
 
-        <div class=\"row justify-content-center\">
+        <div class=\"row justify-content-center\" style=\"height=100%\">
             <form class=\"col col-lg-6\" id=\"container\" action=\"{{ path('app_contact_delete', {id:contact.id}) }}\"
                 method=\"post\" style=\"width:100%\">
                 <div class=\"shadow-lg card mb-4\" id=\"contactCard\">
