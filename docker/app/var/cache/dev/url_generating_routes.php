@@ -4,7 +4,11 @@
 
 return [
     '_preview_error' => [['code', '_format'], ['_controller' => 'error_controller::preview', '_format' => 'html'], ['code' => '\\d+'], [['variable', '.', '[^/]++', '_format', true], ['variable', '/', '\\d+', 'code', true], ['text', '/_error']], [], []],
-    'app_contact_delete' => [['id'], ['_controller' => 'App\\Controller\\ContactController::delete'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/delete']], [], []],
+    'contact_index' => [[], ['_controller' => 'App\\Controller\\ContactController::index'], [], [['text', '/contact/']], [], []],
+    'contact_new' => [[], ['_controller' => 'App\\Controller\\ContactController::new'], [], [['text', '/contact/new']], [], []],
+    'contact_show' => [['id'], ['_controller' => 'App\\Controller\\ContactController::show'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/contact']], [], []],
+    'contact_edit' => [['id'], ['_controller' => 'App\\Controller\\ContactController::edit'], [], [['text', '/edit'], ['variable', '/', '[^/]++', 'id', true], ['text', '/contact']], [], []],
+    'contact_delete' => [['id'], ['_controller' => 'App\\Controller\\ContactController::delete'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/contact']], [], []],
     'app_register' => [[], ['_controller' => 'App\\Controller\\RegistrationController::register'], [], [['text', '/register']], [], []],
     'home' => [[], ['_controller' => 'App\\Controller\\SearchController::recherche'], [], [['text', '/']], [], []],
     'app_login' => [[], ['_controller' => 'App\\Controller\\SecurityController::login'], [], [['text', '/login']], [], []],
