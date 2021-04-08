@@ -1,13 +1,4 @@
-bonjour c'est Emma
-Symfony
-
-Docker Volume (pour stocker la bdd quand on quitte)
-
-
-Faire une liste de contact
-
-Créer un compte
-
-Ajouter les contacts 
-
-Supprimer les contacts
+Dans un terminal, aller dans le dossier docker
+Lancer la commande 'docker-compose up'
+L'application est disponible à l'url http://localhost:8080
+La base de données est vide, à vous de vous inscrire et saisir vos nouveaux contactonys !
